@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        崔佳欢的个人博客
+        npm学习 · 崔佳欢的个人博客
         
     </title>
     <link rel="icon" href= https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3426506533,2967834336&fm=27&gp=0.jpg>
@@ -58,6 +58,8 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
@@ -65,27 +67,52 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >崔佳欢的个人博客</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">npm学习</a>
+            </div>
+    </div>
+    
     <a class="home-link" href=/>崔佳欢的个人博客</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514631926119&di=334b6efc4bd7e658aab3baec1483a5bb&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F1%2F5822eed9c9e27.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            npm学习
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2017/12/30</span>
+            </div>
         
     </div>
 </div>
@@ -153,48 +180,61 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/12/28/gulp学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>gulp学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    gulp作为前端开发过程中对代码进行构建的工具，对它进行了解学习是必要的，它可以提高我们的学习和工作效率
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="什么是npm？它有什么作用？"><a href="#什么是npm？它有什么作用？" class="headerlink" title="什么是npm？它有什么作用？"></a>什么是npm？它有什么作用？</h3><blockquote>
+<p>npm是和node.js一起的包管理工具，并且在安装node.js时已经安装好了npm,npm常见的使用场景有以下几个:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.允许用户从npm服务器下载别人编写的第三方包到本地使用。</div><div class="line">2.允许用户从npm服务器下载并安装别人编写的命令行程序到本地使用。</div><div class="line">3.允许用户将自己编写的包或命令行程序上传到npm服务器供别人使用。</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h3><blockquote>
+<p>npm本地安装的命令为:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install npm</div></pre></td></tr></table></figure>
+<blockquote>
+<p>全局安装的命令为:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install npm -g</div></pre></td></tr></table></figure>
+<blockquote>
+<p>如果要检查是否安装成功可以输入命令行:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm -v</div></pre></td></tr></table></figure>
+<p>来测试是否安装成功。</p>
+<h3 id="使用package-json"><a href="#使用package-json" class="headerlink" title="使用package.json"></a>使用package.json</h3><p>package.json位于模块的目录下，用于定义包的属性。</p>
+<h4 id="在当前目录下产生package-json文件"><a href="#在当前目录下产生package-json文件" class="headerlink" title="在当前目录下产生package.json文件"></a>在当前目录下产生package.json文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
+<h4 id="安装当前package-json中定义的模块"><a href="#安装当前package-json中定义的模块" class="headerlink" title="安装当前package,json中定义的模块"></a>安装当前package,json中定义的模块</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
+<h4 id="注册与提交"><a href="#注册与提交" class="headerlink" title="注册与提交"></a>注册与提交</h4><h5 id="注册用户"><a href="#注册用户" class="headerlink" title="注册用户"></a>注册用户</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm adduser</div><div class="line">Username:输入用户名</div><div class="line">Password:输入密码</div><div class="line">Email:输入邮箱</div></pre></td></tr></table></figure>
+<h5 id="编写完模块后输入命令行"><a href="#编写完模块后输入命令行" class="headerlink" title="编写完模块后输入命令行:"></a>编写完模块后输入命令行:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm publish  #发表模块</div></pre></td></tr></table></figure>
+<h5 id="更新模块"><a href="#更新模块" class="headerlink" title="更新模块"></a>更新模块</h5><blockquote>
+<p>尽管node.js自带pm，但是如果想要更新npm的话。可以输入命令:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update npm -g</div></pre></td></tr></table></figure>
+<h5 id="搜索模块"><a href="#搜索模块" class="headerlink" title="搜索模块"></a>搜索模块</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm search &quot;Module Name&quot;</div></pre></td></tr></table></figure>
 
-要使用gulp，首先要明白它是基于node.js下运行的，所以我们需要先安装node.js，安装完成后再安装gulp，这里分为全局安装gulp与本地安装gulp：对于全局安装，它的目的是为了通过它执行gulp任务;安装的命令提示符是：
-1npm install gulp -g
-安装好之后，可以使用
-1gulp -v
-来进行验证，如果出现版本号即为正确安装
-而本地安装只需要将”-g”去掉
-1npm install gulp
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="previous">
+                <a href= "/2017/12/28/gulp学习/" title= gulp学习 >
+                    <span>Previous Post</span>
+                    <span>gulp学习</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
 
-安装完成之后我们需要新建一个package,json文件
-...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
+<!-- City版安装代码已完成 -->
     
-        <a class="post-tag" href="javascript:void(0);" data-href = 工具学习>工具学习</a>
     
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/12/28</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
+    <!--PC版-->
+
+    <!--PC版-->
+
+
     
 </main>
             <!-- profile -->
@@ -239,6 +279,13 @@
     </div>
     <!-- toc -->
     
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是npm？它有什么作用？"><span class="toc-number">1.</span> <span class="toc-text">什么是npm？它有什么作用？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装npm"><span class="toc-number">2.</span> <span class="toc-text">安装npm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用package-json"><span class="toc-number">3.</span> <span class="toc-text">使用package.json</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#在当前目录下产生package-json文件"><span class="toc-number">3.1.</span> <span class="toc-text">在当前目录下产生package.json文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装当前package-json中定义的模块"><span class="toc-number">3.2.</span> <span class="toc-text">安装当前package,json中定义的模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注册与提交"><span class="toc-number">3.3.</span> <span class="toc-text">注册与提交</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#注册用户"><span class="toc-number">3.3.1.</span> <span class="toc-text">注册用户</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#编写完模块后输入命令行"><span class="toc-number">3.3.2.</span> <span class="toc-text">编写完模块后输入命令行:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#更新模块"><span class="toc-number">3.3.3.</span> <span class="toc-text">更新模块</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#搜索模块"><span class="toc-number">3.3.4.</span> <span class="toc-text">搜索模块</span></a></li></ol></li></ol></li></ol>
+    </div>
+    
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
     <div class="sidebar-header sidebar-header-show-archive">
@@ -268,7 +315,23 @@
     
     
     
-    <div class="total-archive"> Total : 2 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 4 </div>
     
     <div class="post-archive">
     
@@ -280,7 +343,17 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2017/12/30/npm学习/" >npm学习</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">12/28</span><a class="archive-post-title" href= "/2017/12/28/gulp学习/" >gulp学习</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/26</span><a class="archive-post-title" href= "/2017/12/26/git学习/" >Git学习</a>
         </li>
     
     
@@ -292,8 +365,6 @@
   </div>
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
-    
-        <span class="sidebar-tag-name"><a href= "#">工具学习</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
