@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Git学习 · 崔佳欢的个人博客
+        webpack入门学习 · 崔佳欢的个人博客
         
     </title>
     <link rel="icon" href= https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3426506533,2967834336&fm=27&gp=0.jpg>
@@ -72,7 +72,7 @@
                 <a href="/" >崔佳欢的个人博客</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Git学习</a>
+                <a href="#" class="post-name">webpack入门学习</a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Git学习
+            webpack入门学习
             <!-- 404 -->
             
         </h1>
@@ -111,7 +111,7 @@
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2017/12/26</span>
+                <span class="post-intro-time">2018/01/08</span>
             </div>
         
     </div>
@@ -182,71 +182,97 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <blockquote>
-<p>什么是Git？Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理，而对于大家熟知的Github来说，它是一个用Git做版本控制的项目托管平台<br>如图：</p>
+        <h4 id="什么是Webpack"><a href="#什么是Webpack" class="headerlink" title="什么是Webpack?"></a>什么是Webpack?</h4><blockquote>
+<p>Webpack是一个前端资源加载/打包工具，它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源.</p>
+<p>通俗地讲，Webpack可以看作是模块打包机：它做的事情是，分析你的项目结构，找到Javascript模块以及其他的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。</p>
+<h4 id="Webpack与Gulp区别"><a href="#Webpack与Gulp区别" class="headerlink" title="Webpack与Gulp区别"></a>Webpack与Gulp区别</h4><p>Webpack与之前学习的gulp相比较而言，两者的流程不大相同，而且Wwbpack的处理速度更快更直接，能打包更多不同类型的文件。</p>
+<p>gulp是一种能够优化前端的开发流程的工具，它的工作方式是：在一个配置文件中，指明对某些文件进行类似编译，组合，压缩等任务的具体步骤，工具之后可以自动替你完成这些任务。</p>
 </blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/226662-6e184a8462131352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/583" alt=""></p>
-<p>在这里我把我学习Git过程中的知识总结出来，供大家参考</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1031000-d0693c06bb3a00e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
 <blockquote>
-<p>要想使用Git，首先我们需要来安装Git，这里我把链接放在这，有兴趣的兄dei可以来下载安装<br><a href="https://pan.baidu.com/s/1c1J0Lbi" target="_blank" rel="external">链接</a> 密码：ue9y</p>
+<p>Webpack是一种模块化的解决方案，它的工作方式是：把你的项目当做一个整体，通过一个给定的主文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的Javascript文件。</p>
+<p>【注:loader用于对模块的源代码进行转换,比如Webpack只能处理js文件，因此对于css文件就需要安装对应loader模块：style-loader和css-loader等】</p>
 </blockquote>
-<p>下载好之后，我们就开始正式了解Git</p>
-<hr>
-<h3 id="因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程"><a href="#因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程" class="headerlink" title="因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程"></a>因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程</h3><h4 id="要使用Git，我们首先要告诉Git我们是谁"><a href="#要使用Git，我们首先要告诉Git我们是谁" class="headerlink" title="要使用Git，我们首先要告诉Git我们是谁"></a>要使用Git，我们首先要告诉Git我们是谁</h4><p>一般填写的都是Github的用户名和注册邮箱</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &apos;你的名称&apos;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.email &apos;你的邮箱&apos;</div></pre></td></tr></table></figure>
-<h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><p>在任意一个地方新建一个文件，然后在文件中打开git，输入初始化命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure>
-<p>即初始化完成</p>
-<hr>
-<h4 id="提交过程"><a href="#提交过程" class="headerlink" title="提交过程"></a>提交过程</h4><p>首先我们需要先查看当前文件的状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
-<p>它会显示出当前我们所在的分支，比如“on branch master”表示我们现在处在master这个分支上，即主分支</p>
-<p>当我们在文件中新建文件之后，再次运行“git status”时，结果会以红色字体出现新建文件名，即git未跟踪文件，现在我们需要将未跟踪文件添加进来，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add .  #表示添加所有修改文件</div></pre></td></tr></table></figure>
-<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add 文件名  #表示添加某一文件</div></pre></td></tr></table></figure></p>
-<p>再次运行“git status”，会显示绿色字体，表示该文件将要被提交，这时需要确认提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m &apos;提交信息&apos;  #提交信息主要写你提交了什么文件</div></pre></td></tr></table></figure>
-<p>提交完成</p>
-<p>注：一旦修改了跟踪文件的内容，就要重新进行提交</p>
-<hr>
-<h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><p>先查看所有分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch</div></pre></td></tr></table></figure>
-<p>分支名称左边有“*”的默认为当前分支</p>
-<p>创建分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch 分支名</div></pre></td></tr></table></figure>
-<p>既然分支创建好了，如何切换分支呢？我们需要输入命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout 分支名</div></pre></td></tr></table></figure>
-<hr>
-<h4 id="下载版本库"><a href="#下载版本库" class="headerlink" title="下载版本库"></a>下载版本库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone 远程版本库地址  #默认名称为版本库名称，可以在后面加上自定义的名称</div></pre></td></tr></table></figure>
-<p>下载完成后，就可以在本地对版本库进行修改</p>
-<hr>
-<h4 id="提交版本库"><a href="#提交版本库" class="headerlink" title="提交版本库"></a>提交版本库</h4><p>当修改完成之后，在git里面输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin master</div></pre></td></tr></table></figure></p>
-<p>完成提交</p>
-<p>但是远程版本库并不知道你已经更新了状态，这个时候我们需要输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git fetch</div></pre></td></tr></table></figure>
-<p>提示已经提取到更新，然后查看状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
-<p>查看显示远程上已经有了更新，然后我们需要进行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge origin/master</div></pre></td></tr></table></figure>
-<p>这个时候当前分支就与“master”分支保持一致了</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1031000-160bc667d3b6093a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
+<blockquote>
+<p>从图中可以看出，Webpack可以将多种静态资源js,css,less转换成一个静态文件。</p>
+<h4 id="使用Webpack"><a href="#使用Webpack" class="headerlink" title="使用Webpack"></a>使用Webpack</h4></blockquote>
+<h5 id="安装Webpack"><a href="#安装Webpack" class="headerlink" title="安装Webpack"></a>安装Webpack</h5><blockquote>
+<p>在安装之前，需要检查本地环境是否支持node.js</p>
+</blockquote>
+<p>使用npm安装Webpack</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack -g</div></pre></td></tr></table></figure>
+<h5 id="创建一个文件夹"><a href="#创建一个文件夹" class="headerlink" title="创建一个文件夹"></a>创建一个文件夹</h5><blockquote>
+<p>在你的电脑随便一个盘里创建一个新的文件夹或者使用命令创建:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir webpack-test</div></pre></td></tr></table></figure>
+<p>在文件夹中新建一个<strong>run1.js</strong>文件，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.write(&quot;Hello World&quot;);</div></pre></td></tr></table></figure>
+<p>再添加<strong>index.html</strong>文件，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;bundle.js&quot;&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>接下来使用Webpack命令进行打包：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack run1.js bundle.js</div></pre></td></tr></table></figure>
+<blockquote>
+<p>执行以上命令会编译run1.js文件并生成bundle.js文件</p>
+</blockquote>
+<p>在浏览器中打开<strong>index.html</strong>文件，会看到页面上有“Hello World”。</p>
+<h5 id="Loader"><a href="#Loader" class="headerlink" title="Loader"></a>Loader</h5><blockquote>
+<p>就像之前说的，如果想要处理除js之外的其他文件，对于css文件，首先需要执行命令来安装css-loader和style-loader</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install css-loader style-loader</div></pre></td></tr></table></figure>
+<blockquote>
+<p>接下来创建一个style.css文件，代码如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">    background:red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>修改run1.js文件：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">require(&quot;!style-loader!css-loader!./style.css&quot;);</div><div class="line">document.write(&quot;Hello World&quot;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>继续使用Webpack命令打包：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack run1.js bundle.js</div></pre></td></tr></table></figure>
+<p>在浏览器访问index.html会发现背景变成红色。</p>
+<h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><blockquote>
+<p>可以将一些编译选项放在配置文件中，以便于统一管理。</p>
+<p>创建webpack.config.js文件</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">    entry: &quot;./run1.js&quot;,</div><div class="line">    output: &#123;</div><div class="line">        path: __dirname,</div><div class="line">        filename: &quot;bundle.js&quot;</div><div class="line">    &#125;,</div><div class="line">    module: &#123;</div><div class="line">        loaders: [</div><div class="line">            &#123;test: /\.css$/,loader: &quot;style.loader!css-loader&quot;&#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>接下来只需要执行<strong>webpack</strong>命令即可生成<strong>bundle.js</strong>文件</p>
+<p>Webpack命令执行后，会默认载入当前目录的<strong>webpack.config.js</strong>文件。</p>
+<p><strong>当你想要查看你添加的loaders模块时。可以在安装webpack之后再生成一个package.json文件,它里面会显示你当前所有的依赖模块</strong>，代码如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
+<p>==默认一直点回车就行==</p>
+<h5 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h5><blockquote>
+<p>如果不想每次修改模块之后还要重新编译，那么可以启用监听模式；开启之后，就不需要每次都重新编译，代码如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack --watch</div></pre></td></tr></table></figure>
+<blockquote>
+<p>当然还有一种方法是启用一个本地服务器，来实现热加载，可以使用webpack-dev-server服务，当然首先需要安装：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack-dev-server -g</div></pre></td></tr></table></figure>
+<blockquote>
+<p>运行：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack-dev-server</div></pre></td></tr></table></figure>
+<blockquote>
+<p>运行之后一般会通过localhost:8080启用一个express静态资源web服务器，并且会以监听模式自动运行webpack；如果该端口被占用，可以通过“ -port 端口号 ” 来改变服务器端口。</p>
+<p>当然webpack还有其他功能，我也还在学习当中。</p>
+</blockquote>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2017/12/28/gulp学习/" title= gulp学习 >
-                    <span>Next Post</span>
-                    <span>gulp学习</span>
-                </a>
-            </li>
-        
         
             <li class="previous">
-                <a href= "/2017/12/25/第一篇博客/" title= 第一篇博客 >
+                <a href= "/2017/12/30/npm学习/" title= npm学习 >
                     <span>Previous Post</span>
-                    <span>第一篇博客</span>
+                    <span>npm学习</span>
                 </a>
             </li>
         
@@ -310,7 +336,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程"><span class="toc-number">1.</span> <span class="toc-text">因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#要使用Git，我们首先要告诉Git我们是谁"><span class="toc-number">1.1.</span> <span class="toc-text">要使用Git，我们首先要告诉Git我们是谁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#初始化"><span class="toc-number">1.2.</span> <span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#提交过程"><span class="toc-number">1.3.</span> <span class="toc-text">提交过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建分支"><span class="toc-number">1.4.</span> <span class="toc-text">创建分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下载版本库"><span class="toc-number">1.5.</span> <span class="toc-text">下载版本库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#提交版本库"><span class="toc-number">1.6.</span> <span class="toc-text">提交版本库</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是Webpack"><span class="toc-number">1.</span> <span class="toc-text">什么是Webpack?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Webpack与Gulp区别"><span class="toc-number">2.</span> <span class="toc-text">Webpack与Gulp区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用Webpack"><span class="toc-number">3.</span> <span class="toc-text">使用Webpack</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#安装Webpack"><span class="toc-number">3.1.</span> <span class="toc-text">安装Webpack</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#创建一个文件夹"><span class="toc-number">3.2.</span> <span class="toc-text">创建一个文件夹</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Loader"><span class="toc-number">3.3.</span> <span class="toc-text">Loader</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置文件"><span class="toc-number">3.4.</span> <span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#开发环境"><span class="toc-number">3.5.</span> <span class="toc-text">开发环境</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
