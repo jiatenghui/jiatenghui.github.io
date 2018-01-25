@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        崔佳欢的个人博客
+        HTTP状态码 · 崔佳欢的个人博客
         
     </title>
     <link rel="icon" href= https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3426506533,2967834336&fm=27&gp=0.jpg>
@@ -58,6 +58,8 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
@@ -65,27 +67,52 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >崔佳欢的个人博客</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">HTTP状态码</a>
+            </div>
+    </div>
+    
     <a class="home-link" href=/>崔佳欢的个人博客</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514631926119&di=334b6efc4bd7e658aab3baec1483a5bb&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F1%2F5822eed9c9e27.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            HTTP状态码
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/01/26</span>
+            </div>
         
     </div>
 </div>
@@ -153,207 +180,296 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
+            <main class="main post-page">
+    <article class="article-entry">
+        <p><strong>什么是HTTP状态码？</strong></p>
+<p>当浏览器访问一个网页时所在服务器发出请求。当浏览器接收并显示网页前，此网页所在的服务器会返回一个包含HTTP状态码的信息头（server ）用以响应浏览器的请求。</p>
+<p><strong>常见的HTTP状态码</strong></p>
+<ul>
+<li>200 — 请求成功</li>
+<li>301 — 资源（网页等）被永久转移到其他URL</li>
+<li>404 — 请求的资源（网页等）不存在</li>
+<li>500 — 内部服务器错误</li>
+</ul>
+<p><strong>HTTP状态码分类</strong><br>HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。HTTP状态码共分为5种类型：</p>
+<p><strong>HTTP状态码分类</strong></p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>分类描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1**</td>
+<td>信息，服务器收到请求，需要请求者继续执行操作</td>
+</tr>
+<tr>
+<td>2**</td>
+<td>成功，操作被成功接收并处理</td>
+</tr>
+<tr>
+<td>3**</td>
+<td>重定向，需要进一步的操作以完成请求</td>
+</tr>
+<tr>
+<td>4**</td>
+<td>客户端错误，请求包含语法错误或无法完成请求</td>
+</tr>
+<tr>
+<td>5**</td>
+<td>服务器错误，服务器在处理请求的过程中发生了错误</td>
+</tr>
+</tbody>
+</table>
+<p><strong>HTTP状态码列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>状态码英文名称</th>
+<th>中文描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>continue</td>
+<td>继续，客户端应继续其请求</td>
+</tr>
+<tr>
+<td>101</td>
+<td>switching protocols</td>
+<td>切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议</td>
+</tr>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>请求成功。一般用于GET与POST请求</td>
+</tr>
+<tr>
+<td>201</td>
+<td>created</td>
+<td>已创建。成功请求并创建了新的资源</td>
+</tr>
+<tr>
+<td>202</td>
+<td>accepted</td>
+<td>已接受。已经接受请求，但未处理完成</td>
+</tr>
+<tr>
+<td>203</td>
+<td>non-authoritative information</td>
+<td>非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本</td>
+</tr>
+<tr>
+<td>204</td>
+<td>no content</td>
+<td>无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档</td>
+</tr>
+<tr>
+<td>205</td>
+<td>reset content</td>
+<td>重置内容。服务器成功处理，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域</td>
+</tr>
+<tr>
+<td>206</td>
+<td>partial content</td>
+<td>部分内容。服务器成功处理了部分GET请求</td>
+</tr>
+<tr>
+<td>300</td>
+<td>multiple choices</td>
+<td>多种选择。请求的资源可包括多个位置相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择</td>
+</tr>
+<tr>
+<td>301</td>
+<td>moved permanently</td>
+<td>永久移动。请求的资源已被永久的移动到新URL，返回信息会包括新的URL，浏览器会自动的定向到新URL。今后任何新的请求都应使用新的URL代替</td>
+</tr>
+<tr>
+<td>302</td>
+<td>found</td>
+<td>临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URL</td>
+</tr>
+<tr>
+<td>303</td>
+<td>see other</td>
+<td>查看其它地址。与301类似。使用GET和POST请求查看</td>
+</tr>
+<tr>
+<td>304</td>
+<td>not modified</td>
+<td>未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在制定日期之后修改的资源</td>
+</tr>
+<tr>
+<td>305</td>
+<td>use proxy</td>
+<td>使用代理。所请求的资源必须通过代理访问</td>
+</tr>
+<tr>
+<td>306</td>
+<td>unused</td>
+<td>已经被废弃的HTTP状态码</td>
+</tr>
+<tr>
+<td>307</td>
+<td>tomporary redirect</td>
+<td>临时重定向。与302类似。使用GET请求重定向</td>
+</tr>
+<tr>
+<td>400</td>
+<td>bad request</td>
+<td>客户端请求的语法错误，服务器无法理解</td>
+</tr>
+<tr>
+<td>401</td>
+<td>unauthorized</td>
+<td>请求要求用户的身份认证</td>
+</tr>
+<tr>
+<td>402</td>
+<td>payment required</td>
+<td>保留，将来使用</td>
+</tr>
+<tr>
+<td>403</td>
+<td>forbidden</td>
+<td>服务器理解请求客户端的请求，但是拒绝执行此请求</td>
+</tr>
+<tr>
+<td>404</td>
+<td>not found</td>
+<td>服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置“您所请求的资源无法找到”的个性页面</td>
+</tr>
+<tr>
+<td>405</td>
+<td>method not allowed</td>
+<td>客户端请求中的方法被禁止</td>
+</tr>
+<tr>
+<td>406</td>
+<td>not acceptable</td>
+<td>服务器无法根据客户端请求的内容特性完成请求</td>
+</tr>
+<tr>
+<td>407</td>
+<td>proxy authentication required</td>
+<td>请求要求代理的身份认证，与类似，但请求者应当使用代理进行授权</td>
+</tr>
+<tr>
+<td>408</td>
+<td>request time-out</td>
+<td>服务器等待客户端发送的请求时间过长，超时</td>
+</tr>
+<tr>
+<td>409</td>
+<td>conflict</td>
+<td>服务器完成客户端的PUT请求时可能返回此代码，服务器处理请求时发生了冲突</td>
+</tr>
+<tr>
+<td>410</td>
+<td>gone</td>
+<td>客户端请求的资源已经不存在，410不同于404，如果资源以前有现在被永久删除了可使用410代码，网站设计人员可通过301代码指定资源的新位置</td>
+</tr>
+<tr>
+<td>411</td>
+<td>length</td>
+<td>服务器无法处理客户端发送的不带Content-Length的请求信息</td>
+</tr>
+<tr>
+<td>412</td>
+<td>precondition failed</td>
+<td>客户端请求信息的先决条件错误</td>
+</tr>
+<tr>
+<td>413</td>
+<td>Request Entity Too Large</td>
+<td>由于请求的实体过大，服务器无法处理，因此拒绝请求。为防止客户端的连续请求，服务器可能会关闭连接。如果只是服务器暂时无法处理，则会包含一个Retry-After的响应信息</td>
+</tr>
+<tr>
+<td>414</td>
+<td>Request-URI Too Large</td>
+<td>请求的URI过长（URI通常为网址），服务器无法处理</td>
+</tr>
+<tr>
+<td>415</td>
+<td>Unsupported Media Type</td>
+<td>服务器无法处理请求附带的媒体格式</td>
+</tr>
+<tr>
+<td>416</td>
+<td>Requested range not satisfiable</td>
+<td>客户端请求的范围无效</td>
+</tr>
+<tr>
+<td>417</td>
+<td>Expectation Failed</td>
+<td>服务器无法满足Expect的请求头信息</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>服务器内部错误，无法完成请求</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Not Implemented</td>
+<td>服务器不支持请求的功能，无法完成请求</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway</td>
+<td>充当网关或代理的服务器，从远端服务器接收到了一个无效的请求</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+<td>由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的Retry-After头信息中</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Gateway Time-out</td>
+<td>充当网关或代理的服务器，未及时从远端服务器获取请求</td>
+</tr>
+<tr>
+<td>505</td>
+<td>HTTP Version not supported</td>
+<td>服务器不支持请求的HTTP协议的版本，无法完成处理</td>
+</tr>
+</tbody>
+</table>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="previous">
+                <a href= "/2018/01/24/HTML5新特性/" title= HTML5新特性 >
+                    <span>Previous Post</span>
+                    <span>HTML5新特性</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
     
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/26/HTTP状态码/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>HTTP状态码</span>
-                    </h2>
-                <div class="abstract-content">
-                    什么是HTTP状态码？
-当浏览器访问一个网页时所在服务器发出请求。当浏览器接收并显示网页前，此网页所在的服务器会返回一个包含HTTP状态码的信息头（server ）用以响应浏览器的请求。
-常见的HTTP状态码
+    <!--PC版-->
 
-200 — 请求成功
-301 — 资源（网页等）被永久转移到其他URL
-404 — 请求的资源（网页等）不存在
-500 — 内部服务器错误
+    <!--PC版-->
 
-HTTP状态码分类HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。HTTP状态码共分为5种类型：
-HTTP状态码分类
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155431"></script>
+    <!-- UY END -->
 
 
-
-分类
-分类描述
-
-
-
-
-1**
-信息，服务器收到请求，需要请求者继...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/26</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/24/HTML5新特性/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>HTML5新特性</span>
-                    </h2>
-                <div class="abstract-content">
-                    HTML5新特性一、新的语义化标签1. &lt;section&gt;&lt;/section&gt;
-定义文档中的主体部分的节、段。
-2. &lt;article&gt;&lt;/article&gt;
-一个特殊的section标签，比section有更明确的语义。定义来自外部的一个独立的、完整的内容块，例如某个论坛的文章、博客的文本等
-3. &lt;aside&gt;&lt;/aside&gt;
-用来装载页面中非正文的内容，独立于其他模块，例如广告、成组的链接、侧边栏等
-4. &lt;header&gt;&lt;/header&gt;
-定义文档、页面的页眉。通常是一些引导和导航信息，...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/24</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/22/es6学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>es6学习第一篇</span>
-                    </h2>
-                <div class="abstract-content">
-                    es6学习
-
-
-没写的后续会持续更新
-
-1.let命令1、let命令用来声明变量，用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效
-123456&#123;    let a=10;    var b=1;&#125;a // referenceError:a is not definedb // 1
-这表明，let声明的变量只在它所在的代码块有效
-2、for循环的计数器，就很合适使用let命令
-1234for (let i = 0; i &lt; 10; i++) &#123;    //...&#125;console.log(i); //referenceErr...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/22/前端任务/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>前端任务</span>
-                    </h2>
-                <div class="abstract-content">
-                    元月一号至元月三十一号==1==.块级元素的特点：
-
-独占一行
-支持所有样式
-不设置宽度时宽度为父元素宽度
-换行符不解析
-可以容纳内联元素和其他块元素
-
-内联元素的特点：
-
-可以在一行显示
-不支持宽高，上下margin和padding等样式会有问题
-宽度由内容撑开
-换行符会被解析成空格
-
-内联块元素的特点：
-
-内联块元素同时具备块级元素和内联元素的特点
-
-常见的元素的特点属性：
-href：用于a标签里的链接方式或链接css文件
-src：用于链接js文件或图片
-alt：用来指定替换文字，只能用在img、area和input元素中，用于网页中图片无法正常显示时给用户提供文字说明使其了解 图像...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/22/swiper入门学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>swiper入门学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    什么是swiper？swiper是一种用于移动端页面的前端特效插件，它是一种纯javascript的框架，主要用来做轮播图之类页面，在使用之前首先我们需要下载swiper
-
-注：下载swiper-4.1.0.min.js和swiper-4.1.0.min.css即可
-
-swiper使用方法1.首先加载插件1234567891011&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    ...    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/swiper.min.css&quot;...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/08/webpack入门学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>webpack入门学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    什么是Webpack?Webpack是一个前端资源加载/打包工具，它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源.
-通俗地讲，Webpack可以看作是模块打包机：它做的事情是，分析你的项目结构，找到Javascript模块以及其他的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。
-Webpack与Gulp区别Webpack与之前学习的gulp相比较而言，两者的流程不大相同，而且Wwbpack的处理速度更快更直接，能打包更多不同类型的文件。
-gulp是一种能够优化前端的开发流程的工具，它的工...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/08</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
     
 </main>
             <!-- profile -->
@@ -397,6 +513,13 @@ gulp是一种能够优化前端的开发流程的工具，它的工...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
