@@ -182,22 +182,18 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <center>es6学习</center>
+        <center>es6学习第二篇</center>
 
 <blockquote>
-<p><strong><em>没写的后续会持续更新</em></strong></p>
+<p><strong><em>后续会持续更新</em></strong></p>
 </blockquote>
-<p>2、codePointAt()</p>
-<p>javascript内部，字符以UTF-16的格式储存，每个字符固定为2个字节。对于那些需要4个字节储存的字符（Unicode码点大于0xFFFF的字符），javascript会认为它们是两个字符</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var s = &quot;𠮷&quot;;</div><div class="line"></div><div class="line">s.length /2</div><div class="line">s.charAt(0) // &apos;&apos;</div><div class="line">s.charAt(1) // &apos;&apos;</div><div class="line">s.charCodeAt(0) // 55362</div><div class="line">s.charCodeAt(1) // 57271</div></pre></td></tr></table></figure>
-<p>3、模板字符串</p>
-<p>1、基本的字符串格式化，将表达式嵌入字符串中进行拼接。用${}来界定。</p>
+<h5 id="一、模板字符串"><a href="#一、模板字符串" class="headerlink" title="一、模板字符串"></a>一、模板字符串</h5><p>1、基本的字符串格式化，将表达式嵌入字符串中进行拼接。用${}来界定。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const name = &apos;laowang&apos;</div><div class="line">console.log`(hello $(name)`) // hello laowang</div></pre></td></tr></table></figure>
 <p>2、通过反引号(``)来对多行字符串或者字符串一行行拼接</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const template = `&lt;div&gt;</div><div class="line">    &lt;span&gt;hello world&lt;/span&gt;</div><div class="line">&lt;/div&gt;`</div></pre></td></tr></table></figure>
 <p>3、其他常用的es6方法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// 1. includes:判断是否包含然后直接返回布尔值</div><div class="line">let str = &apos;hahay&apos;</div><div class="line">console.log(str.includes(&apos;y&apos;)) // true</div><div class="line"></div><div class="line">// 2. repeat:获取字符串重复n次</div><div class="line">let s = &apos;he&apos;</div><div class="line">console.log(s.repeat(3)) // &apos;hehehe&apos;</div><div class="line"></div><div class="line">//如果你带入小数，Math.floor(num)来处理</div></pre></td></tr></table></figure>
-<h5 id="5-函数"><a href="#5-函数" class="headerlink" title="5.函数"></a>5.函数</h5><p>1、函数默认参数</p>
+<h5 id="二、函数"><a href="#二、函数" class="headerlink" title="二、函数"></a>二、函数</h5><p>1、函数默认参数</p>
 <p>es6为参数提供了默认值。在定义函数时编初始化了这个参数，以便在参数没有被传递进去时使用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function action(num = 200)&#123;</div><div class="line">    console.log(num)</div><div class="line">&#125;</div><div class="line">action() //200</div><div class="line">action(300) //300</div></pre></td></tr></table></figure>
 <p>2、箭头函数</p>
@@ -208,7 +204,7 @@
 <li>继承当前上下文的this关键字</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//例：</div><div class="line">[1,2,3].map( x=&gt; x + 1 )</div><div class="line"></div><div class="line">//等同于：</div><div class="line">[1,2,3].map((function(x)&#123;</div><div class="line">    return x + 1</div><div class="line">&#125;).bind(this))</div></pre></td></tr></table></figure>
-<h5 id="6-扩展的对象功能"><a href="#6-扩展的对象功能" class="headerlink" title="6.扩展的对象功能"></a>6.扩展的对象功能</h5><p>es6对于对象都是以键值对的形式书写。很有可能出现键值对重名。如：</p>
+<h5 id="三、扩展的对象功能"><a href="#三、扩展的对象功能" class="headerlink" title="三、扩展的对象功能"></a>三、扩展的对象功能</h5><p>es6对于对象都是以键值对的形式书写。很有可能出现键值对重名。如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function people(name, age) &#123;</div><div class="line">    return &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>es6同样改进了为对象字面量方法赋值的语法，通过省略冒号与function关键字，将这个语法变得更简洁</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">const people = &#123;</div><div class="line">    name: &apos;laowang&apos;,</div><div class="line">    getName () &#123;</div><div class="line">        console.log(this.name)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -292,7 +288,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-函数"><span class="toc-number">1.</span> <span class="toc-text">5.函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-扩展的对象功能"><span class="toc-number">2.</span> <span class="toc-text">6.扩展的对象功能</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#一、模板字符串"><span class="toc-number">1.</span> <span class="toc-text">一、模板字符串</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#二、函数"><span class="toc-number">2.</span> <span class="toc-text">二、函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三、扩展的对象功能"><span class="toc-number">3.</span> <span class="toc-text">三、扩展的对象功能</span></a></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
@@ -306,14 +302,6 @@
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-archive">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -450,12 +438,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/22</span><a class="archive-post-title" href= "/2018/01/22/前端任务/" >前端任务</a>
+            <span class="archive-post-date">01/23</span><a class="archive-post-title" href= "/2018/01/23/es6学习第一篇/" >es6学习第一篇</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/22</span><a class="archive-post-title" href= "/2018/01/22/es6学习/" >es6学习第一篇</a>
+            <span class="archive-post-date">01/22</span><a class="archive-post-title" href= "/2018/01/22/前端任务/" >前端任务</a>
         </li>
     
     
