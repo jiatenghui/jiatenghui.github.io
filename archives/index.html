@@ -158,6 +158,33 @@
     
     
         <article class="index-post">
+            <a class="content-show-full" href = "/2018/01/30/分享总结/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>分享总结</span>
+                    </h2>
+                <div class="abstract-content">
+                    分享总结今天学姐给我们主要分享了关于setTimeout与闭包的问题，在这里我写一下自己的感受
+
+在这之前，我个人认为首先需要了解一下javascript的单线程和异步。
+作为一个脚本语言，javascript的主要用途是与用户互动，以及操作DOM，这决定了它只能是单线程，否则会带来很复杂的同步问题，所以也决定了它本身是不可能异步的。
+但是，我们通过某种方式又可以使得js具备异步属性，当网络请求、定时器和事件监听时，如果同步执行的话，效率会非常低，所以这时浏览器会开辟另外的线程，主要包括http请求线程，浏览器定时触发器，浏览器事件触发进程，这些都是异步的。
+那么问题来了，当异步任务都完...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/30</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="content-show-full" href = "/2018/01/27/思考跨域问题/" >
                     <h2 class="abstract-title">
                         
@@ -457,39 +484,6 @@ npm本地安装的命令为:
             </div>
         </article>
     
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/12/28/gulp学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>gulp学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    gulp作为前端开发过程中对代码进行构建的工具，对它进行了解学习是必要的，它可以提高我们的学习和工作效率
-
-要使用gulp，首先要明白它是基于node.js下运行的，所以我们需要先安装node.js，安装完成后再安装gulp，这里分为全局安装gulp与本地安装gulp：对于全局安装，它的目的是为了通过它执行gulp任务;安装的命令提示符是：
-1npm install gulp -g
-安装好之后，可以使用
-1gulp -v
-来进行验证，如果出现版本号即为正确安装
-而本地安装只需要将”-g”去掉
-1npm install gulp
-
-安装完成之后我们需要新建一个package,json文件
-...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/12/28</span>
-                </div>
-            </div>
-        </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
@@ -680,7 +674,12 @@ npm本地安装的命令为:
     
     
     
-    <div class="total-archive"> Total : 12 </div>
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 13 </div>
     
     <div class="post-archive">
     
@@ -689,6 +688,11 @@ npm本地安装的命令为:
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/30</span><a class="archive-post-title" href= "/2018/01/30/分享总结/" >分享总结</a>
+        </li>
     
     
         <li class="archive-post-item">
