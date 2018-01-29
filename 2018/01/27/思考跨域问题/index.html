@@ -199,7 +199,14 @@
 type:&quot;get&quot;, // 接收服务器数据的类型
 dataType:&quot;jsonp&quot;, // 用于服务器端的获取函数的参数
 jsonp:&quot;callback&quot;, // 函数名称
-</code></pre>
+</code></pre><p>2、使用jquery的jsonp插件</p>
+<p>首先我们要引入相关的js文件，相关下载可参考<a href="https://github.com/jaubourg/jquery-jsonp" target="_blank" rel="external">该地址</a></p>
+<p>在我们前端代码中需要在ajax里的url下加入</p>
+<pre><code>    callbackParameter:&quot;callback&quot;
+callback:&quot;callback_success&quot;
+</code></pre><p>使用该方法不局限于get请求，还可以是post请求，但从服务器获取到的依然是jsonp格式</p>
+<p>第三种方法是使用cors方法，具体可以参考网上其他博客</p>
+
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
@@ -291,10 +298,6 @@ jsonp:&quot;callback&quot;, // 函数名称
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-archive">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
     
     
     
