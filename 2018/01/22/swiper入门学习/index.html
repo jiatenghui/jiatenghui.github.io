@@ -201,6 +201,18 @@
 <p>autoplay参数：设置为true时自动切换图片，默认为false</p>
 <p>delay参数：自动切换的时间间隔，详情见上图代码</p>
 <p>关于swiper的用法和初始化组件还有许多，<a href="http://www.swiper.com.cn/api/index.html" target="_blank" rel="external">具体请查看swiperAPI文档</a></p>
+<hr>
+<p><em>分割线</em></p>
+<p>在vue中我们可以直接下载插件实现<strong>swiper</strong>的功能</p>
+<blockquote>
+<p>npm install vue-awesome-swiper</p>
+</blockquote>
+<p>然后在<strong>main.js</strong>中引入</p>
+<blockquote>
+<p>import VueAwesomeSwiper from ‘vue-awesome-swiper’<br>Vue.use(VueAwesomeSwiper)</p>
+</blockquote>
+<p>在对应的 <strong>.vue</strong> 比如(<strong>slide.vue</strong>)文件中，写入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">template&gt;</div><div class="line">  &lt;div id=&quot;slide&quot;&gt;</div><div class="line">    &lt;swiper :options=&quot;swiperOption&quot; ref=&quot;mySwiper&quot;&gt;</div><div class="line">      &lt;!-- 幻灯内容 --&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide1&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;1.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide2&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;2.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide3&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;3.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide4&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;4.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide5&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;5.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">    &lt;/swiper&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">import &#123; swiper, swiperSlide &#125; from &apos;vue-awesome-swiper&apos;</div><div class="line">import $ from &apos;jquery&apos;</div><div class="line">export default &#123;</div><div class="line">  components: &#123;</div><div class="line">    swiper,</div><div class="line">    swiperSlide</div><div class="line">  &#125;,</div><div class="line">  data () &#123;</div><div class="line">    return &#123;</div><div class="line">      swiperOption: &#123;</div><div class="line">        initialSlide: 0,</div><div class="line">        direction: &apos;horizontal&apos;,</div><div class="line">        loop: true,</div><div class="line">        loopAdditionalSlides: 2,</div><div class="line">        speed: 1000,</div><div class="line">        autoplay: &#123;</div><div class="line">          delay: 2000</div><div class="line">        &#125;,</div><div class="line">        autoplayDisableOnInteraction: false,</div><div class="line">        observer: true,</div><div class="line">        observeParents: true</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"> &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 
     </article>
     <!-- 前后页  -->
@@ -469,7 +481,18 @@
     
     
     
-    <div class="total-archive"> Total : 15 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 16 </div>
     
     <div class="post-archive">
     
@@ -487,6 +510,11 @@
     
         <li class="archive-post-item">
             <span class="archive-post-date">02/06</span><a class="archive-post-title" href= "/2018/02/06/2月5日分享总结/" >2月5日分享总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/31</span><a class="archive-post-title" href= "/2018/01/31/vue中如何引入外链css和js/" >Vue引入外链css和js</a>
         </li>
     
     
