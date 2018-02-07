@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Git学习 · 崔佳欢的个人博客
+        2月5日分享总结 · 崔佳欢的个人博客
         
     </title>
     <link rel="icon" href= https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3426506533,2967834336&fm=27&gp=0.jpg>
@@ -72,7 +72,7 @@
                 <a href="/" >崔佳欢的个人博客</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Git学习</a>
+                <a href="#" class="post-name">2月5日分享总结</a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Git学习
+            2月5日分享总结
             <!-- 404 -->
             
         </h1>
@@ -111,7 +111,7 @@
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2017/12/26</span>
+                <span class="post-intro-time">2018/02/06</span>
             </div>
         
     </div>
@@ -182,71 +182,53 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <blockquote>
-<p>什么是Git？Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理，而对于大家熟知的Github来说，它是一个用Git做版本控制的项目托管平台<br>如图：</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/226662-6e184a8462131352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/583" alt=""></p>
-<p>在这里我把我学习Git过程中的知识总结出来，供大家参考</p>
-<blockquote>
-<p>要想使用Git，首先我们需要来安装Git，这里我把链接放在这，有兴趣的兄dei可以来下载安装<br><a href="https://pan.baidu.com/s/1c1J0Lbi" target="_blank" rel="external">链接</a> 密码：ue9y</p>
-</blockquote>
-<p>下载好之后，我们就开始正式了解Git</p>
-<hr>
-<h3 id="因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程"><a href="#因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程" class="headerlink" title="因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程"></a>因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程</h3><h4 id="要使用Git，我们首先要告诉Git我们是谁"><a href="#要使用Git，我们首先要告诉Git我们是谁" class="headerlink" title="要使用Git，我们首先要告诉Git我们是谁"></a>要使用Git，我们首先要告诉Git我们是谁</h4><p>一般填写的都是Github的用户名和注册邮箱</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &apos;你的名称&apos;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.email &apos;你的邮箱&apos;</div></pre></td></tr></table></figure>
-<h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><p>在任意一个地方新建一个文件，然后在文件中打开git，输入初始化命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure>
-<p>即初始化完成</p>
-<hr>
-<h4 id="提交过程"><a href="#提交过程" class="headerlink" title="提交过程"></a>提交过程</h4><p>首先我们需要先查看当前文件的状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
-<p>它会显示出当前我们所在的分支，比如“on branch master”表示我们现在处在master这个分支上，即主分支</p>
-<p>当我们在文件中新建文件之后，再次运行“git status”时，结果会以红色字体出现新建文件名，即git未跟踪文件，现在我们需要将未跟踪文件添加进来，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add .  #表示添加所有修改文件</div></pre></td></tr></table></figure>
-<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add 文件名  #表示添加某一文件</div></pre></td></tr></table></figure></p>
-<p>再次运行“git status”，会显示绿色字体，表示该文件将要被提交，这时需要确认提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m &apos;提交信息&apos;  #提交信息主要写你提交了什么文件</div></pre></td></tr></table></figure>
-<p>提交完成</p>
-<p>注：一旦修改了跟踪文件的内容，就要重新进行提交</p>
-<hr>
-<h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><p>先查看所有分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch</div></pre></td></tr></table></figure>
-<p>分支名称左边有“*”的默认为当前分支</p>
-<p>创建分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch 分支名</div></pre></td></tr></table></figure>
-<p>既然分支创建好了，如何切换分支呢？我们需要输入命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout 分支名</div></pre></td></tr></table></figure>
-<hr>
-<h4 id="下载版本库"><a href="#下载版本库" class="headerlink" title="下载版本库"></a>下载版本库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone 远程版本库地址  #默认名称为版本库名称，可以在后面加上自定义的名称</div></pre></td></tr></table></figure>
-<p>下载完成后，就可以在本地对版本库进行修改</p>
-<hr>
-<h4 id="提交版本库"><a href="#提交版本库" class="headerlink" title="提交版本库"></a>提交版本库</h4><p>当修改完成之后，在git里面输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin master</div></pre></td></tr></table></figure></p>
-<p>完成提交</p>
-<p>但是远程版本库并不知道你已经更新了状态，这个时候我们需要输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git fetch</div></pre></td></tr></table></figure>
-<p>提示已经提取到更新，然后查看状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
-<p>查看显示远程上已经有了更新，然后我们需要进行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge origin/master</div></pre></td></tr></table></figure>
-<p>这个时候当前分支就与“master”分支保持一致了</p>
+        <h3 id="分享总结"><a href="#分享总结" class="headerlink" title="分享总结"></a>分享总结</h3><p>今天晚上罗旋大佬给我们分享了关于web前沿方面的知识，对我的感觉是很精彩的，只比之前学姐的分享稍逊一筹，下面我来分享一下我的理解并在之后查阅的资料</p>
+<h4 id="Progressive-Web-App"><a href="#Progressive-Web-App" class="headerlink" title="Progressive Web App"></a>Progressive Web App</h4><p>这个词直译就是“进步的web app”，由于学长推荐的学习网页需要翻墙才能看，我在这里给大家推荐另一个网站 <strong><a href="https://lavas.baidu.com/mip/doc/README#%E5%8F%AF%E9%9D%A0" target="_blank" rel="external">什么是PWA</a></strong>,希望能有所帮助</p>
+<h5 id="什么是PWA？"><a href="#什么是PWA？" class="headerlink" title="什么是PWA？"></a>什么是PWA？</h5><p>PWA是一种提升Web App体验的方法，能带给用户原生应用般的体验，而PWA的主要特点主要包含以下几点：</p>
+<ul>
+<li>渐进式 - 适用于选用任何浏览器的所有用户，因为它是以渐进式增强作为核心宗旨来开发的</li>
+<li>自适应 - 适合任何机型：桌面设备、移动设备、平板电脑等</li>
+<li>连接无关性 - 能够借助服务工作线程在离线或低质量网络状况下工作</li>
+<li>类似应用 - 由于是在 <strong><a href="https://lavas.baidu.com/mip/guide/vue/doc/vue/advanced/define-app-shell" target="_blank" rel="external">App Shell模型</a></strong> 基础上开发，因此具有应用风格的交互和导航，给用户以应用般的熟悉感</li>
+<li>持续更新 - 在服务工作线程更新进程的作用下时刻保持最新状态</li>
+<li>安全 - 通过HTTPS提供，以防止窥探和确保内容不被篡改</li>
+<li>可发现 - W3C清单和服务工作流程注册作用域能够让搜索引擎找到它们，从而将其识别为“应用”</li>
+<li>可再互动 - 通过推送通知之类的功能简化了再互动</li>
+<li>可安装 - 用户可免去使用应用商店的麻烦，直接将对其最有用的应用“保留”在主屏幕上</li>
+<li>可链接 - 可通过网址轻松分享，无需复杂的安装</li>
+</ul>
+<p>比如有一个具体的例子，<strong><a href="https://weatherpwa.baidu.com/" target="_blank" rel="external">天气PWA</a></strong>，当我们平时遇到断网时刷新一下页面，电脑或手机会出现“未连接到互联网”之类的页面或错误提示，而PWA则会在断网刷新后依然出现页面内容，而且当我们对页面上一个内容很感兴趣时，我们可以直接将它放在主页面，不需要安装app,国内的 <strong><a href="https://m.douban.com/" target="_blank" rel="external">豆瓣网手机版</a></strong> 使用的也是PWA，对于如何使用，由于在chrome浏览器需要下载“Web Server for Chrome”扩展功能，我们可以查按照我推荐的那个网站来进行操作</p>
+<h5 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h5><p>前端工程师有很多性能优化手段，包括CDN、CSS Sprite、文件的合并压缩、异步加载、资源缓存等（<em>原谅我还不清楚具体的性能优化</em>），而Service Worker让缓存做到了优雅、极致，让Web App的缺点更加弱化。</p>
+<p>Service Worker特点：</p>
+<ul>
+<li>一个独立的worker线程，独立于当前网页进程，有自己独立的worker context</li>
+<li>一旦被install，就永远存在，除非被uninstall</li>
+<li>需要时可直接唤醒、不需要要=可以自动睡眠‘</li>
+<li>可编程拦截代理请求和返回，缓存文件，缓存的文件可以被网页进程渠取到（包括离线状态）</li>
+<li>离线内容开发者可控</li>
+<li>能向客户端推送消息</li>
+<li>不能直接操作DOM</li>
+<li>必须在HTTPS环境下工作</li>
+<li>异步实现，内部大都是通过Promise实现</li>
+</ul>
+<p>如何使用Service Worker请看网站资源，我试过，不用翻墙，可以成功检查到是否安装Seivice Worker</p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
             <li class="next">
-                <a href= "/2017/12/28/gulp学习/" title= gulp学习 >
+                <a href= "/2018/02/07/了解Vue-router/" title= 了解Vue-router >
                     <span>Next Post</span>
-                    <span>gulp学习</span>
+                    <span>了解Vue-router</span>
                 </a>
             </li>
         
         
             <li class="previous">
-                <a href= "/2017/12/25/第一篇博客/" title= 第一篇博客 >
+                <a href= "/2018/01/30/1月28分享总结/" title= 1月28日分享总结 >
                     <span>Previous Post</span>
-                    <span>第一篇博客</span>
+                    <span>1月28日分享总结</span>
                 </a>
             </li>
         
@@ -315,7 +297,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程"><span class="toc-number">1.</span> <span class="toc-text">因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#要使用Git，我们首先要告诉Git我们是谁"><span class="toc-number">1.1.</span> <span class="toc-text">要使用Git，我们首先要告诉Git我们是谁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#初始化"><span class="toc-number">1.2.</span> <span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#提交过程"><span class="toc-number">1.3.</span> <span class="toc-text">提交过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建分支"><span class="toc-number">1.4.</span> <span class="toc-text">创建分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下载版本库"><span class="toc-number">1.5.</span> <span class="toc-text">下载版本库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#提交版本库"><span class="toc-number">1.6.</span> <span class="toc-text">提交版本库</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#分享总结"><span class="toc-number">1.</span> <span class="toc-text">分享总结</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Progressive-Web-App"><span class="toc-number">1.1.</span> <span class="toc-text">Progressive Web App</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是PWA？"><span class="toc-number">1.1.1.</span> <span class="toc-text">什么是PWA？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Service-Worker"><span class="toc-number">1.1.2.</span> <span class="toc-text">Service Worker</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
