@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        崔佳欢的个人博客
+        分享总结 · 崔佳欢的个人博客
         
     </title>
     <link rel="icon" href= https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3426506533,2967834336&fm=27&gp=0.jpg>
@@ -58,6 +58,8 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
@@ -65,27 +67,52 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >崔佳欢的个人博客</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">分享总结</a>
+            </div>
+    </div>
+    
     <a class="home-link" href=/>崔佳欢的个人博客</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514631926119&di=334b6efc4bd7e658aab3baec1483a5bb&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F1%2F5822eed9c9e27.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            分享总结
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/02/07</span>
+            </div>
         
     </div>
 </div>
@@ -153,239 +180,54 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>优雅降级与渐进增强</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1839822-d10930c25da17cd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/650" alt=""></p>
+<p><strong>优雅降级(Graceful Degradation)</strong>：一开始就构建站点的完整功能，然后针对浏览器测试和修复。比如一开始使用CSS3的特性构建了一个应用，然后逐步针对各大浏览器进行测试使其可以再低版本浏览器上正常浏览。</p>
+<p><strong>渐进增强(Progressive Enhancement)</strong>：一开始就针对低版本浏览器进行构建页面，完成基本的功能，然后再针对高级浏览器进行效果、交互、追加功能达到更好的体验。</p>
+<p><em>渐进增强相当于向上兼容，而优雅降级相当于向下兼容，向下兼容指的是高版本支持低版本的或者说后期开发的版本支持和兼容早期开发的版本，向上兼容的很少，大多数软件都是向下兼容的</em></p>
+<p>区别</p>
+<p><strong>优雅降级</strong>认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段</p>
+<p><strong>渐进增强</strong>则认为应关注于内容本身，而对浏览器则是次要的，因为内容是建立网站的诱因，这使得渐进增强成一种更为合理的设计范例。</p>
+<p>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.transition&#123; /*渐进式写法*/</div><div class="line">    -webkit-transition:all .5s;</div><div class="line">    -moz-transition:all .5s;</div><div class="line">    -o-transition:all .5s;</div><div class="line">    transition:all .5s;</div><div class="line">&#125;</div><div class="line">.transition&#123; /*优雅降级写法*/</div><div class="line">    transition:all .5s;</div><div class="line">    -o-transition:all .5s;</div><div class="line">    -moz-transition:all .5s;</div><div class="line">    -webkit-transition:all .5s;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>前缀CSS3与正常CSS3在浏览器中的支持情况：</p>
+<ol>
+<li>很久以前：浏览器前缀CSS3和正常CSS3都不支持；</li>
+<li>不久之前：浏览器只支持前缀CSS3，不支持正常CSS3；</li>
+<li>现在：浏览器既支持前缀CSS3，又支持正常CSS3；</li>
+<li>浏览器不支持前缀CSS3，仅支持正常CSS3。</li>
+</ol>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="previous">
+                <a href= "/2018/02/07/了解Vue-router/" title= 了解Vue-router >
+                    <span>Previous Post</span>
+                    <span>了解Vue-router</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
     
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/22/前端任务/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>前端任务</span>
-                    </h2>
-                <div class="abstract-content">
-                    元月一号至元月三十一号==1==.块级元素的特点：
+    <!--PC版-->
 
-独占一行
-支持所有样式
-不设置宽度时宽度为父元素宽度
-换行符不解析
-可以容纳内联元素和其他块元素
+    <!--PC版-->
 
-内联元素的特点：
-
-可以在一行显示
-不支持宽高，上下margin和padding等样式会有问题
-宽度由内容撑开
-换行符会被解析成空格
-
-内联块元素的特点：
-
-内联块元素同时具备块级元素和内联元素的特点
-
-常见的元素的特点属性：
-href：用于a标签里的链接方式或链接css文件
-src：用于链接js文件或图片
-alt：用来指定替换文字，只能用在img、area和input元素中，用于网页中图片无法正常显示时给用户提供文字说明使其了解 图像...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/22/swiper入门学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>swiper入门学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    什么是swiper？swiper是一种用于移动端页面的前端特效插件，它是一种纯javascript的框架，主要用来做轮播图之类页面，在使用之前首先我们需要下载swiper
-
-注：下载swiper-4.1.0.min.js和swiper-4.1.0.min.css即可
-
-swiper使用方法1.首先加载插件1234567891011&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    ...    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/swiper.min.css&quot;...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/08/webpack入门学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>webpack入门学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    什么是Webpack?Webpack是一个前端资源加载/打包工具，它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源.
-通俗地讲，Webpack可以看作是模块打包机：它做的事情是，分析你的项目结构，找到Javascript模块以及其他的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。
-Webpack与Gulp区别Webpack与之前学习的gulp相比较而言，两者的流程不大相同，而且Wwbpack的处理速度更快更直接，能打包更多不同类型的文件。
-gulp是一种能够优化前端的开发流程的工具，它的工...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/08</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/06/18/npm学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>npm学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    什么是npm？它有什么作用？
-npm是和node.js一起的包管理工具，并且在安装node.js时已经安装好了npm,npm常见的使用场景有以下几个:
-
-1231.允许用户从npm服务器下载别人编写的第三方包到本地使用。2.允许用户从npm服务器下载并安装别人编写的命令行程序到本地使用。3.允许用户将自己编写的包或命令行程序上传到npm服务器供别人使用。
-
-安装npm
-npm本地安装的命令为:
-
-1npm install npm
-
-全局安装的命令为:
-
-1npm install npm -g
-
-如果要检查是否安装成功可以输入命令行:
-
-1npm -v
-来测试是否安装成功。
-使用packa...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/06/18</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/06/15/gulp学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>gulp学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    gulp作为前端开发过程中对代码进行构建的工具，对它进行了解学习是必要的，它可以提高我们的学习和工作效率
-
-要使用gulp，首先要明白它是基于node.js下运行的，所以我们需要先安装node.js，安装完成后再安装gulp，这里分为全局安装gulp与本地安装gulp：对于全局安装，它的目的是为了通过它执行gulp任务;安装的命令提示符是：
-1npm install gulp -g
-安装好之后，可以使用
-1gulp -v
-来进行验证，如果出现版本号即为正确安装
-而本地安装只需要将”-g”去掉
-1npm install gulp
-
-安装完成之后我们需要新建一个package,json文件
-...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/06/15</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/06/12/git学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Git学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-什么是Git？Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理，而对于大家熟知的Github来说，它是一个用Git做版本控制的项目托管平台如图：
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155431"></script>
+    <!-- UY END -->
 
 
-在这里我把我学习Git过程中的知识总结出来，供大家参考
-
-要想使用Git，首先我们需要来安装Git，这里我把链接放在这，有兴趣的兄dei可以来下载安装链接 密码：ue9y
-
-下载好之后，我们就开始正式了解Git
-
-因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程要使用Git，我们首先要告诉Git我们是谁一般填写的都是Github的用户名和注册邮箱
-1git conf...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/06/12</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/06/10/第一篇博客/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>第一篇博客</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-经历千辛万苦，我终于建好了我的个人博客，期间在网上翻看了不少前辈的教程和方法，也选择了各种建造博客的工具，最后还是使用最顺手的一个来用了，我的博客主要是分享学习新知识的总结和理解，以及生活中的一些有趣的故事，说来惭愧，小白我虽然学习的是前端，但也有那么一丢丢文学细胞，也想通过自己写的文章来让别人感受到不同的自己，今后会不定时更新的哦
-
-
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/06/10</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/">#PREV</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
     
 </main>
             <!-- profile -->
@@ -429,6 +271,13 @@ npm本地安装的命令为:
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
