@@ -158,19 +158,17 @@
     
     
         <article class="index-post">
-            <a class="content-show-full" href = "/2018/02/09/优雅降级与渐进增强/" >
+            <a class="content-show-full" href = "/2018/05/01/自适应布局的几种方法/" >
                     <h2 class="abstract-title">
                         
-                        <span>优雅降级与渐进增强</span>
+                        <span>自适应布局的几种方法</span>
                     </h2>
                 <div class="abstract-content">
-                    优雅降级与渐进增强
-
-优雅降级(Graceful Degradation)：一开始就构建站点的完整功能，然后针对浏览器测试和修复。比如一开始使用CSS3的特性构建了一个应用，然后逐步针对各大浏览器进行测试使其可以再低版本浏览器上正常浏览。
-渐进增强(Progressive Enhancement)：一开始就针对低版本浏览器进行构建页面，完成基本的功能，然后再针对高级浏览器进行效果、交互、追加功能达到更好的体验。
-渐进增强相当于向上兼容，而优雅降级相当于向下兼容，向下兼容指的是高版本支持低版本的或者说后期开发的版本支持和兼容早期开发的版本，向上兼容的很少，大多数软件都是向下兼容的
-区别
-优...
+                    自适应布局的几种方法
+百分比1&lt;meta name=&quot;viewport&quot; content=&quot;width-device-width,initial-scale=1&quot;
+viewport是网页默认的宽度和高度，width=device-width即网页宽度默认等于屏幕宽度，initial-scale=1即原始缩放比例为1.0，网页初始大小占屏幕面积的100%。
+由于网页会根据屏幕宽度调整布局，所以不能使用绝对宽度的布局，也不能使用绝对宽度的元素，如css不能指定像素宽度，只能指定百分比宽度，字体不能使用绝对大小px，而只能使用相对大小em。
+@me...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -178,69 +176,7 @@
                 
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/02/09</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/02/07/了解Vue-router/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>了解Vue-router</span>
-                    </h2>
-                <div class="abstract-content">
-                    Vue-router通过Vue我们可以实现组件化开发，而各组件之间如何跳转呢，在我们第一次项目用gulp构建工具开发时，页面跳转是通过a标签的href属性实现的，不过在Vue中，页面跳转是通过路由实现的，路由的配置就成了一个需要学习的问题
-
-路由实现页面跳转首先需要安装插件
-
-npm install vue-router –save
-
-之后在 main.js 里面写入
-
-import VueRouter from ‘vue-router’
-Vue.use(VueRouter)
-
-通过它来引入 vue-router ，之后进入 /router/index.js 文件，同样先引入
-
-impo...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/02/07</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/02/06/2月5日分享总结/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>2月5日分享总结</span>
-                    </h2>
-                <div class="abstract-content">
-                    分享总结今天晚上罗旋大佬给我们分享了关于web前沿方面的知识，对我的感觉是很精彩的，只比之前学姐的分享稍逊一筹，下面我来分享一下我的理解并在之后查阅的资料
-Progressive Web App这个词直译就是“进步的web app”，由于学长推荐的学习网页需要翻墙才能看，我在这里给大家推荐另一个网站 什么是PWA,希望能有所帮助
-什么是PWA？PWA是一种提升Web App体验的方法，能带给用户原生应用般的体验，而PWA的主要特点主要包含以下几点：
-
-渐进式 - 适用于选用任何浏览器的所有用户，因为它是以渐进式增强作为核心宗旨来开发的
-自适应 - 适合任何机型：桌面设备、移动设备、平板电...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/02/06</span>
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/01</span>
                 </div>
             </div>
         </article>
