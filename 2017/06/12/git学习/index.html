@@ -272,6 +272,23 @@
 <!-- City版安装代码已完成 -->
     
     
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: "Git学习", // 可选。默认为 location.href
+        owner: 'cuijiahuan',
+        repo: 'cuijiahuan.github.io',
+        oauth: {
+            client_id: 'ad0e66b9677c7ee79a07',
+            client_secret: '12171f2a24a0d417f128120d788aa621df8fb551',
+        },
+    })
+    gitment.render('container')
+
+</script>
+
     <!--PC版-->
 
     <!--PC版-->
@@ -344,16 +361,6 @@
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-archive">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
