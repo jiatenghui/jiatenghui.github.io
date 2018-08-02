@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        about · 崔佳欢的个人博客
+        安装mongodb遇到的坑 · 崔佳欢的个人博客
         
     </title>
     <link rel="icon" href= https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3426506533,2967834336&fm=27&gp=0.jpg>
@@ -58,6 +58,8 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
@@ -65,27 +67,52 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >崔佳欢的个人博客</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">安装mongodb遇到的坑</a>
+            </div>
+    </div>
+    
     <a class="home-link" href=/>崔佳欢的个人博客</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514631926119&di=334b6efc4bd7e658aab3baec1483a5bb&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F1%2F5822eed9c9e27.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            安装mongodb遇到的坑
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/05/11</span>
+            </div>
         
     </div>
 </div>
@@ -155,15 +182,34 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>QQ：1290829466</p>
-
-
-
+        <h3 id="mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程"><a href="#mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程" class="headerlink" title="mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程"></a>mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程</h3><hr>
+<p>我在官网上下载最新3.6版本并在windows下安装会出现进度条长时间不动的情况，这是因为3.6版本在windows<br>下有不适配的问题，需要我们下载3.4版本安装</p>
+<p>（我的安装路径是C:\Program Files\MongoDB）</p>
+<p>下载安装完成之后，需要添加安装路径到path环境变量：C:\Program Files\MongoDB\Server\3.4\bin</p>
+<p>我们在D盘创建如下文件夹D:\mongodb\data  D:\mongodb\logs</p>
+<p>在命令提示符输入</p>
+<blockquote>
+<p>cd C:\Program Files\MongoDB\Server\3.4\bin</p>
+</blockquote>
+<p>再输入mongod.exe –dbpath=D:\mongodb\data –logpath=D:\mongodb\logs\mongodb.log –install</p>
+<p>输入net start mongodb启动服务</p>
+<p>最后在浏览器输入<a href="http://localhost:27017/在页面看到It" target="_blank" rel="external">http://localhost:27017/在页面看到It</a> looks like you are trying to access MongoDB over HTTP on the native driver port.表示成功</p>
+<p>在这里我说一下我安装的时候遇到的几个坑</p>
+<blockquote>
+<p>1.首先就是安装包问题，需要安装3.4版本的<br><br>2.在输入net start mongodb之后，提示我服务没有响应控制功能，之后我发现在配置path路径时把C:\windows\system32给删掉了，把这句加上就可以了<br><br>在D盘创建文件夹时，当时看别人的博客是把logs文件夹放到data文件夹里面，我这样操作之后启动服务是无法启动的，当我把logs文件夹和data文件夹并列之后，启动是可以的。</p>
+</blockquote>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
+        
+            <li class="previous">
+                <a href= "/2018/05/05/使用express配置前端服务器/" title= 使用express配置前端服务器 >
+                    <span>Previous Post</span>
+                    <span>使用express配置前端服务器</span>
+                </a>
+            </li>
         
     </ul>
     <!-- 评论插件 -->
@@ -241,6 +287,13 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程"><span class="toc-number">1.</span> <span class="toc-text">mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程</span></a></li></ol>
+    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
