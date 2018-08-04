@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        es6学习第一篇 · 崔佳欢的个人博客
+        崔佳欢的个人博客
         
     </title>
     <link rel="icon" href= https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3426506533,2967834336&fm=27&gp=0.jpg>
@@ -58,8 +58,6 @@
 </head>
 
     
-        <body class="post-body">
-    
     
 <header class="header">
 
@@ -67,52 +65,27 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >崔佳欢的个人博客</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">es6学习第一篇</a>
-            </div>
-    </div>
-    
     <a class="home-link" href=/>崔佳欢的个人博客</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514631926119&di=334b6efc4bd7e658aab3baec1483a5bb&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F1%2F5822eed9c9e27.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            es6学习第一篇
-            <!-- 404 -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <!-- 文章页标签  -->
-            
-            <div class="post-intro-meta">
-                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/01/23</span>
-            </div>
         
     </div>
 </div>
@@ -180,92 +153,38 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <center>es6学习第一篇</center>
-
-<blockquote>
-<p><strong><em>后续会持续更新</em></strong></p>
-</blockquote>
-<h5 id="一、let命令"><a href="#一、let命令" class="headerlink" title="一、let命令"></a>一、let命令</h5><p>1、let命令用来声明变量，用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效（<em>我的理解感觉有点像js中的局部变量</em>）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    let a=10;</div><div class="line">    var b=1;</div><div class="line">&#125;</div><div class="line">a //  a is not defined</div><div class="line">b // 1</div></pre></td></tr></table></figure>
-<p>2、let在循环中可以正常使用，但是只在循环内部有效，在外边引用会出错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">for (let i = 0; i &lt; 10; i++) &#123;</div><div class="line">    //...</div><div class="line">&#125;</div><div class="line">alert(i); // i is not defined</div></pre></td></tr></table></figure>
-<p>3、let不允许在同一个域内重复声明一个变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function func() &#123;</div><div class="line">    let a = 10;</div><div class="line">    var a = 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function func() &#123;</div><div class="line">    let a = 10;</div><div class="line">    let a = 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h5 id="二、const命令"><a href="#二、const命令" class="headerlink" title="二、const命令"></a>二、const命令</h5><p>1、const声明一个只读的常量。一旦声明，常量的值就不能改变</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">const PI = 3.1215;</div><div class="line">PI //3.1415</div><div class="line"></div><div class="line">PI = 3; // TypeError:Assignment to constant variable</div></pre></td></tr></table></figure>
-<p>2、const一旦声明变量，就必须初始化，不能在后面赋值，另外对const来说，只声明不赋值会出错。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const foo;</div><div class="line">// SyntaxError:Missing initializer in const declaration</div></pre></td></tr></table></figure>
-<p>3、const只在声明所在的块级作用域内有效。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">if(true) &#123;</div><div class="line">    const MAX = 5;</div><div class="line">&#125;</div><div class="line">MAX // Uncaught ReferenceError:Max is not defined</div></pre></td></tr></table></figure>
-<p>4、const声明的常量，也与let一样不可重复声明</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var message = &quot;Hello!&quot;;</div><div class="line">let age = 25;</div><div class="line">//以下两行都会报错</div><div class="line">const message = &quot;Goodbye!&quot;;</div><div class="line">const age = 30;</div></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>let与const的区别：let是变量，const是常量，只需要定义的不用改变的值就用const</strong></p>
-</blockquote>
-<h5 id="三、数组的解构赋值"><a href="#三、数组的解构赋值" class="headerlink" title="三、数组的解构赋值"></a>三、数组的解构赋值</h5><p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构</p>
-<p>ES6允许写成下面这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let [a,b,c] = [1,2,3];</div></pre></td></tr></table></figure>
-<p>上面代码表示，可以从数组中提取值，按照对应位置，对变量赋值，这种写法属于“模式匹配”：只要等号两边的模式相同，左边的变量就会被赋予对应的值。</p>
-<p><em>如果解构不成功，变量的值就等于underfined</em></p>
-<p>另一种情况是不完全解构，即等号左边的模式，只匹配一部分的等号右边的数组，这种情况下，解构依然可以成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">let [x,y] = [1,2,3];</div><div class="line">x // 1</div><div class="line">y // 2</div><div class="line"></div><div class="line">let [a,[b],d] = [1,[2,3],4];</div><div class="line">a // 1</div><div class="line">b // 2</div><div class="line">d // 4</div></pre></td></tr></table></figure>
-<p><em>如果等号的右边不是数组，那么将会报错</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//报错</div><div class="line">let [foo] = 1;</div><div class="line">let [foo] = false;</div><div class="line">let [foo] = &#123;&#125;;</div></pre></td></tr></table></figure>
-
-    </article>
-    <!-- 前后页  -->
-    <ul class="post-pager">
-        
-            <li class="next">
-                <a href= "/2018/01/24/HTML5新特性/" title= HTML5新特性 >
-                    <span>Next Post</span>
-                    <span>HTML5新特性</span>
-                </a>
-            </li>
-        
-        
-            <li class="previous">
-                <a href= "/2018/01/22/前端任务/" title= 前端任务 >
-                    <span>Previous Post</span>
-                    <span>前端任务</span>
-                </a>
-            </li>
-        
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zODUxOS8xNTA0Nw==">
-<script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
-
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-</script>
-<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
-<!-- City版安装代码已完成 -->
-
+            <main class="main index-page">
     
     
-    <!--PC版-->
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/06/10/第一篇博客/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>第一篇博客</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+经历千辛万苦，我终于建好了我的个人博客，期间在网上翻看了不少前辈的教程和方法，也选择了各种建造博客的工具，最后还是使用最顺手的一个来用了，我的博客主要是分享学习新知识的总结和理解，以及生活中的一些有趣的故事，说来惭愧，小白我虽然学习的是前端，但也有那么一丢丢文学细胞，也想通过自己写的文章来让别人感受到不同的自己，今后会不定时更新的哦
 
-    <!--PC版-->
 
-    <!-- UY BEGIN -->
-    <div id="uyan_frame"></div>
-    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155431"></script>
-    <!-- UY END -->
-
-
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/06/10</span>
+                </div>
+            </div>
+        </article>
+    
+    <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/archives/page/2/">#PREV</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
     
 </main>
             <!-- profile -->
@@ -309,13 +228,6 @@
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#一、let命令"><span class="toc-number">1.</span> <span class="toc-text">一、let命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#二、const命令"><span class="toc-number">2.</span> <span class="toc-text">二、const命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三、数组的解构赋值"><span class="toc-number">3.</span> <span class="toc-text">三、数组的解构赋值</span></a></li></ol>
-    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">

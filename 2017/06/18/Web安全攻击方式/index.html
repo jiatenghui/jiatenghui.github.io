@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        es6学习第一篇 · 崔佳欢的个人博客
+        Web安全攻击方式 · 崔佳欢的个人博客
         
     </title>
     <link rel="icon" href= https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3426506533,2967834336&fm=27&gp=0.jpg>
@@ -72,7 +72,7 @@
                 <a href="/" >崔佳欢的个人博客</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">es6学习第一篇</a>
+                <a href="#" class="post-name">Web安全攻击方式</a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            es6学习第一篇
+            Web安全攻击方式
             <!-- 404 -->
             
         </h1>
@@ -111,7 +111,7 @@
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/01/23</span>
+                <span class="post-intro-time">2017/06/18</span>
             </div>
         
     </div>
@@ -182,54 +182,66 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <center>es6学习第一篇</center>
-
+        <h3 id="xss"><a href="#xss" class="headerlink" title="xss"></a>xss</h3><p>xss是跨站脚本攻击，指攻击者在网页中嵌入客户端脚本，当用户浏览次页面时，脚本就会在用户浏览器上执行，从而达到攻击目的</p>
+<p>比如我们下载有这么一个代码</p>
 <blockquote>
-<p><strong><em>后续会持续更新</em></strong></p>
+<p>&lt;input type=”text” name=”address” value=”valuefrom”&gt;</p>
 </blockquote>
-<h5 id="一、let命令"><a href="#一、let命令" class="headerlink" title="一、let命令"></a>一、let命令</h5><p>1、let命令用来声明变量，用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效（<em>我的理解感觉有点像js中的局部变量</em>）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    let a=10;</div><div class="line">    var b=1;</div><div class="line">&#125;</div><div class="line">a //  a is not defined</div><div class="line">b // 1</div></pre></td></tr></table></figure>
-<p>2、let在循环中可以正常使用，但是只在循环内部有效，在外边引用会出错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">for (let i = 0; i &lt; 10; i++) &#123;</div><div class="line">    //...</div><div class="line">&#125;</div><div class="line">alert(i); // i is not defined</div></pre></td></tr></table></figure>
-<p>3、let不允许在同一个域内重复声明一个变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function func() &#123;</div><div class="line">    let a = 10;</div><div class="line">    var a = 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function func() &#123;</div><div class="line">    let a = 10;</div><div class="line">    let a = 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h5 id="二、const命令"><a href="#二、const命令" class="headerlink" title="二、const命令"></a>二、const命令</h5><p>1、const声明一个只读的常量。一旦声明，常量的值就不能改变</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">const PI = 3.1215;</div><div class="line">PI //3.1415</div><div class="line"></div><div class="line">PI = 3; // TypeError:Assignment to constant variable</div></pre></td></tr></table></figure>
-<p>2、const一旦声明变量，就必须初始化，不能在后面赋值，另外对const来说，只声明不赋值会出错。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const foo;</div><div class="line">// SyntaxError:Missing initializer in const declaration</div></pre></td></tr></table></figure>
-<p>3、const只在声明所在的块级作用域内有效。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">if(true) &#123;</div><div class="line">    const MAX = 5;</div><div class="line">&#125;</div><div class="line">MAX // Uncaught ReferenceError:Max is not defined</div></pre></td></tr></table></figure>
-<p>4、const声明的常量，也与let一样不可重复声明</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var message = &quot;Hello!&quot;;</div><div class="line">let age = 25;</div><div class="line">//以下两行都会报错</div><div class="line">const message = &quot;Goodbye!&quot;;</div><div class="line">const age = 30;</div></pre></td></tr></table></figure>
+<p>valuefrom是来自用户的输入，如果用户不是输入valuefrom而是输入”/&gt;<script>alert(document.cookie)</script>&lt;!-,即变成</p>
 <blockquote>
-<p><strong>let与const的区别：let是变量，const是常量，只需要定义的不用改变的值就用const</strong></p>
+<p>&lt;input type=”text” name=”address” value=””/&gt;<script>alert(document.cookie)</script>&lt;!-“&gt;</p>
 </blockquote>
-<h5 id="三、数组的解构赋值"><a href="#三、数组的解构赋值" class="headerlink" title="三、数组的解构赋值"></a>三、数组的解构赋值</h5><p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构</p>
-<p>ES6允许写成下面这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let [a,b,c] = [1,2,3];</div></pre></td></tr></table></figure>
-<p>上面代码表示，可以从数组中提取值，按照对应位置，对变量赋值，这种写法属于“模式匹配”：只要等号两边的模式相同，左边的变量就会被赋予对应的值。</p>
-<p><em>如果解构不成功，变量的值就等于underfined</em></p>
-<p>另一种情况是不完全解构，即等号左边的模式，只匹配一部分的等号右边的数组，这种情况下，解构依然可以成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">let [x,y] = [1,2,3];</div><div class="line">x // 1</div><div class="line">y // 2</div><div class="line"></div><div class="line">let [a,[b],d] = [1,[2,3],4];</div><div class="line">a // 1</div><div class="line">b // 2</div><div class="line">d // 4</div></pre></td></tr></table></figure>
-<p><em>如果等号的右边不是数组，那么将会报错</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//报错</div><div class="line">let [foo] = 1;</div><div class="line">let [foo] = false;</div><div class="line">let [foo] = &#123;&#125;;</div></pre></td></tr></table></figure>
+<p>嵌入的javascript代码将会被执行</p>
+<p><strong>xss漏洞修复</strong><br>原则：不要相信用户输入的数据</p>
+<p>*注意：攻击代码不一定在&lt;script&gt;&lt;script&gt;标签里</p>
+<blockquote>
+<ul>
+<li>将重要的cookie标记为http only，这样js的document.cookie语句就无法获取cookie</li>
+<li>只允许用户输入我们规定的数据，比如年龄只允许输入数字</li>
+<li>对数据进行html Encode处理</li>
+<li>过滤或移除特殊的html标签，例如&lt;script&gt;,&lt;iframe&gt;</li>
+<li>过滤掉js事件的标签，比如onclick,onfocus</li>
+</ul>
+</blockquote>
+<h3 id="csrf"><a href="#csrf" class="headerlink" title="csrf"></a>csrf</h3><p>csrf是跨站请求伪造，指攻击者盗用了你的身份，以你的名义发送恶意请求，csrf能够以你名义发送邮件，发消息……会造成个人隐私泄露以及财产安全等问题</p>
+<p>要完成一次csrf攻击，受害者必须依次完成两个步骤：</p>
+<blockquote>
+<p>登录受信任网站A，并在本地生成cookie</p>
+<p>在不登出A的情况下，访问危险网站B</p>
+</blockquote>
+<p>看到这里，你也许会说：“如果我不满足以上两个条件中的一个，我就不会受到CSRF的攻击”。是的，确实如此，但你不能保证以下情况不会发生：</p>
+<blockquote>
+<p>1.你不能保证你登录了一个网站后，不再打开一个tab页面并访问另外的网站。</p>
+<p>2.你不能保证你关闭浏览器了后，你本地的Cookie立刻过期，你上次的会话已经结束。（事实上，关闭浏览器不能结束一个会话，但大多数人都会错误的认为关闭浏览器就等于退出登录/结束会话了……）</p>
+<p>3.所谓的攻击网站，可能是一个存在其他漏洞的可信任的经常被人访问的网站。</p>
+</blockquote>
+<p><strong>csrf防御</strong></p>
+<p>1.服务端进行csrf防御</p>
+<p>服务端的CSRF方式方法很多样，但总的思想都是一致的，就是在客户端页面增加伪随机数。</p>
+<p>(1).Cookie Hashing(所有表单都包含同一个伪随机值)</p>
+<p>(2).验证码</p>
+<p>(3).One-Time Tokens(不同的表单包含一个不同的伪随机值)</p>
+<p>目前防御 CSRF 攻击主要有三种策略：</p>
+<p>①验证 HTTP Referer 字段；</p>
+<p>②在请求地址中添加 token 并验证；</p>
+<p>③在 HTTP 头中自定义属性并验证。</p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
             <li class="next">
-                <a href= "/2018/01/24/HTML5新特性/" title= HTML5新特性 >
+                <a href= "/2017/06/18/npm学习/" title= npm学习 >
                     <span>Next Post</span>
-                    <span>HTML5新特性</span>
+                    <span>npm学习</span>
                 </a>
             </li>
         
         
             <li class="previous">
-                <a href= "/2018/01/22/前端任务/" title= 前端任务 >
+                <a href= "/2017/06/15/gulp学习/" title= gulp学习 >
                     <span>Previous Post</span>
-                    <span>前端任务</span>
+                    <span>gulp学习</span>
                 </a>
             </li>
         
@@ -314,7 +326,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#一、let命令"><span class="toc-number">1.</span> <span class="toc-text">一、let命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#二、const命令"><span class="toc-number">2.</span> <span class="toc-text">二、const命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三、数组的解构赋值"><span class="toc-number">3.</span> <span class="toc-text">三、数组的解构赋值</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#xss"><span class="toc-number">1.</span> <span class="toc-text">xss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#csrf"><span class="toc-number">2.</span> <span class="toc-text">csrf</span></a></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
