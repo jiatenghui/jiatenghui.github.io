@@ -187,9 +187,9 @@
 <blockquote>
 <p>&lt;input type=”text” name=”address” value=”valuefrom”&gt;</p>
 </blockquote>
-<p>valuefrom是来自用户的输入，如果用户不是输入valuefrom而是输入”/&gt;<script>alert(document.cookie)</script>&lt;!-,即变成</p>
+<p>valuefrom是来自用户的输入，如果用户不是输入valuefrom而是输入”/&gt;&lt;script&gt;alert(document.cookie)&gt;/script&gt;&lt;!-,即变成</p>
 <blockquote>
-<p>&lt;input type=”text” name=”address” value=””/&gt;<script>alert(document.cookie)</script>&lt;!-“&gt;</p>
+<p>&lt;input type=”text” name=”address” value=””/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-“&gt;</p>
 </blockquote>
 <p>嵌入的javascript代码将会被执行</p>
 <p><strong>xss漏洞修复</strong><br>原则：不要相信用户输入的数据</p>
@@ -333,30 +333,6 @@
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-archive">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
