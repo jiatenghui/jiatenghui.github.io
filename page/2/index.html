@@ -1,1093 +1,1261 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>
-        
-        崔佳欢的博客
-        
-    </title>
-    <link rel="icon" href= http://pic.caigoubao.cc/606573/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180725164000.png>
-    <!-- TODO: 在font-face加载完毕后改变字体  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
-    <!-- 提前加载place holder  -->
-    <style type="text/css">
-        @font-face {
-            font-family: 'Oswald-Regular';
-            src: url(/font/Oswald-Regular.ttf);
-        }
-    </style>
-    <style type="text/css">
-        .site-intro {
-            position: relative;
-            width: 100%;
-            height: 50vh;
-            overflow: hidden;
-            box-shadow: -0.1rem 0 0.5rem 0 rgba(0, 0, 0, 0.8);
-        }
-        .site-intro-placeholder {
-            position: absolute;
-            z-index: -2;
-            top: 0;
-            left: 0px;
-            width: calc(100% + 300px);
-            height: 100%;
-            background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
-            background-position: center center;
-            transform: translate3d(-226px, 0, 0);
-            animation: gradient-move 2.5s ease-out 0s 1;
-        }
-        @keyframes gradient-move {
-        0% {
-            transform: translate3d(-226px, 0, 0);
-        }
-        100% {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-</style>
-    <link rel="stylesheet" href = /css/style.css?v=20171218 />
-    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
-    
-    <script src="/scripts/main.js" defer></script>
-    <!-- 百度统计  -->
-    
-    <!-- 谷歌统计  -->
-    
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <!--<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">-->
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
 </head>
 
-    
-        <body class="home-body">
-    
-    
-<header class="header index-header">
-
-    <div class="read-progress"></div>
-    <div class="header-sidebar-menu">&#xe775;</div>
-    <!-- post页的toggle banner  -->
-    
-    <a class="home-link" href=/>崔佳欢的博客</a>
-</header>
-    <div class="wrapper">
-        <div class="site-intro">
-    
-    <!-- 主页  -->
-    
-    
-    <!-- 文章页  -->
-            
-    <div class="site-intro-img" style="background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514631864740&di=aba4ea6c7ceae990badb3aeedffbc566&imgtype=0&src=http%3A%2F%2Fwww.deskcar.com%2Fdesktop%2Felse%2F20121013112920%2F12.jpg)"></div>
-    <div class="site-intro-placeholder"></div>
-    <div class="site-intro-meta">
-        <!-- 标题  -->
-        <h1 class="intro-title">
-            <!-- 主页  -->
-            
-            崔佳欢的博客
-            <!-- 文章页  -->
-            
-        </h1>
-        <!-- 副标题 -->
-        <p class="intro-subtitle">
-            <!-- 主页副标题  -->
-            
-            
-                温柔只给意中人，真情只待有缘人
-            
-            <!-- 文章页  -->
-            
-        </p>
-        <!-- 文章页meta -->
-        
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
     </div>
-</div>
-        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
-        <script>
-            var browser = {
-                    versions: function () {
-                        var u = window.navigator.userAgent;
-                        return {
-                            userAgent: u,
-                            trident: u.indexOf('Trident') > -1, //IE内核
-                            presto: u.indexOf('Presto') > -1, //opera内核
-                            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-                            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-                            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-                            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-                            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
-                            iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
-                            iPad: u.indexOf('iPad') > -1, //是否为iPad
-                            webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
-                            weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
-                            uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
-                        };
-                    }()
-                }
-
-            function fontLoaded(){
-                console.log('font loaded');
-                if (document.getElementsByClassName('site-intro-meta')) {
-                    document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
-                    document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
-                    var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
-                        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
-                        if (postIntroTags) {
-                            postIntroTags.classList.add('post-fade-in');
-                        }
-                        if (postIntroMeat) {
-                            postIntroMeat.classList.add('post-fade-in');
-                        }
-                    }
-                }
-                
-            console.log("userAgent:" + browser.versions.userAgent);
-            // UC不支持跨域，所以直接显示
-            if (browser.versions.uc) {
-                console.log("UCBrowser");
-                fontLoaded();
-            } else {
-                WebFont.load({
-                    custom: {
-                        families: ['Oswald-Regular']
-                    },
-                    loading: function () {  //所有字体开始加载
-                        // console.log('loading');
-                    },
-                    active: function () {  //所有字体已渲染
-                        fontLoaded();
-                    },
-                    inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
-                        console.log('inactive: timeout');
-                        fontLoaded();
-                    },
-                    timeout: 7000 // Set the timeout to two seconds
-                });
-            }
-        </script>
-        <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/30/1月28分享总结/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>1月28日分享总结</span>
-                    </h2>
-                <div class="abstract-content">
-                    分享总结今天学姐给我们主要分享了关于setTimeout与闭包的问题，在这里我写一下自己的感受
-
-在这之前，我个人认为首先需要了解一下javascript的单线程和异步。
-作为一个脚本语言，javascript的主要用途是与用户互动，以及操作DOM，这决定了它只能是单线程，否则会带来很复杂的同步问题，所以也决定了它本身是不可能异步的。
-但是，我们通过某种方式又可以使得js具备异步属性，当网络请求、定时器和事件监听时，如果同步执行的话，效率会非常低，所以这时浏览器会开辟另外的线程，主要包括http请求线程，浏览器定时触发器，浏览器事件触发进程，这些都是异步的。
-那么问题来了，当异步任务都完...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/30</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/27/思考跨域问题/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>思考跨域问题</span>
-                    </h2>
-                <div class="abstract-content">
-                    什么是跨域问题？跨域就是指浏览器不能执行其他网站的脚本，这是由浏览器的同源策略造成的，是javascript的安全限制
-一个域名地址是由：
-
-http://(请求头)  www(子域名) . cuijahuan(主域名) : 8080(端口号) / script/jquery.js(请求资源地址) 组成的
-
-而同源，就是指域名，协议，端口均相同
-当协议、子域名、主域名、端口号中任意一个不相同时，都算作不同域
-而不同域之间的相互请求资源，就是跨域比如http://cuijiahuan.xyz 请求 http://jiahuan.xyz
-解决方法1、使用ajax的JSONP
-首先要了解JSO...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/27</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/26/es6学习第二篇/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>es6学习第二篇</span>
-                    </h2>
-                <div class="abstract-content">
-                    es6学习第二篇
-
-
-后续会持续更新
-
-一、模板字符串1、基本的字符串格式化，将表达式嵌入字符串中进行拼接。用${}来界定。
-12const name = &apos;laowang&apos;console.log`(hello $(name)`) // hello laowang
-2、通过反引号(``)来对多行字符串或者字符串一行行拼接
-123const template = `&lt;div&gt;    &lt;span&gt;hello world&lt;/span&gt;&lt;/div&gt;`
-3、其他常用的es6方法
-123456789// 1. includes:判断...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/26</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/26/HTTP状态码/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>HTTP状态码</span>
-                    </h2>
-                <div class="abstract-content">
-                    什么是HTTP状态码？
-当浏览器访问一个网页时所在服务器发出请求。当浏览器接收并显示网页前，此网页所在的服务器会返回一个包含HTTP状态码的信息头（server ）用以响应浏览器的请求。
-常见的HTTP状态码
-
-200 — 请求成功
-301 — 资源（网页等）被永久转移到其他URL
-404 — 请求的资源（网页等）不存在
-500 — 内部服务器错误
-
-HTTP状态码分类HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。HTTP状态码共分为5种类型：
-HTTP状态码分类
-
-
-
-分类
-分类描述
-
-
-
-
-1**
-信息，服务器收到请求，需要请求者继...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/26</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/24/HTML5新特性/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>HTML5新特性</span>
-                    </h2>
-                <div class="abstract-content">
-                    HTML5新特性一、新的语义化标签1. &lt;section&gt;&lt;/section&gt;
-定义文档中的主体部分的节、段。
-2. &lt;article&gt;&lt;/article&gt;
-一个特殊的section标签，比section有更明确的语义。定义来自外部的一个独立的、完整的内容块，例如某个论坛的文章、博客的文本等
-3. &lt;aside&gt;&lt;/aside&gt;
-用来装载页面中非正文的内容，独立于其他模块，例如广告、成组的链接、侧边栏等
-4. &lt;header&gt;&lt;/header&gt;
-定义文档、页面的页眉。通常是一些引导和导航信息，...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/24</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/23/es6学习第一篇/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>es6学习第一篇</span>
-                    </h2>
-                <div class="abstract-content">
-                    es6学习第一篇
-
-
-后续会持续更新
-
-一、let命令1、let命令用来声明变量，用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效（我的理解感觉有点像js中的局部变量）
-123456&#123;    let a=10;    var b=1;&#125;a //  a is not definedb // 1
-2、let在循环中可以正常使用，但是只在循环内部有效，在外边引用会出错
-1234for (let i = 0; i &lt; 10; i++) &#123;    //...&#125;alert(i); // i is not defined
-3、let不允...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/23</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/22/前端任务/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>前端任务</span>
-                    </h2>
-                <div class="abstract-content">
-                    元月一号至元月三十一号==1==.块级元素的特点：
-
-独占一行
-支持所有样式
-不设置宽度时宽度为父元素宽度
-换行符不解析
-可以容纳内联元素和其他块元素
-
-内联元素的特点：
-
-可以在一行显示
-不支持宽高，上下margin和padding等样式会有问题
-宽度由内容撑开
-换行符会被解析成空格
-
-内联块元素的特点：
-
-内联块元素同时具备块级元素和内联元素的特点
-
-常见的元素的特点属性：
-href：用于a标签里的链接方式或链接css文件
-src：用于链接js文件或图片
-alt：用来指定替换文字，只能用在img、area和input元素中，用于网页中图片无法正常显示时给用户提供文字说明使其了解 图像...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/22/swiper入门学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>swiper入门学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    什么是swiper？swiper是一种用于移动端页面的前端特效插件，它是一种纯javascript的框架，主要用来做轮播图之类页面，在使用之前首先我们需要下载swiper
-
-注：下载swiper-4.1.0.min.js和swiper-4.1.0.min.css即可
-
-swiper使用方法1.首先加载插件1234567891011&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    ...    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/swiper.min.css&quot;...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/08/webpack入门学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>webpack入门学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    什么是Webpack?Webpack是一个前端资源加载/打包工具，它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源.
-通俗地讲，Webpack可以看作是模块打包机：它做的事情是，分析你的项目结构，找到Javascript模块以及其他的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。
-Webpack与Gulp区别Webpack与之前学习的gulp相比较而言，两者的流程不大相同，而且Wwbpack的处理速度更快更直接，能打包更多不同类型的文件。
-gulp是一种能够优化前端的开发流程的工具，它的工...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/08</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/06/18/npm学习/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>npm学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    什么是npm？它有什么作用？
-npm是和node.js一起的包管理工具，并且在安装node.js时已经安装好了npm,npm常见的使用场景有以下几个:
-
-1231.允许用户从npm服务器下载别人编写的第三方包到本地使用。2.允许用户从npm服务器下载并安装别人编写的命令行程序到本地使用。3.允许用户将自己编写的包或命令行程序上传到npm服务器供别人使用。
-
-安装npm
-npm本地安装的命令为:
-
-1npm install npm
-
-全局安装的命令为:
-
-1npm install npm -g
-
-如果要检查是否安装成功可以输入命令行:
-
-1npm -v
-来测试是否安装成功。
-使用packa...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/06/18</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/">#PREV</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">#NEXT</a>
-    </nav>
-    
-</main>
-            <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" src= http://pic.caigoubao.cc/606573/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180725164000.png >
-    <div class="profile-name">柚子讴歌</div>
-    
-    <div class="profile-signature">
-        疯狂吧，骄傲的少年
-    </div>
-    
-    
-    <div class="profile-social">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-    
+          <a class="main-nav-link" href="/">Home</a>
         
-            
-                <a href="mailto:cuijiahuan97@foxmail.com" class="iconfont-archer email" title=email ></a>
-            
+          <a class="main-nav-link" href="/archives">Archives</a>
         
-    
+      </nav>
+      <nav id="sub-nav">
         
-            
-                <a href="//github.com/cuijiahuan" class="iconfont-archer github" target="_blank" title="github"></a>
-            
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-    
-        
-            
-                <a href="//www.zhihu.com/people/jia-huan-80-62/activities" class="iconfont-archer zhihu" target="_blank" title="zhihu"></a>
-            
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                <span>
-                    <a href= //www.bilibili.com target="_black">bilibili</a>
-                </span>
-            
-                <span>
-                    <a href= //www.dilidili.wang target="_black">dilidili</a>
-                </span>
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <div>
-                <a href = "/about" >ABOUT ME</a>
-            </div>
-        </div>
-    
-</div>
-            
-        </div>
-        <footer class="footer footer-unloaded">
-    <!-- social  -->
-    
-    <div class="social">
-        
-    
-        
-            
-                <a href="mailto:cuijiahuan97@foxmail.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/cuijiahuan" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-            
-                <a href="//www.zhihu.com/people/jia-huan-80-62/activities" class="iconfont-archer zhihu" target="_blank" title="zhihu"></a>
-            
-        
-    
-
-    </div>
-    
-    <!-- powered by Hexo  -->
-    <div class="copyright">
-        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
-    </div>
-    <!-- 不蒜子  -->
-    
-</footer>
-    </div>
-    <!-- toc -->
-    
-    <div class="back-top">&#xe639;</div>
-    <div class="sidebar">
-    <div class="sidebar-header sidebar-header-show-archive">
-        <div class="sidebar-category">
-            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
-            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
-        </div>
-    </div>
-    <div class="sidebar-content sidebar-content-show-archive">
-          <div class="sidebar-archive">
-    <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 23 </div>
-    
-    <div class="post-archive">
-    
-    
-    
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2018/08/22/vue中遇到的一些问题总结/" >vue中遇到的一些问题总结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/21</span><a class="archive-post-title" href= "/2018/08/21/利用hover控制其他元素样式/" >利用hover控制其他元素样式</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/18</span><a class="archive-post-title" href= "/2018/05/18/Web安全攻击方式/" >Web安全攻击方式</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2018/05/11/安装mongodb遇到的坑/" >安装mongodb遇到的坑</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/05</span><a class="archive-post-title" href= "/2018/05/05/使用express配置前端服务器/" >使用express配置前端服务器</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/01</span><a class="archive-post-title" href= "/2018/05/01/自适应布局的几种方法/" >自适应布局的几种方法</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/09</span><a class="archive-post-title" href= "/2018/02/09/优雅降级与渐进增强/" >优雅降级与渐进增强</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/07</span><a class="archive-post-title" href= "/2018/02/07/了解Vue-router/" >了解Vue-router</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/06</span><a class="archive-post-title" href= "/2018/02/06/2月5日分享总结/" >2月5日分享总结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/31</span><a class="archive-post-title" href= "/2018/01/31/vue中如何引入外链css和js/" >Vue引入外链css和js</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/30</span><a class="archive-post-title" href= "/2018/01/30/1月28分享总结/" >1月28日分享总结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/27</span><a class="archive-post-title" href= "/2018/01/27/思考跨域问题/" >思考跨域问题</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/26</span><a class="archive-post-title" href= "/2018/01/26/es6学习第二篇/" >es6学习第二篇</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/26</span><a class="archive-post-title" href= "/2018/01/26/HTTP状态码/" >HTTP状态码</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/24</span><a class="archive-post-title" href= "/2018/01/24/HTML5新特性/" >HTML5新特性</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/23</span><a class="archive-post-title" href= "/2018/01/23/es6学习第一篇/" >es6学习第一篇</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/22</span><a class="archive-post-title" href= "/2018/01/22/前端任务/" >前端任务</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/22</span><a class="archive-post-title" href= "/2018/01/22/swiper入门学习/" >swiper入门学习</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2018/01/08/webpack入门学习/" >webpack入门学习</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2017 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/18</span><a class="archive-post-title" href= "/2017/06/18/npm学习/" >npm学习</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/15</span><a class="archive-post-title" href= "/2017/06/15/gulp学习/" >gulp学习</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/12</span><a class="archive-post-title" href= "/2017/06/12/git学习/" >Git学习</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/10</span><a class="archive-post-title" href= "/2017/06/10/第一篇博客/" >第一篇博客</a>
-        </li>
-    
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
     </div>
   </div>
-        <div class="sidebar-tags">
-    <div class="sidebar-tags-name">
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-1月28分享总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/30/1月28分享总结/" class="article-date">
+  <time datetime="2018-01-29T17:07:11.000Z" itemprop="datePublished">2018-01-30</time>
+</a>
     
-    </div>
-    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
-    缺失模块。<br/>
-    1、请确保node版本大于6.2<br/>
-    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
-    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
-    3、在根目录_config.yml里添加配置：
-    <pre style="color: #787878; font-size: 0.6rem;">
-jsonContent:
-  meta: false
-  pages: false
-  posts:
-    title: true
-    date: true
-    path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: false
-    tags: true</pre>
-    </div> 
-    <div class="sidebar-tag-list"></div>
-</div>
-    </div>
-</div> 
-    <script>
-    var jsInfo = {
-        root: '/'
-    }
-</script>
-    <!-- 不蒜子  -->
+  </div>
+  <div class="article-inner">
     
-    <!-- CNZZ统计  -->
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/30/1月28分享总结/">1月28日分享总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="分享总结"><a href="#分享总结" class="headerlink" title="分享总结"></a><center>分享总结</center></h3><p>今天学姐给我们主要分享了关于setTimeout与闭包的问题，在这里我写一下自己的感受</p>
+<hr>
+<p>在这之前，我个人认为首先需要了解一下javascript的单线程和异步。</p>
+<p>作为一个脚本语言，javascript的主要用途是与用户互动，以及操作DOM，这决定了它只能是单线程，否则会带来很复杂的同步问题，所以也决定了它本身是不可能异步的。</p>
+<p>但是，我们通过某种方式又可以使得js具备异步属性，当网络请求、定时器和事件监听时，如果同步执行的话，效率会非常低，所以这时浏览器会开辟另外的线程，主要包括http请求线程，浏览器定时触发器，浏览器事件触发进程，这些都是异步的。</p>
+<p>那么问题来了，当异步任务都完成后，主线程又是如何知道的？答案是回调函数，整个程序是事件驱动的，每个事件都会绑定相应的回调函数，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setTimeout(function()&#123;</div><div class="line">    console.log(time is out);</div><div class="line">&#125;,50);</div></pre></td></tr></table></figure>
+<p>当执行这段函数时，浏览器异步执行计时操作，当50ms时，会触发定时事件，这个时候就会把回调函数放到任务队列里</p>
+<blockquote>
+<p><strong>所以，js一直都是单线程的，浏览器实现异步</strong></p>
+</blockquote>
+<hr>
+<p>下面我们主要来回顾一下学姐今天给我们讲的知识：</p>
+<p>1、setTimeout(f1,0)</p>
+<p>这个语句中的f1数是立刻执行的吗？并不一定，我们首先要知道主线程内的命令是否执行完，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">setTimeout(function()&#123;</div><div class="line">    console.log(1);</div><div class="line">&#125;,0)</div><div class="line">console.log(2);</div></pre></td></tr></table></figure>
+<p>这段代码输出为2,1，因为执行setTimeout后，会立即把匿名函数放到任务队列里面等待主线程召唤，等到执行完console.log(2)之后，才会执行匿名函数，这里有人会问为什么要用setTimeout(f1,0)语句，首先我们要确认这个语句是具有意义的：如果f1很费时，那么我们需要先将它放到任务队列里面，等到主程序执行完之后再执行f1。</p>
+<p>2、setTimeout中的闭包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for(var i = 0; i &lt; 5; i++)&#123;</div><div class="line">    setTimeout(function()&#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;,1000*i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果：开始打印一个5，然后每隔一秒输出5，总共5个5</p>
+<p>解析：先执行setTimeout外面的函数，然后执行setTimeout里面的函数，这时因为for循环已经遍历完，所以i=5，接着执行console.log(i),执行5次，所以输出5个5</p>
+<p>那么如何得到0-4呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">for(var i = 0;i &lt; 5; i++)&#123;</div><div class="line">    (function(i)&#123;</div><div class="line">        setTimeout(function()&#123;</div><div class="line">            console.log(i);</div><div class="line">        &#125;,i*1000);</div><div class="line">    &#125;)(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果：每隔一秒输出，输出0-4</p>
+<p>解析：在这里我的理解是for循环遍历时，将每次i的值暂时存到(i)里面，然后当执行setTimeout时，通过function(i)将值引入进来，所以输出0-4</p>
+<p>删掉i时</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">for(var i = 0; i &lt; 5; i++)&#123;</div><div class="line">    (function()&#123;</div><div class="line">        setTimeout(function()&#123;</div><div class="line">            console.log(i);</div><div class="line">        &#125;,i*1000);</div><div class="line">    &#125;)(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果：5个5</p>
+<p>解析：个人感觉这样写和第一个语句一样，是通过同样的方式输出。</p>
+<p>变：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for(var i = 0; i &lt; 5; i++)&#123;</div><div class="line">    setTimeout((function(i)&#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;)(i),i*1000);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果：立刻输出0-4</p>
+<p>解析：在这里我个人理解是先打印出0-4，但是先保存，最后一起输出</p>
+<p>最后一个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">setTimeout(function() &#123;</div><div class="line">  console.log(1)</div><div class="line">&#125;, 0);</div><div class="line">new Promise(function executor(resolve) &#123;</div><div class="line">  console.log(2);</div><div class="line">  for( var i=0 ; i&lt;10000 ; i++ ) &#123;</div><div class="line">    i == 9999 &amp;&amp; resolve();</div><div class="line">  &#125;</div><div class="line">  console.log(3);</div><div class="line">&#125;).then(function() &#123;</div><div class="line">  console.log(4);</div><div class="line">&#125;);</div><div class="line">console.log(5);</div></pre></td></tr></table></figure>
+<p>答案是2 3 5 4 1</p>
+<p>对于第一个不输出1，我大概理解是它的执行时间是大于0小于1的，所以先执行下面的函数，最后执行setTimeout函数，所以最后打印1（看了mkicrotask和macrotask的区别后，我理解是console(1)会先存入macrotask中，当microtask任务执行完之后，最后执行macrotask任务）</p>
+<p>对于es6中的promise方法，这是一种异步解决方法，它有三种状态：pending(进行中)、Resolved(已经完成)和Rejected(已失败)，上面代码里是resolve，是异步操作成功，因此打印出2</p>
+<p>当i为9999且resolve()成立时，输出3</p>
+<p>promise生成之后，用then方法分别指定Resolved状态和Reject状态的回调函数因此打印4，这块我认为4在5后面的原因是console.log(4)在函数内，执行时会先存入任务队列，然后promise优先级高于setTimeout，所以先输出5，然后是4，最后是1（不知道理解的对不对）</p>
+<p>最后，学姐提到了macrotask与microtask,我查看了资料后，显示，它们两个相当于异步任务中不同的两个任务队列</p>
+<p>而它们的不同如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">console.log(1);</div><div class="line">setTimeout(function()&#123;</div><div class="line">    console.log(2);</div><div class="line">&#125;,0);</div><div class="line">Promise.resolve().then(function()&#123;</div><div class="line">    console.log(3);</div><div class="line">&#125;).then(function()&#123;</div><div class="line">    console.log(4);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>输出是1,3,4,2</p>
+<p>由上代码我们就可以看出来（学姐的最后一个代码块也可以看出），Promise的异步任务优先级高于setTimeout的延时为0的任务</p>
+<p>原因是Promise的then方法的函数会被存入microtasks队列，而setTimeout函数会被存入marcotasks中</p>
+<p>在任务队列中，每一次事件循环，macrotask只会提取一个执行，而microtask会一直提取，直到microtask队列为空，也就是说如果某个microtask推入到执行中，那么当主线程任务完成之后，会循环调用该队列的下一个任务，直到全部完成，而事件循环每次只会引入一个macrotask，执行完之后主线程又会检查microtask队列，完成所有之后再执行macrotask任务</p>
+
+      
     </div>
-    </body>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/30/1月28分享总结/" data-id="cjl6kv1wq00014ombf52z3vy3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-思考跨域问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/27/思考跨域问题/" class="article-date">
+  <time datetime="2018-01-27T11:31:21.000Z" itemprop="datePublished">2018-01-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/27/思考跨域问题/">思考跨域问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="什么是跨域问题？"><a href="#什么是跨域问题？" class="headerlink" title="什么是跨域问题？"></a>什么是跨域问题？</h4><p>跨域就是指浏览器不能执行其他网站的脚本，这是由浏览器的同源策略造成的，是javascript的安全限制</p>
+<p>一个域名地址是由：</p>
+<blockquote>
+<p><a href="http://(请求头" target="_blank" rel="external">http://(请求头</a>)  www(子域名) . cuijahuan(主域名) : 8080(端口号) / script/jquery.js(请求资源地址) 组成的</p>
+</blockquote>
+<p>而同源，就是指域名，协议，端口均相同</p>
+<p>当协议、子域名、主域名、端口号中任意一个不相同时，都算作不同域</p>
+<p>而不同域之间的相互请求资源，就是跨域<br>比如<a href="http://cuijiahuan.xyz" target="_blank" rel="external">http://cuijiahuan.xyz</a> 请求 <a href="http://jiahuan.xyz" target="_blank" rel="external">http://jiahuan.xyz</a></p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>1、使用ajax的JSONP</p>
+<p><strong><em>首先要了解JSONP只支持GET请求，不支持POST请求</em></strong></p>
+<p>ajax请求受同源策略影响，不允许进行跨域请求，而script标签src属性可以访问跨域的js脚本，因此，服务器不再返回JSON格式的数据，而是返回一段调用某个函数的JS代码，在src中进行了调用，实现了跨域。</p>
+<pre><code>还没有看jsonp，目前我只知道要在ajax里面引入
+type:&quot;get&quot;, // 接收服务器数据的类型
+dataType:&quot;jsonp&quot;, // 用于服务器端的获取函数的参数
+jsonp:&quot;callback&quot;, // 函数名称
+</code></pre><p>2、使用jquery的jsonp插件</p>
+<p>首先我们要引入相关的js文件，相关下载可参考<a href="https://github.com/jaubourg/jquery-jsonp" target="_blank" rel="external">该地址</a></p>
+<p>在我们前端代码中需要在ajax里的url下加入</p>
+<pre><code>callbackParameter:&quot;callback&quot;
+callback:&quot;callback_success&quot;
+</code></pre><p>使用该方法不局限于get请求，还可以是post请求，但从服务器获取到的依然是jsonp格式</p>
+<p>第三种方法是使用cors方法，具体可以参考网上其他博客</p>
+<hr>
+<p>附：在项目中我解决跨域问题没有用到<strong>jsonp</strong>，是通过后台修改来实现的，在前端ajax里面需要加上一句语句</p>
+<blockquote>
+<p> xhrFields: {withCredentials: true}</p>
+</blockquote>
+<p>这句是提供了请求发送凭证的支持</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/27/思考跨域问题/" data-id="cjl6kv1xi000o4ombcb7k9psi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-es6学习第二篇" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/26/es6学习第二篇/" class="article-date">
+  <time datetime="2018-01-26T14:34:26.000Z" itemprop="datePublished">2018-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/26/es6学习第二篇/">es6学习第二篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <center>es6学习第二篇</center>
+
+<blockquote>
+<p><strong><em>后续会持续更新</em></strong></p>
+</blockquote>
+<h5 id="一、模板字符串"><a href="#一、模板字符串" class="headerlink" title="一、模板字符串"></a>一、模板字符串</h5><p>1、基本的字符串格式化，将表达式嵌入字符串中进行拼接。用${}来界定。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const name = &apos;laowang&apos;</div><div class="line">console.log`(hello $(name)`) // hello laowang</div></pre></td></tr></table></figure>
+<p>2、通过反引号(``)来对多行字符串或者字符串一行行拼接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const template = `&lt;div&gt;</div><div class="line">    &lt;span&gt;hello world&lt;/span&gt;</div><div class="line">&lt;/div&gt;`</div></pre></td></tr></table></figure>
+<p>3、其他常用的es6方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// 1. includes:判断是否包含然后直接返回布尔值</div><div class="line">let str = &apos;hahay&apos;</div><div class="line">console.log(str.includes(&apos;y&apos;)) // true</div><div class="line"></div><div class="line">// 2. repeat:获取字符串重复n次</div><div class="line">let s = &apos;he&apos;</div><div class="line">console.log(s.repeat(3)) // &apos;hehehe&apos;</div><div class="line"></div><div class="line">//如果你带入小数，Math.floor(num)来处理</div></pre></td></tr></table></figure>
+<h5 id="二、函数"><a href="#二、函数" class="headerlink" title="二、函数"></a>二、函数</h5><p>1、函数默认参数</p>
+<p>es6为参数提供了默认值。在定义函数时编初始化了这个参数，以便在参数没有被传递进去时使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function action(num = 200)&#123;</div><div class="line">    console.log(num)</div><div class="line">&#125;</div><div class="line">action() //200</div><div class="line">action(300) //300</div></pre></td></tr></table></figure>
+<p>2、箭头函数</p>
+<p>箭头函数最直观的三个特点。</p>
+<ul>
+<li>不需要function关键字来创建函数</li>
+<li>省略return关键字</li>
+<li>继承当前上下文的this关键字</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//例：</div><div class="line">[1,2,3].map( x=&gt; x + 1 )</div><div class="line"></div><div class="line">//等同于：</div><div class="line">[1,2,3].map((function(x)&#123;</div><div class="line">    return x + 1</div><div class="line">&#125;).bind(this))</div></pre></td></tr></table></figure>
+<h5 id="三、扩展的对象功能"><a href="#三、扩展的对象功能" class="headerlink" title="三、扩展的对象功能"></a>三、扩展的对象功能</h5><p>es6对于对象都是以键值对的形式书写。很有可能出现键值对重名。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function people(name, age) &#123;</div><div class="line">    return &#123;</div><div class="line">        name,</div><div class="line">        age</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>es6同样改进了为对象字面量方法赋值的语法，通过省略冒号与function关键字，将这个语法变得更简洁</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">const people = &#123;</div><div class="line">    name: &apos;laowang&apos;,</div><div class="line">    getName () &#123;</div><div class="line">        console.log(this.name)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>es6对象提供了Object.assign()这个方法来实现浅复制。Object.assign()可以把任意多个源对象自身可枚举的属性拷贝给目标对象，然后返回目标对象。第一参数即为目标对象。在实际中，为了不改变源对象。一般会把目标对象传位{}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">const obj = Object.assign(&#123;&#125;,objA,objB)</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/26/es6学习第二篇/" data-id="cjl6kv1x200094ombx9u3bl73" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTTP状态码" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/26/HTTP状态码/" class="article-date">
+  <time datetime="2018-01-25T16:17:48.000Z" itemprop="datePublished">2018-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/26/HTTP状态码/">HTTP状态码</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>什么是HTTP状态码？</strong></p>
+<p>当浏览器访问一个网页时所在服务器发出请求。当浏览器接收并显示网页前，此网页所在的服务器会返回一个包含HTTP状态码的信息头（server ）用以响应浏览器的请求。</p>
+<p><strong>常见的HTTP状态码</strong></p>
+<ul>
+<li>200 — 请求成功</li>
+<li>301 — 资源（网页等）被永久转移到其他URL</li>
+<li>404 — 请求的资源（网页等）不存在</li>
+<li>500 — 内部服务器错误</li>
+</ul>
+<p><strong>HTTP状态码分类</strong><br>HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。HTTP状态码共分为5种类型：</p>
+<p><strong>HTTP状态码分类</strong></p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>分类描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1**</td>
+<td>信息，服务器收到请求，需要请求者继续执行操作</td>
+</tr>
+<tr>
+<td>2**</td>
+<td>成功，操作被成功接收并处理</td>
+</tr>
+<tr>
+<td>3**</td>
+<td>重定向，需要进一步的操作以完成请求</td>
+</tr>
+<tr>
+<td>4**</td>
+<td>客户端错误，请求包含语法错误或无法完成请求</td>
+</tr>
+<tr>
+<td>5**</td>
+<td>服务器错误，服务器在处理请求的过程中发生了错误</td>
+</tr>
+</tbody>
+</table>
+<p><strong>HTTP状态码列表</strong></p>
+<blockquote>
+<p>0 请求未初始化<br><br>1 服务器连接已建立<br><br>2 请求已接收<br><br>3 请求处理中<br><br>4 请求已完成，且响应已就绪</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>状态码英文名称</th>
+<th>中文描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>continue</td>
+<td>继续，客户端应继续其请求</td>
+</tr>
+<tr>
+<td>101</td>
+<td>switching protocols</td>
+<td>切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议</td>
+</tr>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>请求成功。一般用于GET与POST请求</td>
+</tr>
+<tr>
+<td>201</td>
+<td>created</td>
+<td>已创建。成功请求并创建了新的资源</td>
+</tr>
+<tr>
+<td>202</td>
+<td>accepted</td>
+<td>已接受。已经接受请求，但未处理完成</td>
+</tr>
+<tr>
+<td>203</td>
+<td>non-authoritative information</td>
+<td>非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本</td>
+</tr>
+<tr>
+<td>204</td>
+<td>no content</td>
+<td>无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档</td>
+</tr>
+<tr>
+<td>205</td>
+<td>reset content</td>
+<td>重置内容。服务器成功处理，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域</td>
+</tr>
+<tr>
+<td>206</td>
+<td>partial content</td>
+<td>部分内容。服务器成功处理了部分GET请求</td>
+</tr>
+<tr>
+<td>300</td>
+<td>multiple choices</td>
+<td>多种选择。请求的资源可包括多个位置相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择</td>
+</tr>
+<tr>
+<td>301</td>
+<td>moved permanently</td>
+<td>永久移动。请求的资源已被永久的移动到新URL，返回信息会包括新的URL，浏览器会自动的定向到新URL。今后任何新的请求都应使用新的URL代替</td>
+</tr>
+<tr>
+<td>302</td>
+<td>found</td>
+<td>临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URL</td>
+</tr>
+<tr>
+<td>303</td>
+<td>see other</td>
+<td>查看其它地址。与301类似。使用GET和POST请求查看</td>
+</tr>
+<tr>
+<td>304</td>
+<td>not modified</td>
+<td>未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在制定日期之后修改的资源</td>
+</tr>
+<tr>
+<td>305</td>
+<td>use proxy</td>
+<td>使用代理。所请求的资源必须通过代理访问</td>
+</tr>
+<tr>
+<td>306</td>
+<td>unused</td>
+<td>已经被废弃的HTTP状态码</td>
+</tr>
+<tr>
+<td>307</td>
+<td>tomporary redirect</td>
+<td>临时重定向。与302类似。使用GET请求重定向</td>
+</tr>
+<tr>
+<td>400</td>
+<td>bad request</td>
+<td>客户端请求的语法错误，服务器无法理解</td>
+</tr>
+<tr>
+<td>401</td>
+<td>unauthorized</td>
+<td>请求要求用户的身份认证</td>
+</tr>
+<tr>
+<td>402</td>
+<td>payment required</td>
+<td>保留，将来使用</td>
+</tr>
+<tr>
+<td>403</td>
+<td>forbidden</td>
+<td>服务器理解请求客户端的请求，但是拒绝执行此请求</td>
+</tr>
+<tr>
+<td>404</td>
+<td>not found</td>
+<td>服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置“您所请求的资源无法找到”的个性页面</td>
+</tr>
+<tr>
+<td>405</td>
+<td>method not allowed</td>
+<td>客户端请求中的方法被禁止</td>
+</tr>
+<tr>
+<td>406</td>
+<td>not acceptable</td>
+<td>服务器无法根据客户端请求的内容特性完成请求</td>
+</tr>
+<tr>
+<td>407</td>
+<td>proxy authentication required</td>
+<td>请求要求代理的身份认证，与类似，但请求者应当使用代理进行授权</td>
+</tr>
+<tr>
+<td>408</td>
+<td>request time-out</td>
+<td>服务器等待客户端发送的请求时间过长，超时</td>
+</tr>
+<tr>
+<td>409</td>
+<td>conflict</td>
+<td>服务器完成客户端的PUT请求时可能返回此代码，服务器处理请求时发生了冲突</td>
+</tr>
+<tr>
+<td>410</td>
+<td>gone</td>
+<td>客户端请求的资源已经不存在，410不同于404，如果资源以前有现在被永久删除了可使用410代码，网站设计人员可通过301代码指定资源的新位置</td>
+</tr>
+<tr>
+<td>411</td>
+<td>length</td>
+<td>服务器无法处理客户端发送的不带Content-Length的请求信息</td>
+</tr>
+<tr>
+<td>412</td>
+<td>precondition failed</td>
+<td>客户端请求信息的先决条件错误</td>
+</tr>
+<tr>
+<td>413</td>
+<td>Request Entity Too Large</td>
+<td>由于请求的实体过大，服务器无法处理，因此拒绝请求。为防止客户端的连续请求，服务器可能会关闭连接。如果只是服务器暂时无法处理，则会包含一个Retry-After的响应信息</td>
+</tr>
+<tr>
+<td>414</td>
+<td>Request-URI Too Large</td>
+<td>请求的URI过长（URI通常为网址），服务器无法处理</td>
+</tr>
+<tr>
+<td>415</td>
+<td>Unsupported Media Type</td>
+<td>服务器无法处理请求附带的媒体格式</td>
+</tr>
+<tr>
+<td>416</td>
+<td>Requested range not satisfiable</td>
+<td>客户端请求的范围无效</td>
+</tr>
+<tr>
+<td>417</td>
+<td>Expectation Failed</td>
+<td>服务器无法满足Expect的请求头信息</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>服务器内部错误，无法完成请求</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Not Implemented</td>
+<td>服务器不支持请求的功能，无法完成请求</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway</td>
+<td>充当网关或代理的服务器，从远端服务器接收到了一个无效的请求</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+<td>由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的Retry-After头信息中</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Gateway Time-out</td>
+<td>充当网关或代理的服务器，未及时从远端服务器获取请求</td>
+</tr>
+<tr>
+<td>505</td>
+<td>HTTP Version not supported</td>
+<td>服务器不支持请求的HTTP协议的版本，无法完成处理</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/26/HTTP状态码/" data-id="cjl6kv1x100084ombxslbirw5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML5新特性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/24/HTML5新特性/" class="article-date">
+  <time datetime="2018-01-23T18:17:20.000Z" itemprop="datePublished">2018-01-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/24/HTML5新特性/">HTML5新特性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="HTML5新特性"><a href="#HTML5新特性" class="headerlink" title="HTML5新特性"></a><center>HTML5新特性</center></h3><h4 id="一、新的语义化标签"><a href="#一、新的语义化标签" class="headerlink" title="一、新的语义化标签"></a>一、新的语义化标签</h4><p><strong>1. &lt;section&gt;&lt;/section&gt;</strong></p>
+<p>定义文档中的主体部分的节、段。</p>
+<p><strong>2. &lt;article&gt;&lt;/article&gt;</strong></p>
+<p>一个特殊的section标签，比section有更明确的语义。定义来自外部的一个独立的、完整的内容块，例如某个论坛的文章、博客的文本等</p>
+<p><strong>3. &lt;aside&gt;&lt;/aside&gt;</strong></p>
+<p>用来装载页面中非正文的内容，独立于其他模块，例如广告、成组的链接、侧边栏等</p>
+<p><strong>4. &lt;header&gt;&lt;/header&gt;</strong></p>
+<p>定义文档、页面的页眉。通常是一些引导和导航信息，不局限于整个页面头部，也可以用在内容里。</p>
+<p><strong>5. &lt;footer&gt;&lt;/footer&gt;</strong></p>
+<p>定义了文档、页面的页脚，和header类似。</p>
+<p><strong>6. &lt;nav&gt;&lt;/nav&gt;</strong></p>
+<p>定义了一个链接组组成的导航部分，其中的链接可以链接到其他网页或者当前页面的其他部分。</p>
+<p><strong>7. &lt;hgroup&gt;&lt;/hgroup&gt;</strong></p>
+<p>用于对网页或区段的标题元素进行组合。</p>
+<p><strong>8. &lt;figure&gt;&lt;/figure&gt;</strong></p>
+<p>用于对元素进行组合。</p>
+<p><strong>9. &lt;figcaption&gt;&lt;/figcaption&gt;</strong></p>
+<p>为figure元素加标题。一般放在figure第一个子元素或者最后一个。</p>
+<p><strong>10. &lt;details&gt;&lt;/details&gt;</strong></p>
+<p>定义元素的细节，用户可以点击查看或者隐藏。</p>
+<p><strong>11. &lt;summary&gt;&lt;/summary&gt;</strong></p>
+<p>和details连用，用来包含details的标题。</p>
+<p><strong>12. &lt;canvas&gt;&lt;/canvas&gt;</strong></p>
+<p>用来进行canvas绘图。</p>
+<p><strong>13. &lt;video&gt;&lt;/video&gt;</strong></p>
+<p>定义视频。</p>
+<p><strong>14. &lt;audio&gt;&lt;/audio&gt;</strong></p>
+<p>定义音频</p>
+<p><strong>15. &lt;embed&gt;&lt;/embed&gt;</strong></p>
+<p>定义嵌入网页的内容。比如插件。</p>
+<p><strong>16. &lt;source&gt;&lt;/source&gt;</strong></p>
+<p>该标签为媒介元素（比如video、audio）定义媒介元素。</p>
+<p><strong>17. &lt;detailst id=’dl’&gt;&lt;/detailst&gt;</strong></p>
+<p>定义可选数据的列表，与input配合使用（&lt;input list=’dl’&gt;）可制作输入值的下拉列表。</p>
+<p><strong>18. &lt;mark&gt;&lt;/mark&gt;</strong></p>
+<p>在视觉上向用户展现出那些想要突出的文字。比如搜索结果中向用户高亮显示搜索关键词。</p>
+<p><strong>19. &lt;meter [min/max/low/high/optimum/value]&gt;&lt;/meter&gt;</strong></p>
+<p>度量衡，用红黄绿表示出一个数值所在范围。</p>
+<p><strong>20 &lt;output&gt;&lt;/output&gt;</strong></p>
+<p>定义不同类型的输出，样式与span无异。</p>
+<p><strong>21. &lt;progress&gt;&lt;/progress&gt;</strong></p>
+<p>进度条，运行中的速度。</p>
+<p><strong>22. &lt;time&gt;&lt;time&gt;</strong></p>
+<p>定义日期或者时间。</p>
+<p><strong>23. &lt;keygen&gt;&lt;/keygen&gt;</strong></p>
+<p>定义加密内容。</p>
+<p><strong>24. &lt;command&gt;&lt;/command&gt;</strong></p>
+<p>定义命令行为。</p>
+<h4 id="二、新的Javascript的API"><a href="#二、新的Javascript的API" class="headerlink" title="二、新的Javascript的API"></a>二、新的Javascript的API</h4><h5 id="2D绘图"><a href="#2D绘图" class="headerlink" title="2D绘图"></a>2D绘图</h5><p>我们学过的canvas和svg动画都属于javascript的API，</p>
+<p><strong>canvas：</strong></p>
+<ul>
+<li>canvas通过javascript来绘制2D图形</li>
+<li>canvas是逐像素进行渲染的</li>
+<li>在canvas中，一旦图形被绘制完成，它就不会继续得到浏览器的关注，如果位置发生变化，那么整个场景也需要重新绘制，包括任何已经被图形覆盖的对象。</li>
+</ul>
+<p><strong>SVG：</strong></p>
+<ul>
+<li>SVG是一种使用XML描述2D图形的语言</li>
+<li>SVG基于XML，这意味着SVG DOM中的每个元素都是可用的，你可以为某个元素附加javascript事件处理器</li>
+<li>在SVG中，每个被绘制的图形均被视为对象。如果SVG对象的属性发生变化，那么浏览器能够自动重现图形</li>
+</ul>
+<p>两者区别</p>
+<pre><code>canvas与SVG的比较
+canvas:
+1、canvas依赖分辨率
+2、不支持事件处理器
+3、弱的文本渲染能力
+4、能够以 .png 或 .jpg格式保存结果图像
+
+SVG:
+1、不依赖分辨率
+2、支持事件处理器
+3、最适合带有大型渲染区域的应用程序（如：google map）
+4、复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）
+</code></pre><h5 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h5><p>history对象保存着用户上网的历史记录，从窗口被打开的那一刻算起。<br><a href="https://studygolang.com/articles/4675" target="_blank" rel="external">使用go()方法</a>可以在用户的历史记录中任意跳转，可以向后也可以向前，这个方法接受一个参数，表示向后或向前跳转的页面数的一个整数值，负数表示向后跳转【类似浏览器的“后退”按钮】，正数表示向前跳转【类似浏览器的“前进”按钮】</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">history.go(-1); // 后退一页</div><div class="line">history.go(1)； // 前进一页</div><div class="line">history.go(2);  //前进两页</div></pre></td></tr></table></figure>
+<p>也可以给go()方法传递一个字符串参数，此时浏览器会跳转到历史记录中包含该字符串的第一个位置：可能后退，也可能前进，具体由位置近的决定。如果历史记录中不包含该字符串，那么这个方法什么也不做</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">history.go(&apos;worx.com&apos;); 跳到最近的wrox.com页面</div></pre></td></tr></table></figure>
+<p>还可以使用两个简写方法back()和forward()来代替go()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">history.back(); // 后退一页</div><div class="line">history.forward(); // 前进一页</div></pre></td></tr></table></figure>
+<p>除此之外，history对象还有一个length属性，保存着历史记录的数量，这个数量包括所有的历史记录，即所有向后和向前的记录。</p>
+<h5 id="HTML5-Web-存储"><a href="#HTML5-Web-存储" class="headerlink" title="HTML5 Web 存储"></a>HTML5 Web 存储</h5><p>如何在客户端存储数据？</p>
+<p>HTML5提供了两种在客户端存储数据的新方法：</p>
+<ul>
+<li>localStorage — 没有时间限制的数据存储</li>
+<li>sessionSSStorage — 针对一个session的存储数据</li>
+</ul>
+<p>之前我们学习的cookie缓存并不适合大量数据的存储，因为它们由每个对服务器的请求来传递，这使得cookie速度很慢而且效率也不高</p>
+<p>在HTML5中，数据不是由每个服务器请求传递的，而是只有在请求时使用数据，它使在不影响网站性能的情况下存储大量数据成为可能</p>
+<p>对于不同的网站，数据存储于不同的区域，并且一个网站只能访问其自身的数据</p>
+<p>HTML5通过javascript来存储和访问数据</p>
+<h6 id="localStorage方法"><a href="#localStorage方法" class="headerlink" title="localStorage方法"></a>localStorage方法</h6><p>localStorage方法存储的数据没有时间限制，长时间之后数据依然可用，</p>
+<p><strong>创建和访问localStorage</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">// Check browser support</div><div class="line">if (typeof(Storage) !== &quot;undefined&quot;) &#123;</div><div class="line">    // Store</div><div class="line">    localStorage.setItem(&quot;lastname&quot;, &quot;Gates&quot;);</div><div class="line">    // Retrieve</div><div class="line">    document.getElementById(&quot;result&quot;).innerHTML = localStorage.getItem(&quot;lastname&quot;);</div><div class="line">&#125; else &#123;</div><div class="line">    document.getElementById(&quot;result&quot;).innerHTML = &quot;抱歉！您的浏览器不支持 Web Storage ...&quot;;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>下面是对用户访问页面次数进行计数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE HTML&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line"></div><div class="line">if (localStorage.pagecount)</div><div class="line">	&#123;</div><div class="line">	localStorage.pagecount=Number(localStorage.pagecount) +1;</div><div class="line">	&#125;</div><div class="line">else</div><div class="line">	&#123;</div><div class="line">	localStorage.pagecount=1;</div><div class="line">	&#125;</div><div class="line">document.write(&quot;Visits: &quot; + localStorage.pagecount + &quot; time(s).&quot;);</div><div class="line"></div><div class="line">&lt;/script&gt; </div><div class="line"></div><div class="line">&lt;p&gt;刷新页面会看到计数器在增长。&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;p&gt;请关闭浏览器窗口，然后再试一次，计数器会继续计数。&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h6 id="sessionStorage方法"><a href="#sessionStorage方法" class="headerlink" title="sessionStorage方法"></a>sessionStorage方法</h6><p>sessionStorage方法针对一个session进行数据存储，当用户关闭浏览器窗口之后，数据会被删除</p>
+<p>创建并访问一个sessionStorage：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;script&gt;</div><div class="line">function clickCounter() &#123;</div><div class="line">    if(typeof(Storage) !== &quot;undefined&quot;) &#123;</div><div class="line">        if (sessionStorage.clickcount) &#123;</div><div class="line">            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;</div><div class="line">        &#125; else &#123;</div><div class="line">            sessionStorage.clickcount = 1;</div><div class="line">        &#125;</div><div class="line">        document.getElementById(&quot;result&quot;).innerHTML = &quot;在本 session 中，您已经点击这个按钮 &quot; + sessionStorage.clickcount + &quot; 次。&quot;;</div><div class="line">    &#125; else &#123;</div><div class="line">        document.getElementById(&quot;result&quot;).innerHTML = &quot;抱歉！您的浏览器不支持 Web Storage ...&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;p&gt;&lt;button onclick=&quot;clickCounter()&quot; type=&quot;button&quot;&gt;请点击这里&lt;/button&gt;&lt;/p&gt;</div><div class="line">&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;p&gt;请点击按钮使计数器递增。&lt;/p&gt;</div><div class="line">&lt;p&gt;请关闭浏览器或标签页，然后再试一次，计数器会重置。&lt;/p&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>下面对当前session中访问页面的次数进行计数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE HTML&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line"></div><div class="line">if (sessionStorage.pagecount)</div><div class="line">	&#123;</div><div class="line">	sessionStorage.pagecount=Number(sessionStorage.pagecount) +1;</div><div class="line">	&#125;</div><div class="line">else</div><div class="line">	&#123;</div><div class="line">	sessionStorage.pagecount=1;</div><div class="line">	&#125;</div><div class="line">document.write(&quot;Visits &quot; + sessionStorage.pagecount + &quot; time(s) this session.&quot;);</div><div class="line"></div><div class="line">&lt;/script&gt; </div><div class="line"></div><div class="line">&lt;p&gt;刷新页面会看到计数器在增长。&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;p&gt;请关闭浏览器窗口，然后再试一次，计数器已经重置了。&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h5 id="lt-video-gt-和-lt-audio-gt"><a href="#lt-video-gt-和-lt-audio-gt" class="headerlink" title="&lt;video&gt;和&lt;audio&gt;"></a>&lt;video&gt;和&lt;audio&gt;</h5><h6 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;video src=&quot;./video/mv.mp4&quot;&gt;&lt;/video&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意audio和video元素必须同时包含开始和结束标签，不能使用&lt;audio/&gt;这样的空元素语法形式。</p>
+</blockquote>
+<h6 id="HTML属性"><a href="#HTML属性" class="headerlink" title="HTML属性"></a>HTML属性</h6><p><strong>controls:ontrol</strong><br>如果出现该属性，则向用户显示控件，如播放按钮，每个浏览器播放控件不一样，但是用途一致，都可以控制开始和结束，跳到新位置和调节音量。</p>
+<p><strong>autoplay:autoplay</strong><br>如果出现该属性，则视频在就绪后马上播放，如果不设置autoplay属性，必须是用户单机播放按钮才会播放。</p>
+<p><strong>loop:loop</strong><br>循环播放</p>
+<p><strong>preload:auto、mete、none:</strong><br>告诉浏览器如何下载音频</p>
+<blockquote>
+<p>auto:让浏览器下载整个文件，以便用户单机播放按钮就能播放</p>
+<p>meta:告诉浏览器先获取音频文件开头的数据块，从而足以确定一些基本信息（比如音频的总时长）</p>
+<p>none:告诉浏览器不必预先下载，合理利用这些值</p>
+</blockquote>
+<h6 id="常用API属性"><a href="#常用API属性" class="headerlink" title="常用API属性"></a>常用API属性</h6><p><strong>duration:</strong><br>返回当前音频、视频的长度（单位：S）</p>
+<p><strong>paused:</strong><br>设置或返回音频、视频是否暂停</p>
+<p><strong>currentTime:</strong><br>设置或返回音频/视频中的当前播放位置（单位：S）</p>
+<p><strong>ended:</strong><br>返回音频、视频的播放是否已结束</p>
+<p>如需具体了解请参考<a href="http://www.w3school.com.cn/tags/html_ref_audio_video_dom.asp" target="_blank" rel="external">W3school书册</a></p>
+<blockquote>
+<p>如果还想了解更多的API，<a href="https://chajian.baidu.com/developer/extensions/api_index.html" target="_blank" rel="external">请点击访问查看更多javascript的API</a></p>
+</blockquote>
+<h4 id="三、H5头部声明"><a href="#三、H5头部声明" class="headerlink" title="三、H5头部声明"></a>三、H5头部声明</h4><p>H5将DOCTYPE的声明简化，只需要&lt;!DOCTYPE&gt;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">     </div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>doctype是document type（文档类型）的简写，在页面中，用来指定页面所使用的xhtml（或者html）的版本。要想制作符合标准的页面，一个必不可少的关键组成部分就 是doctype声明。只有确定了一个正确的doctype，xhtml里的标识和css才能正常生效。</p>
+<p>html 告诉浏览器这个文件是html格式网页文件</p>
+<p>两个合起来就是 html5标准网页声明,原先的是一串很长的字符串,现在是这个简洁形式,支持html5标准的主流浏览器都认识这个声明。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/24/HTML5新特性/" data-id="cjl6kv1wv00034ombebx31kw2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-es6学习第一篇" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/23/es6学习第一篇/" class="article-date">
+  <time datetime="2018-01-23T12:08:20.000Z" itemprop="datePublished">2018-01-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/23/es6学习第一篇/">es6学习第一篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <center>es6学习第一篇</center>
+
+<blockquote>
+<p><strong><em>后续会持续更新</em></strong></p>
+</blockquote>
+<h5 id="一、let命令"><a href="#一、let命令" class="headerlink" title="一、let命令"></a>一、let命令</h5><p>1、let命令用来声明变量，用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效（<em>我的理解感觉有点像js中的局部变量</em>）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    let a=10;</div><div class="line">    var b=1;</div><div class="line">&#125;</div><div class="line">a //  a is not defined</div><div class="line">b // 1</div></pre></td></tr></table></figure>
+<p>2、let在循环中可以正常使用，但是只在循环内部有效，在外边引用会出错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">for (let i = 0; i &lt; 10; i++) &#123;</div><div class="line">    //...</div><div class="line">&#125;</div><div class="line">alert(i); // i is not defined</div></pre></td></tr></table></figure>
+<p>3、let不允许在同一个域内重复声明一个变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function func() &#123;</div><div class="line">    let a = 10;</div><div class="line">    var a = 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function func() &#123;</div><div class="line">    let a = 10;</div><div class="line">    let a = 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="二、const命令"><a href="#二、const命令" class="headerlink" title="二、const命令"></a>二、const命令</h5><p>1、const声明一个只读的常量。一旦声明，常量的值就不能改变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">const PI = 3.1215;</div><div class="line">PI //3.1415</div><div class="line"></div><div class="line">PI = 3; // TypeError:Assignment to constant variable</div></pre></td></tr></table></figure>
+<p>2、const一旦声明变量，就必须初始化，不能在后面赋值，另外对const来说，只声明不赋值会出错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const foo;</div><div class="line">// SyntaxError:Missing initializer in const declaration</div></pre></td></tr></table></figure>
+<p>3、const只在声明所在的块级作用域内有效。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">if(true) &#123;</div><div class="line">    const MAX = 5;</div><div class="line">&#125;</div><div class="line">MAX // Uncaught ReferenceError:Max is not defined</div></pre></td></tr></table></figure>
+<p>4、const声明的常量，也与let一样不可重复声明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var message = &quot;Hello!&quot;;</div><div class="line">let age = 25;</div><div class="line">//以下两行都会报错</div><div class="line">const message = &quot;Goodbye!&quot;;</div><div class="line">const age = 30;</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>let与const的区别：let是变量，const是常量，只需要定义的不用改变的值就用const</strong></p>
+</blockquote>
+<h5 id="三、数组的解构赋值"><a href="#三、数组的解构赋值" class="headerlink" title="三、数组的解构赋值"></a>三、数组的解构赋值</h5><p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构</p>
+<p>ES6允许写成下面这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let [a,b,c] = [1,2,3];</div></pre></td></tr></table></figure>
+<p>上面代码表示，可以从数组中提取值，按照对应位置，对变量赋值，这种写法属于“模式匹配”：只要等号两边的模式相同，左边的变量就会被赋予对应的值。</p>
+<p><em>如果解构不成功，变量的值就等于underfined</em></p>
+<p>另一种情况是不完全解构，即等号左边的模式，只匹配一部分的等号右边的数组，这种情况下，解构依然可以成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">let [x,y] = [1,2,3];</div><div class="line">x // 1</div><div class="line">y // 2</div><div class="line"></div><div class="line">let [a,[b],d] = [1,[2,3],4];</div><div class="line">a // 1</div><div class="line">b // 2</div><div class="line">d // 4</div></pre></td></tr></table></figure>
+<p><em>如果等号的右边不是数组，那么将会报错</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//报错</div><div class="line">let [foo] = 1;</div><div class="line">let [foo] = false;</div><div class="line">let [foo] = &#123;&#125;;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/23/es6学习第一篇/" data-id="cjl6kv1wy00054ombu4pevlem" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-前端任务" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/22/前端任务/" class="article-date">
+  <time datetime="2018-01-22T12:06:34.000Z" itemprop="datePublished">2018-01-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/22/前端任务/">前端任务</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><center>元月一号至元月三十一号</center><br><strong>==1==</strong>.<strong>块级元素的特点：</strong></p>
+<ul>
+<li>独占一行</li>
+<li>支持所有样式</li>
+<li>不设置宽度时宽度为父元素宽度</li>
+<li>换行符不解析</li>
+<li>可以容纳内联元素和其他块元素</li>
+</ul>
+<p><strong>内联元素的特点：</strong></p>
+<ul>
+<li>可以在一行显示</li>
+<li>不支持宽高，上下margin和padding等样式会有问题</li>
+<li>宽度由内容撑开</li>
+<li>换行符会被解析成空格</li>
+</ul>
+<p><strong>内联块元素的特点：</strong></p>
+<ul>
+<li>内联块元素同时具备块级元素和内联元素的特点</li>
+</ul>
+<p><strong>常见的元素的特点属性：</strong></p>
+<p>href：用于a标签里的链接方式或链接css文件</p>
+<p>src：用于链接js文件或图片</p>
+<p>alt：用来指定替换文字，只能用在img、area和input元素中，用于网页中图片无法正常显示时给用户提供文字说明使其了解 图像信息  alt是替代图像作用而不是提供额外说明文字</p>
+<p>title：作为属性时用来为元素提供额外的说明信息；作为标签时里面写入网页标题</p>
+<p><strong>==2==</strong>.<strong>html语义化：</strong></p>
+<p>what：根据内容的结构化，选择合适的语义化标签，便于开发者阅读和代码美观</p>
+<p>why：</p>
+<ul>
+<li>为了在没有css的情况下，页面也可以很好的体现内容结构代码结构</li>
+<li>有利于用户体验</li>
+<li>有利于SEO</li>
+<li>便于团队开发和维护，语义化更具有可读性</li>
+</ul>
+<p><strong>SEO的原理：</strong></p>
+<blockquote>
+<p>SEO一共包括三个过程：网页搜索、预处理信息、建立索引。<br>细化分为：爬行—抓取—处理抓取信息—建立索引—呈现排名</p>
+</blockquote>
+<p>一、爬行</p>
+<p>爬行的目的：建立待抓取列表</p>
+<p>爬虫：谷歌爬虫（ddos）百度爬虫（spider）</p>
+<p>1.发现：</p>
+<p>对于一个网站来说，分为被动等待和主动引爬虫</p>
+<blockquote>
+<p>被动等待：设置好Robots.txt文件，放在服务器等待爬虫自己过来爬取</p>
+<p>主动引爬虫：写带有链接的软文花钱放在高质量高权重的网站中、利用权重高的博客、在质量高的论坛里发外链</p>
+</blockquote>
+<p>2.内容：</p>
+<p>争取权重高的位置放</p>
+<p>Banner不如幻灯片，幻灯片不如文字，文字优先，图片写alt属性</p>
+<p>二、抓取</p>
+<p>网页本身需要符合<a href="https://baike.baidu.com/item/W3C%E6%A0%87%E5%87%86/8367679?fr=aladdin" target="_blank" rel="external">W3C标准</a>，编码建议使用“utf-8”，“title”尽量靠前，我们想让爬虫进入到某个页面就看到我们的主旨内容，内容尽量原创</p>
+<p>正文：关键词出现的次数要合适，位置要靠前</p>
+<p>“h1标签”：唯一性，整个页面最重要，含关键字，尽量靠前</p>
+<p>“h2标签”：可以添加其他属性</p>
+<p>“alt属性”：只能用于“img”，意在告诉蜘蛛图片的解释</p>
+<p>“title属性”：为链接添加描述性文字，可为用户提供更清楚表达的意思</p>
+<p>“锚文本”：锚文本得有相关的关键词，且面面相关</p>
+<p>三、处理抓取结果</p>
+<p>爬虫抓取后压缩成数据包返回数据库</p>
+<p>相关性：因为百度算法语境分析+语义分析的原因，所以网站不要出现不相关的内容出现，否则搜索引擎也会撇掉你的网站权威性（网络拼比，信任度等）</p>
+<blockquote>
+<p><strong>注：</strong>不权威造成的影响：同一篇文章，由于信任度高低，有可能自己被转载发布的文章自己的反倒在别人网站后面</p>
+</blockquote>
+<p>去重：一个链接不能有多个页面、同一个关键词不能指向不同链接、同一页面下不要出现不同链接相同的关键词</p>
+<p>四、建立索引</p>
+<p>搜索引擎的索引是反向建立的<br>（一个关键词对应许多文件[网站/网页]）</p>
+<p><strong>什么是爬虫？</strong></p>
+<blockquote>
+<p>爬虫一般指网络爬虫，是一种按照一定的规则，自动的抓取万维网信息的程序或脚本</p>
+</blockquote>
+<p><strong>如何去写一个爬虫？</strong></p>
+<p><strong>==3==</strong>：<strong>!Doctype的作用：</strong></p>
+<blockquote>
+<p>Doctype是document type的简写，声明叫做文件类型定义（DTD），声明的作用是为了告诉浏览器该文件的类型，让浏览器解析器知道用哪个规范来解析文档，!Doctype必须放在HTML文档的第一行，它不是一个HTML标签</p>
+</blockquote>
+<p><strong>严格模式和混杂模式的区别以及如何触发两种模式</strong></p>
+<blockquote>
+<p>严格模式：又称为标准模式，是指浏览器按照W3C标准解析代码</p>
+<p>混杂模式：又称怪异模式或兼容模式，是指浏览器用自己的方式解析代码</p>
+</blockquote>
+<p>区别：浏览器解析时到底使用严格模式还是混杂模式，与网页中的DTD相关</p>
+<p>1.如果文档包含严格的DOCTYPE，那么它一般以严格模式呈现。（<strong>严格DTD——严格模式</strong>）</p>
+<p>2.包含过渡DTD和URL的DOCTYPE，也以严格模式呈现，但有过渡DTD而没有URL（统一资源标识符，就是声明最后的地址）会导致页面以混杂模式呈现。（<strong>有URL的过渡DTD——严格模式；没有URL的过渡DTD——混杂模式</strong>）</p>
+<p>3.DOCTYPE不存在或形式不正确会导致文档以混杂模式呈现。（<strong>DTD不存在或者格式不正确——混杂模式</strong>）</p>
+<p>4.HTML5没有DTD，因此也就没有严格模式与混杂模式的区别，HTML5有相对宽松得语法，实现时，已经尽可能大的实现了向后兼容。（<strong>HTML没有严格与混杂之分</strong>）</p>
+<p><strong>==4：==</strong>.DOM树<br><img src="http://www.w3school.com.cn/i/ct_htmltree.gif" alt=""></p>
+<p><strong>什么是DOM?</strong></p>
+<p>DOM是Document Object Model（文档对象模型）的缩写，是W3C的标准，它定义了访问HTML和XML文档的标准：“W3C文档对象模型（DOM）是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”</p>
+<p>W3C DOM标准被分为3个不同的部分：</p>
+<ul>
+<li>核心 DOM - 针对任何结构化文档的标准模型</li>
+<li>XML DOM - 针对XML文档的标准模型</li>
+<li>HTML DOM - 针对 HTML 文档的标准模型</li>
+</ul>
+<p><strong>什么是HTML DOM？</strong></p>
+<p>HTML DOM 是：</p>
+<ul>
+<li>HTML 的标准对象模型</li>
+<li>HTML 的标准编程接口</li>
+<li>W3C 标准</li>
+</ul>
+<p>HTML DOM定义了所有HTML元素的对象和属性，以及访问它们的方法。</p>
+<p><strong><em>换言之，HTML DOM是关于如何获取、修改、添加或删除HTML元素的标准</em></strong></p>
+<p><strong>如何去优化DOM结构？</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">把DOM和Javascript各自想象成一个岛屿，它们之间用收费桥梁连接</div></pre></td></tr></table></figure>
+<p>因此要避免去操作DOM，还要减少去访问DOM的次数。</p>
+<p><strong>==5==</strong>.标签嵌套规则及HTML转义</p>
+<p>1.块级元素</p>
+<pre><code>div、h1~h6、address、blockquote、center、dir、dl、dt、dd、fieldset、form、hr、isindex、menu、nooframes、noscript、ol、p、pre、table、ul...
+</code></pre><p>特点：总是在新行上开始，高度、行高以及顶和底边距都可控制，宽度缺省是它的容器的100%，除非设定一个宽度</p>
+<p>功能：主要用来搭建网站架构、页面布局、承载内容</p>
+<p>2.行内元素</p>
+<pre><code>span、a、abbr、acronym、b、bdo、big、br、cite、code、dfn、em、font、i、img、input、kbd、label、q、s、samp、select、small、strike、strong、sub、sup、textarea、tt、u、var ...
+</code></pre><p>特点：和其他元素都在一行上，高、行高及顶和底边距不可改变，宽度就是它的文字或图片的宽度，不可改变</p>
+<p>功能：用于加强内容显示,控制细节，例如：加粗、斜体等等</p>
+<p><strong>HTML转义</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/22/前端任务/" data-id="cjl6kv1xc000j4ombz1pmwdca" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-swiper入门学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/22/swiper入门学习/" class="article-date">
+  <time datetime="2018-01-21T16:57:30.000Z" itemprop="datePublished">2018-01-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/22/swiper入门学习/">swiper入门学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="什么是swiper？"><a href="#什么是swiper？" class="headerlink" title="什么是swiper？"></a>什么是swiper？</h4><p>swiper是一种用于移动端页面的前端特效插件，它是一种纯javascript的框架，主要用来做轮播图之类页面，在使用之前首先我们需要<a href="http://www.swiper.com.cn/download/index.html" target="_blank" rel="external">下载swiper</a></p>
+<blockquote>
+<p><strong>注：</strong>下载swiper-4.1.0.min.js和swiper-4.1.0.min.css即可</p>
+</blockquote>
+<h4 id="swiper使用方法"><a href="#swiper使用方法" class="headerlink" title="swiper使用方法"></a>swiper使用方法</h4><h5 id="1-首先加载插件"><a href="#1-首先加载插件" class="headerlink" title="1.首先加载插件"></a>1.首先加载插件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    ...</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/swiper.min.css&quot;&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    ...</div><div class="line">    &lt;script src=&quot;path/to/swiper.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h5 id="2-HTML内容"><a href="#2-HTML内容" class="headerlink" title="2.HTML内容"></a>2.HTML内容</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;swiper-container&quot;&gt;</div><div class="line">    &lt;div class=&quot;swiper-wrapper&quot;&gt;</div><div class="line">        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 1&lt;/div&gt;</div><div class="line">        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 2&lt;/div&gt;</div><div class="line">        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 3&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;!-- 如果需要分页器 --&gt;</div><div class="line">    &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;</div><div class="line">    </div><div class="line">    &lt;!-- 如果需要导航按钮 --&gt;</div><div class="line">    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;</div><div class="line">    </div><div class="line">    &lt;!-- 如果需要滚动条 --&gt;</div><div class="line">    &lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">导航等组件可以放在container之外</div></pre></td></tr></table></figure>
+<p><strong><em>注：</em></strong>可以自行给swiper定义大小</p>
+<h5 id="3-初始化swiper"><a href="#3-初始化swiper" class="headerlink" title="3.初始化swiper"></a>3.初始化swiper</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;        </div><div class="line">  var mySwiper = new Swiper (&apos;.swiper-container&apos;, &#123;</div><div class="line">    direction: &apos;vertical&apos;,</div><div class="line">    loop: true,</div><div class="line">    </div><div class="line">    // 如果需要分页器</div><div class="line">    pagination: &#123;</div><div class="line">      el: &apos;.swiper-pagination&apos;,</div><div class="line">    &#125;,</div><div class="line">    </div><div class="line">    // 如果需要前进后退按钮</div><div class="line">    navigation: &#123;</div><div class="line">      nextEl: &apos;.swiper-button-next&apos;,</div><div class="line">      prevEl: &apos;.swiper-button-prev&apos;,</div><div class="line">    &#125;,</div><div class="line">    </div><div class="line">    // 如果需要滚动条</div><div class="line">    scrollbar: &#123;</div><div class="line">      el: &apos;.swiper-scrollbar&apos;,</div><div class="line">    &#125;,</div><div class="line">  &#125;)        </div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<h5 id="4-如何利用swiper实现一个简单的轮播图效果"><a href="#4-如何利用swiper实现一个简单的轮播图效果" class="headerlink" title="4.如何利用swiper实现一个简单的轮播图效果"></a>4.如何利用swiper实现一个简单的轮播图效果</h5><blockquote>
+<p>默认前三项都成功完成</p>
+</blockquote>
+<p>首先先上代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;swiper-4.1.0.min.css&quot;&gt;</div><div class="line">		&lt;title&gt;轮播图&lt;/title&gt;</div><div class="line">		&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">			.swiper-container &#123;</div><div class="line">    			width: 600px;</div><div class="line">    			height: 300px;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide&#123;</div><div class="line">				font-size: 50px;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide:nth-of-type(1)&#123;</div><div class="line">				background-color: cornflowerblue;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide:nth-of-type(2)&#123;</div><div class="line">				background-color: coral;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide:nth-of-type(3)&#123;</div><div class="line">				background-color: yellowgreen;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide:nth-of-type(4)&#123;</div><div class="line">				background-color: coral;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide:nth-of-type(5)&#123;</div><div class="line">				background-color: cornflowerblue;</div><div class="line">			&#125;</div><div class="line">		&lt;/style&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;div class=&quot;swiper-container&quot;&gt;</div><div class="line">    		&lt;div class=&quot;swiper-wrapper&quot;&gt;</div><div class="line">        		&lt;div class=&quot;swiper-slide&quot;&gt;Slide 1&lt;/div&gt;</div><div class="line">        		&lt;div class=&quot;swiper-slide&quot;&gt;Slide 2&lt;/div&gt;</div><div class="line">        		&lt;div class=&quot;swiper-slide&quot;&gt;Slide 3&lt;/div&gt;</div><div class="line">        		&lt;div class=&quot;swiper-slide&quot;&gt;Slide 4&lt;/div&gt;</div><div class="line">        		&lt;div class=&quot;swiper-slide&quot;&gt;Slide 5&lt;/div&gt;</div><div class="line">    		&lt;/div&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">		&lt;script src=&quot;swiper-4.1.0.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">		&lt;script&gt;        </div><div class="line">  			var mySwiper = new Swiper (&apos;.swiper-container&apos;, &#123;</div><div class="line">//              horizontal 水平  </div><div class="line">//				vertical   垂直</div><div class="line">    			direction: &apos;horizontal&apos;,</div><div class="line">//				开始显示第几张</div><div class="line">    			initialSlide: 0,</div><div class="line">//				换页速度</div><div class="line">				speed: 1500,</div><div class="line">//				自动切换</div><div class="line">    			autoplay: &#123;</div><div class="line">    				delay: 2000,</div><div class="line">    			&#125;,</div><div class="line">  			&#125;)        </div><div class="line">  		&lt;/script&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>initialSlide参数：设定初始化时slide页面的索引，初始时为0，即默认为轮播图第一张图；如果设置为2时，swiper初始化时页面就是轮播图第三张图</p>
+<p>direction参数：设置轮播图的滑动方向，水平方向为（horizontal），垂直方向为（vertical），默认为水平方向</p>
+<p>speed参数：轮播图的切换速度</p>
+<p>autoplay参数：设置为true时自动切换图片，默认为false</p>
+<p>delay参数：自动切换的时间间隔，详情见上图代码</p>
+<p>关于swiper的用法和初始化组件还有许多，<a href="http://www.swiper.com.cn/api/index.html" target="_blank" rel="external">具体请查看swiperAPI文档</a></p>
+<hr>
+<p><em>分割线</em></p>
+<p>在vue中我们可以直接下载插件实现<strong>swiper</strong>的功能</p>
+<blockquote>
+<p>npm install vue-awesome-swiper</p>
+</blockquote>
+<p>然后在<strong>main.js</strong>中引入</p>
+<blockquote>
+<p>import VueAwesomeSwiper from ‘vue-awesome-swiper’<br>Vue.use(VueAwesomeSwiper)</p>
+</blockquote>
+<p>在对应的 <strong>.vue</strong> 比如(<strong>slide.vue</strong>)文件中，写入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">template&gt;</div><div class="line">  &lt;div id=&quot;slide&quot;&gt;</div><div class="line">    &lt;swiper :options=&quot;swiperOption&quot; ref=&quot;mySwiper&quot;&gt;</div><div class="line">      &lt;!-- 幻灯内容 --&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide1&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;1.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide2&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;2.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide3&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;3.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide4&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;4.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide5&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;5.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">    &lt;/swiper&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">import &#123; swiper, swiperSlide &#125; from &apos;vue-awesome-swiper&apos;</div><div class="line">import $ from &apos;jquery&apos;</div><div class="line">export default &#123;</div><div class="line">  components: &#123;</div><div class="line">    swiper,</div><div class="line">    swiperSlide</div><div class="line">  &#125;,</div><div class="line">  data () &#123;</div><div class="line">    return &#123;</div><div class="line">      swiperOption: &#123;</div><div class="line">        initialSlide: 0,</div><div class="line">        direction: &apos;horizontal&apos;,</div><div class="line">        loop: true,</div><div class="line">        loopAdditionalSlides: 2,</div><div class="line">        speed: 1000,</div><div class="line">        autoplay: &#123;</div><div class="line">          delay: 2000</div><div class="line">        &#125;,</div><div class="line">        autoplayDisableOnInteraction: false,</div><div class="line">        observer: true,</div><div class="line">        observeParents: true</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"> &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/22/swiper入门学习/" data-id="cjl6kv1x7000e4ombr0zswk17" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-webpack入门学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/08/webpack入门学习/" class="article-date">
+  <time datetime="2018-01-08T02:14:35.000Z" itemprop="datePublished">2018-01-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/08/webpack入门学习/">webpack入门学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="什么是Webpack"><a href="#什么是Webpack" class="headerlink" title="什么是Webpack?"></a>什么是Webpack?</h3><p>Webpack是一个前端资源加载/打包工具，它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源.</p>
+<p>通俗地讲，Webpack可以看作是模块打包机：它做的事情是，分析你的项目结构，找到Javascript模块以及其他的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。</p>
+<h3 id="Webpack与Gulp区别"><a href="#Webpack与Gulp区别" class="headerlink" title="Webpack与Gulp区别"></a>Webpack与Gulp区别</h3><p>Webpack与之前学习的gulp相比较而言，两者的流程不大相同，而且Wwbpack的处理速度更快更直接，能打包更多不同类型的文件。</p>
+<p>gulp是一种能够优化前端的开发流程的工具，它的工作方式是：在一个配置文件中，指明对某些文件进行类似编译，组合，压缩等任务的具体步骤，工具之后可以自动替你完成这些任务。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1031000-d0693c06bb3a00e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
+<p>Webpack是一种模块化的解决方案，它的工作方式是：把你的项目当做一个整体，通过一个给定的主文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的Javascript文件。</p>
+<blockquote>
+<p>【注:loader用于对模块的源代码进行转换,比如Webpack只能处理js文件，因此对于css文件就需要安装对应loader模块：style-loader和css-loader等】</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/1031000-160bc667d3b6093a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
+<p>从图中可以看出，Webpack可以将多种静态资源js,css,less转换成一个静态文件。</p>
+<h3 id="使用Webpack"><a href="#使用Webpack" class="headerlink" title="使用Webpack"></a>使用Webpack</h3><h5 id="安装Webpack"><a href="#安装Webpack" class="headerlink" title="安装Webpack"></a>安装Webpack</h5><p>在安装之前，需要检查本地环境是否支持node.js</p>
+<p>使用npm安装Webpack</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack -g</div></pre></td></tr></table></figure>
+<h5 id="创建一个文件夹"><a href="#创建一个文件夹" class="headerlink" title="创建一个文件夹"></a>创建一个文件夹</h5><p>在你的电脑随便一个盘里创建一个新的文件夹或者使用命令创建:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir webpack-test</div></pre></td></tr></table></figure>
+<p>在文件夹中新建一个<strong>run1.js</strong>文件，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.write(&quot;Hello World&quot;);</div></pre></td></tr></table></figure>
+<p>再添加<strong>index.html</strong>文件，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;bundle.js&quot;&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>接下来使用Webpack命令进行打包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack run1.js bundle.js</div></pre></td></tr></table></figure>
+<p>执行以上命令会编译run1.js文件并生成bundle.js文件</p>
+<p>在浏览器中打开<strong>index.html</strong>文件，会看到页面上有“Hello World”。</p>
+<h5 id="Loader"><a href="#Loader" class="headerlink" title="Loader"></a>Loader</h5><p>就像之前说的，如果想要处理除js之外的其他文件，对于css文件，首先需要执行命令来安装css-loader和style-loader</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install css-loader style-loader</div></pre></td></tr></table></figure>
+<p>接下来创建一个style.css文件，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">    background:red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>修改run1.js文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">require(&quot;!style-loader!css-loader!./style.css&quot;);</div><div class="line">document.write(&quot;Hello World&quot;);</div></pre></td></tr></table></figure>
+<p>继续使用Webpack命令打包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack run1.js bundle.js</div></pre></td></tr></table></figure>
+<p>在浏览器访问index.html会发现背景变成红色。</p>
+<h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><p>可以将一些编译选项放在配置文件中，以便于统一管理。</p>
+<p>创建webpack.config.js文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">    entry: &quot;./run1.js&quot;,</div><div class="line">    output: &#123;</div><div class="line">        path: __dirname,</div><div class="line">        filename: &quot;bundle.js&quot;</div><div class="line">    &#125;,</div><div class="line">    module: &#123;</div><div class="line">        loaders: [</div><div class="line">            &#123;test: /\.css$/,loader: &quot;style.loader!css-loader&quot;&#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>接下来只需要执行<strong>webpack</strong>命令即可生成<strong>bundle.js</strong>文件</p>
+<p>Webpack命令执行后，会默认载入当前目录的<strong>webpack.config.js</strong>文件。</p>
+<p><strong>当你想要查看你添加的loaders模块时。可以在安装webpack之后再生成一个package.json文件,它里面会显示你当前所有的依赖模块</strong>，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
+<p><em>默认一直点回车就行</em></p>
+<h5 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h5><p>如果不想每次修改模块之后还要重新编译，那么可以启用监听模式；开启之后，就不需要每次都重新编译，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack --watch</div></pre></td></tr></table></figure>
+<p>当然还有一种方法是启用一个本地服务器，来实现热加载，可以使用webpack-dev-server服务，当然首先需要安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack-dev-server -g</div></pre></td></tr></table></figure>
+<p>运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack-dev-server</div></pre></td></tr></table></figure>
+<p>运行之后一般会通过localhost:8080启用一个express静态资源web服务器，并且会以监听模式自动运行webpack；如果该端口被占用，可以通过“ -port 端口号 ” 来改变服务器端口。</p>
+<p>当然webpack还有其他功能，我也还在学习当中。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/08/webpack入门学习/" data-id="cjl6kv1x9000g4omb73rh95w8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-npm学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/18/npm学习/" class="article-date">
+  <time datetime="2017-06-18T07:18:22.000Z" itemprop="datePublished">2017-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/18/npm学习/">npm学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="什么是npm？它有什么作用？"><a href="#什么是npm？它有什么作用？" class="headerlink" title="什么是npm？它有什么作用？"></a>什么是npm？它有什么作用？</h3><blockquote>
+<p>npm是和node.js一起的包管理工具，并且在安装node.js时已经安装好了npm,npm常见的使用场景有以下几个:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.允许用户从npm服务器下载别人编写的第三方包到本地使用。</div><div class="line">2.允许用户从npm服务器下载并安装别人编写的命令行程序到本地使用。</div><div class="line">3.允许用户将自己编写的包或命令行程序上传到npm服务器供别人使用。</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h3><blockquote>
+<p>npm本地安装的命令为:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install npm</div></pre></td></tr></table></figure>
+<blockquote>
+<p>全局安装的命令为:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install npm -g</div></pre></td></tr></table></figure>
+<blockquote>
+<p>如果要检查是否安装成功可以输入命令行:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm -v</div></pre></td></tr></table></figure>
+<p>来测试是否安装成功。</p>
+<h3 id="使用package-json"><a href="#使用package-json" class="headerlink" title="使用package.json"></a>使用package.json</h3><p>package.json位于模块的目录下，用于定义包的属性。</p>
+<h4 id="在当前目录下产生package-json文件"><a href="#在当前目录下产生package-json文件" class="headerlink" title="在当前目录下产生package.json文件"></a>在当前目录下产生package.json文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
+<h4 id="安装当前package-json中定义的模块"><a href="#安装当前package-json中定义的模块" class="headerlink" title="安装当前package,json中定义的模块"></a>安装当前package,json中定义的模块</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
+<h4 id="注册与提交"><a href="#注册与提交" class="headerlink" title="注册与提交"></a>注册与提交</h4><h5 id="注册用户"><a href="#注册用户" class="headerlink" title="注册用户"></a>注册用户</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm adduser</div><div class="line">Username:输入用户名</div><div class="line">Password:输入密码</div><div class="line">Email:输入邮箱</div></pre></td></tr></table></figure>
+<h5 id="编写完模块后输入命令行"><a href="#编写完模块后输入命令行" class="headerlink" title="编写完模块后输入命令行:"></a>编写完模块后输入命令行:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm publish  #发表模块</div></pre></td></tr></table></figure>
+<h5 id="更新模块"><a href="#更新模块" class="headerlink" title="更新模块"></a>更新模块</h5><blockquote>
+<p>尽管node.js自带pm，但是如果想要更新npm的话。可以输入命令:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update npm -g</div></pre></td></tr></table></figure>
+<h5 id="搜索模块"><a href="#搜索模块" class="headerlink" title="搜索模块"></a>搜索模块</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm search &quot;Module Name&quot;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/18/npm学习/" data-id="cjl6kv1x4000b4ombixrr4svy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/22/vue中遇到的一些问题总结/">vue中遇到的一些问题总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/21/利用hover控制其他元素样式/">利用hover控制其他元素样式</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/18/Web安全攻击方式/">Web安全攻击方式</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/11/安装mongodb遇到的坑/">安装mongodb遇到的坑</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/05/使用express配置前端服务器/">使用express配置前端服务器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
 </html>
-
-
