@@ -1,1039 +1,782 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>
-        
-        崔佳欢的博客
-        
-    </title>
-    <link rel="icon" href= http://pic.caigoubao.cc/606573/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180725164000.png>
-    <!-- TODO: 在font-face加载完毕后改变字体  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
-    <!-- 提前加载place holder  -->
-    <style type="text/css">
-        @font-face {
-            font-family: 'Oswald-Regular';
-            src: url(/font/Oswald-Regular.ttf);
-        }
-    </style>
-    <style type="text/css">
-        .site-intro {
-            position: relative;
-            width: 100%;
-            height: 50vh;
-            overflow: hidden;
-            box-shadow: -0.1rem 0 0.5rem 0 rgba(0, 0, 0, 0.8);
-        }
-        .site-intro-placeholder {
-            position: absolute;
-            z-index: -2;
-            top: 0;
-            left: 0px;
-            width: calc(100% + 300px);
-            height: 100%;
-            background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
-            background-position: center center;
-            transform: translate3d(-226px, 0, 0);
-            animation: gradient-move 2.5s ease-out 0s 1;
-        }
-        @keyframes gradient-move {
-        0% {
-            transform: translate3d(-226px, 0, 0);
-        }
-        100% {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-</style>
-    <link rel="stylesheet" href = /css/style.css?v=20171218 />
-    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
-    
-    <script src="/scripts/main.js" defer></script>
-    <!-- 百度统计  -->
-    
-    <!-- 谷歌统计  -->
-    
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <!--<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">-->
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
 </head>
 
-    
-        <body class="home-body">
-    
-    
-<header class="header index-header">
-
-    <div class="read-progress"></div>
-    <div class="header-sidebar-menu">&#xe775;</div>
-    <!-- post页的toggle banner  -->
-    
-    <a class="home-link" href=/>崔佳欢的博客</a>
-</header>
-    <div class="wrapper">
-        <div class="site-intro">
-    
-    <!-- 主页  -->
-    
-    
-    <!-- 文章页  -->
-            
-    <div class="site-intro-img" style="background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514631864740&di=aba4ea6c7ceae990badb3aeedffbc566&imgtype=0&src=http%3A%2F%2Fwww.deskcar.com%2Fdesktop%2Felse%2F20121013112920%2F12.jpg)"></div>
-    <div class="site-intro-placeholder"></div>
-    <div class="site-intro-meta">
-        <!-- 标题  -->
-        <h1 class="intro-title">
-            <!-- 主页  -->
-            
-            崔佳欢的博客
-            <!-- 文章页  -->
-            
-        </h1>
-        <!-- 副标题 -->
-        <p class="intro-subtitle">
-            <!-- 主页副标题  -->
-            
-            
-                温柔只给意中人，真情只待有缘人
-            
-            <!-- 文章页  -->
-            
-        </p>
-        <!-- 文章页meta -->
-        
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
     </div>
-</div>
-        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
-        <script>
-            var browser = {
-                    versions: function () {
-                        var u = window.navigator.userAgent;
-                        return {
-                            userAgent: u,
-                            trident: u.indexOf('Trident') > -1, //IE内核
-                            presto: u.indexOf('Presto') > -1, //opera内核
-                            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-                            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-                            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-                            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-                            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
-                            iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
-                            iPad: u.indexOf('iPad') > -1, //是否为iPad
-                            webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
-                            weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
-                            uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
-                        };
-                    }()
-                }
-
-            function fontLoaded(){
-                console.log('font loaded');
-                if (document.getElementsByClassName('site-intro-meta')) {
-                    document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
-                    document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
-                    var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
-                        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
-                        if (postIntroTags) {
-                            postIntroTags.classList.add('post-fade-in');
-                        }
-                        if (postIntroMeat) {
-                            postIntroMeat.classList.add('post-fade-in');
-                        }
-                    }
-                }
-                
-            console.log("userAgent:" + browser.versions.userAgent);
-            // UC不支持跨域，所以直接显示
-            if (browser.versions.uc) {
-                console.log("UCBrowser");
-                fontLoaded();
-            } else {
-                WebFont.load({
-                    custom: {
-                        families: ['Oswald-Regular']
-                    },
-                    loading: function () {  //所有字体开始加载
-                        // console.log('loading');
-                    },
-                    active: function () {  //所有字体已渲染
-                        fontLoaded();
-                    },
-                    inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
-                        console.log('inactive: timeout');
-                        fontLoaded();
-                    },
-                    timeout: 7000 // Set the timeout to two seconds
-                });
-            }
-        </script>
-        <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/08/22/vue中遇到的一些问题总结/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>vue中遇到的一些问题总结</span>
-                    </h2>
-                <div class="abstract-content">
-                    1、今天在公司修改样式的时候发现引入Element-UI的tooltip组件之后，想对tootip的样式进行自定义修改，结果发现无论怎么设置选择器的优先级，都渲染不到页面上，后来经过一系列的尝试之后发现是由于给style设置scoped造成的，本身设置scoped是为了防止全局样式冲突，结果没想到会造成自定义的样式渲染不上，后来经过思考测试，其实是可以将组件内修改tooltp的样式放到全局css中，不过需要给对应的元素设置类型，比如tooltip可以通过popper-class=”tooltip”设置类名，然后给这个类名添加样式。
-2、在进行vue页面编写时经常会用到数据绑定，在渲染页面...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/08/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/08/21/利用hover控制其他元素样式/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>利用hover控制其他元素样式</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-之前在项目中有一个需求是鼠标移入元素上时该元素改变样式的同时另外元素样式也要改变，刚开始想利用js来实现，不过有点麻烦，之后发现可以通过css直接来实现这个功能，本着人无我有，人有我优的原则，在这里记录一下具体过程。
-
-首先我经过尝试以及网上查找之后，发现利用hover来实现这个功能是有一定局限性的，如果你要改变其他元素的样式，那么它们必须是相邻同级元素或者是同一父元素的子元素，不然效果是出不来的（呜~）
-相邻同级元素HTML
-
-&lt;div class="div1"&gt;
-    &lt;div class="son1"&gt;son1 &lt;/div&gt;
-    &lt;...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/08/21</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/05/18/Web安全攻击方式/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Web安全攻击方式</span>
-                    </h2>
-                <div class="abstract-content">
-                    xssxss是跨站脚本攻击，指攻击者在网页中嵌入客户端脚本，当用户浏览次页面时，脚本就会在用户浏览器上执行，从而达到攻击目的
-比如我们下载有这么一个代码
-
-&lt;input type=”text” name=”address” value=”valuefrom”&gt;
-
-valuefrom是来自用户的输入，如果用户不是输入valuefrom而是输入”/&gt;&lt;script&gt;alert(document.cookie)&gt;/script&gt;&lt;!-,即变成
-
-&lt;input type=”text” name=”address” value=””/&gt;&...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/18</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/05/11/安装mongodb遇到的坑/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>安装mongodb遇到的坑</span>
-                    </h2>
-                <div class="abstract-content">
-                    mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程
-我在官网上下载最新3.6版本并在windows下安装会出现进度条长时间不动的情况，这是因为3.6版本在windows下有不适配的问题，需要我们下载3.4版本安装
-（我的安装路径是C:\Program Files\MongoDB）
-下载安装完成之后，需要添加安装路径到path环境变量：C:\Program Files\MongoDB\Server\3.4\bin
-我们在D盘创建如下文件夹D:\mongodb\data  D:\mongodb\logs
-在命...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/11</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/05/05/使用express配置前端服务器/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>使用express配置前端服务器</span>
-                    </h2>
-                <div class="abstract-content">
-                    使用webpack打包vue项目之后会生成dist文件夹，dist文件夹下面有html文件和其他的css,js和img等文件，如果你要查看打包之后的文件怎么办，这时候我们可以将生成的dist文件部署到express服务器上运行。
-首先我们需要安装express-generator生成器
-npm install express-generator -g
-
-创建express项目
-express expressname(项目名称)
-
-进入项目目录，安装相关项目依赖
-cd expressnamenpm install
-
-将dist文件夹下生成的文件复制到express项目下的piblic文件夹...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/05</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/05/01/自适应布局的几种方法/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>自适应布局的几种方法</span>
-                    </h2>
-                <div class="abstract-content">
-                    自适应布局的几种方法
-百分比1&lt;meta name=&quot;viewport&quot; content=&quot;width-device-width,initial-scale=1&quot;
-viewport是网页默认的宽度和高度，width=device-width即网页宽度默认等于屏幕宽度，initial-scale=1即原始缩放比例为1.0，网页初始大小占屏幕面积的100%。
-由于网页会根据屏幕宽度调整布局，所以不能使用绝对宽度的布局，也不能使用绝对宽度的元素，如css不能指定像素宽度，只能指定百分比宽度，字体不能使用绝对大小px，而只能使用相对大小em。
-@me...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/01</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/02/09/优雅降级与渐进增强/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>优雅降级与渐进增强</span>
-                    </h2>
-                <div class="abstract-content">
-                    优雅降级与渐进增强
-
-优雅降级(Graceful Degradation)：一开始就构建站点的完整功能，然后针对浏览器测试和修复。比如一开始使用CSS3的特性构建了一个应用，然后逐步针对各大浏览器进行测试使其可以再低版本浏览器上正常浏览。
-渐进增强(Progressive Enhancement)：一开始就针对低版本浏览器进行构建页面，完成基本的功能，然后再针对高级浏览器进行效果、交互、追加功能达到更好的体验。
-渐进增强相当于向上兼容，而优雅降级相当于向下兼容，向下兼容指的是高版本支持低版本的或者说后期开发的版本支持和兼容早期开发的版本，向上兼容的很少，大多数软件都是向下兼容的
-区别
-优...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/02/09</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/02/07/了解Vue-router/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>了解Vue-router</span>
-                    </h2>
-                <div class="abstract-content">
-                    Vue-router通过Vue我们可以实现组件化开发，而各组件之间如何跳转呢，在我们第一次项目用gulp构建工具开发时，页面跳转是通过a标签的href属性实现的，不过在Vue中，页面跳转是通过路由实现的，路由的配置就成了一个需要学习的问题
-
-路由实现页面跳转首先需要安装插件
-
-npm install vue-router –save
-
-之后在 main.js 里面写入
-
-import VueRouter from ‘vue-router’
-Vue.use(VueRouter)
-
-通过它来引入 vue-router ，之后进入 /router/index.js 文件，同样先引入
-
-impo...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/02/07</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/02/06/2月5日分享总结/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>2月5日分享总结</span>
-                    </h2>
-                <div class="abstract-content">
-                    分享总结今天晚上罗旋大佬给我们分享了关于web前沿方面的知识，对我的感觉是很精彩的，只比之前学姐的分享稍逊一筹，下面我来分享一下我的理解并在之后查阅的资料
-Progressive Web App这个词直译就是“进步的web app”，由于学长推荐的学习网页需要翻墙才能看，我在这里给大家推荐另一个网站 什么是PWA,希望能有所帮助
-什么是PWA？PWA是一种提升Web App体验的方法，能带给用户原生应用般的体验，而PWA的主要特点主要包含以下几点：
-
-渐进式 - 适用于选用任何浏览器的所有用户，因为它是以渐进式增强作为核心宗旨来开发的
-自适应 - 适合任何机型：桌面设备、移动设备、平板电...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/02/06</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/01/31/vue中如何引入外链css和js/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Vue引入外链css和js</span>
-                    </h2>
-                <div class="abstract-content">
-                    初次使用vue，在这里我把我了解到的vue如何引入css和js方法给大家分享一下
-
-引入外链css
-
-大家的文件夹格式基本都是
-这样的吧，在这里，我建议大家把css文件都放在static文件夹里面，可以直接放，也可以在里面新建文件夹放入，我也不知道为什么一定放在这里面，我放在比如assets里面死活就是不出来
-放好之后，下面就可以直接在&lt;style&gt;里面引入格式如下：
-
-@import ‘./static/common.css’
-
-这是引入css
-
-而对于js，我主要说一下如何引入jquery
-首先我们输入命令行
-
-npm install jquery –save
-
-安装好之...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/31</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">#NEXT</a>
-    </nav>
-    
-</main>
-            <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" src= http://pic.caigoubao.cc/606573/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180725164000.png >
-    <div class="profile-name">柚子讴歌</div>
-    
-    <div class="profile-signature">
-        疯狂吧，骄傲的少年
-    </div>
-    
-    
-    <div class="profile-social">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-    
+          <a class="main-nav-link" href="/">Home</a>
         
-            
-                <a href="mailto:cuijiahuan97@foxmail.com" class="iconfont-archer email" title=email ></a>
-            
+          <a class="main-nav-link" href="/archives">Archives</a>
         
-    
+      </nav>
+      <nav id="sub-nav">
         
-            
-                <a href="//github.com/cuijiahuan" class="iconfont-archer github" target="_blank" title="github"></a>
-            
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-    
-        
-            
-                <a href="//www.zhihu.com/people/jia-huan-80-62/activities" class="iconfont-archer zhihu" target="_blank" title="zhihu"></a>
-            
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                <span>
-                    <a href= //www.bilibili.com target="_black">bilibili</a>
-                </span>
-            
-                <span>
-                    <a href= //www.dilidili.wang target="_black">dilidili</a>
-                </span>
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <div>
-                <a href = "/about" >ABOUT ME</a>
-            </div>
-        </div>
-    
-</div>
-            
-        </div>
-        <footer class="footer footer-unloaded">
-    <!-- social  -->
-    
-    <div class="social">
-        
-    
-        
-            
-                <a href="mailto:cuijiahuan97@foxmail.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/cuijiahuan" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-            
-                <a href="//www.zhihu.com/people/jia-huan-80-62/activities" class="iconfont-archer zhihu" target="_blank" title="zhihu"></a>
-            
-        
-    
-
-    </div>
-    
-    <!-- powered by Hexo  -->
-    <div class="copyright">
-        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
-    </div>
-    <!-- 不蒜子  -->
-    
-</footer>
-    </div>
-    <!-- toc -->
-    
-    <div class="back-top">&#xe639;</div>
-    <div class="sidebar">
-    <div class="sidebar-header sidebar-header-show-archive">
-        <div class="sidebar-category">
-            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
-            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
-        </div>
-    </div>
-    <div class="sidebar-content sidebar-content-show-archive">
-          <div class="sidebar-archive">
-    <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 23 </div>
-    
-    <div class="post-archive">
-    
-    
-    
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2018/08/22/vue中遇到的一些问题总结/" >vue中遇到的一些问题总结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/21</span><a class="archive-post-title" href= "/2018/08/21/利用hover控制其他元素样式/" >利用hover控制其他元素样式</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/18</span><a class="archive-post-title" href= "/2018/05/18/Web安全攻击方式/" >Web安全攻击方式</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2018/05/11/安装mongodb遇到的坑/" >安装mongodb遇到的坑</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/05</span><a class="archive-post-title" href= "/2018/05/05/使用express配置前端服务器/" >使用express配置前端服务器</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/01</span><a class="archive-post-title" href= "/2018/05/01/自适应布局的几种方法/" >自适应布局的几种方法</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/09</span><a class="archive-post-title" href= "/2018/02/09/优雅降级与渐进增强/" >优雅降级与渐进增强</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/07</span><a class="archive-post-title" href= "/2018/02/07/了解Vue-router/" >了解Vue-router</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/06</span><a class="archive-post-title" href= "/2018/02/06/2月5日分享总结/" >2月5日分享总结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/31</span><a class="archive-post-title" href= "/2018/01/31/vue中如何引入外链css和js/" >Vue引入外链css和js</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/30</span><a class="archive-post-title" href= "/2018/01/30/1月28分享总结/" >1月28日分享总结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/27</span><a class="archive-post-title" href= "/2018/01/27/思考跨域问题/" >思考跨域问题</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/26</span><a class="archive-post-title" href= "/2018/01/26/es6学习第二篇/" >es6学习第二篇</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/26</span><a class="archive-post-title" href= "/2018/01/26/HTTP状态码/" >HTTP状态码</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/24</span><a class="archive-post-title" href= "/2018/01/24/HTML5新特性/" >HTML5新特性</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/23</span><a class="archive-post-title" href= "/2018/01/23/es6学习第一篇/" >es6学习第一篇</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/22</span><a class="archive-post-title" href= "/2018/01/22/前端任务/" >前端任务</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/22</span><a class="archive-post-title" href= "/2018/01/22/swiper入门学习/" >swiper入门学习</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2018/01/08/webpack入门学习/" >webpack入门学习</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2017 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/18</span><a class="archive-post-title" href= "/2017/06/18/npm学习/" >npm学习</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/15</span><a class="archive-post-title" href= "/2017/06/15/gulp学习/" >gulp学习</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/12</span><a class="archive-post-title" href= "/2017/06/12/git学习/" >Git学习</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/10</span><a class="archive-post-title" href= "/2017/06/10/第一篇博客/" >第一篇博客</a>
-        </li>
-    
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
     </div>
   </div>
-        <div class="sidebar-tags">
-    <div class="sidebar-tags-name">
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-vue中遇到的一些问题总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/22/vue中遇到的一些问题总结/" class="article-date">
+  <time datetime="2018-08-22T13:06:55.000Z" itemprop="datePublished">2018-08-22</time>
+</a>
     
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/22/vue中遇到的一些问题总结/">vue中遇到的一些问题总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、今天在公司修改样式的时候发现引入Element-UI的tooltip组件之后，想对tootip的样式进行自定义修改，结果发现无论怎么设置选择器的优先级，都渲染不到页面上，后来经过一系列的尝试之后发现是由于给style设置scoped造成的，本身设置scoped是为了防止全局样式冲突，结果没想到会造成自定义的样式渲染不上，后来经过思考测试，其实是可以将组件内修改tooltp的样式放到全局css中，不过需要给对应的元素设置类型，比如tooltip可以通过<code>popper-class=”tooltip”</code>设置类名，然后给这个类名添加样式。</p>
+<p>2、在进行vue页面编写时经常会用到数据绑定，在渲染页面的时候其实会出现页面闪烁会看到变量的问题，比如通过<code>&lt;p&gt;&lt;p&gt;</code>进行数据绑定，页面刷新时可能会看到<code></code>，这对于用户体验来说是很差的，因此我们可以使用<strong>v-clock</strong>来解决这个问题，基本上我们只需要把它添加到el挂载的标签就可以，一般来说就是最外层的div，如<code>&lt;div class=”#app” v-clock&gt;</code></p>
+<blockquote>
+<p>在某些情况下<code>v-clock</code>并不起作用</p>
+<p>①、挂载v-clock的元素的display属性被更高层级的覆盖掉了，如<code>!important</code>属性，这就需要我们提高层级</p>
+<p>②、当样式放到@import引入的css文件中时<code>v-clock</code>是不起作用的，可以用link引入样式或者写入内联样式。</p>
+</blockquote>
+<p>3、在搭建个人博客时我曾经换过页面标题旁边的图标，因此在利用vue编写个人项目时也考虑过这个问题，它的实现思路和博客其实差不多，只需要在最外层index.html的head标签里面加上<code>&lt;link rel=”shortcut icon” type=”image/x-icon” href=”static/favicon.ico”&gt;</code>，个人建议图标和logo之类的图片放在static文件夹中比较好。</p>
+<center>to be continue…</center>
+      
     </div>
-    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
-    缺失模块。<br/>
-    1、请确保node版本大于6.2<br/>
-    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
-    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
-    3、在根目录_config.yml里添加配置：
-    <pre style="color: #787878; font-size: 0.6rem;">
-jsonContent:
-  meta: false
-  pages: false
-  posts:
-    title: true
-    date: true
-    path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: false
-    tags: true</pre>
-    </div> 
-    <div class="sidebar-tag-list"></div>
-</div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/22/vue中遇到的一些问题总结/" data-id="cjl6lbthj000bw8mb3x3wsk0n" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-利用hover控制其他元素样式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/21/利用hover控制其他元素样式/" class="article-date">
+  <time datetime="2018-08-21T13:05:29.000Z" itemprop="datePublished">2018-08-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/21/利用hover控制其他元素样式/">利用hover控制其他元素样式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>之前在项目中有一个需求是鼠标移入元素上时该元素改变样式的同时另外元素样式也要改变，刚开始想利用js来实现，不过有点麻烦，之后发现可以通过css直接来实现这个功能，本着人无我有，人有我优的原则，在这里记录一下具体过程。</p>
+</blockquote>
+<p><strong>首先我经过尝试以及网上查找之后，发现利用hover来实现这个功能是有一定局限性的，如果你要改变其他元素的样式，那么它们必须是相邻同级元素或者是同一父元素的子元素，不然效果是出不来的（呜~）</strong></p>
+<h4 id="相邻同级元素"><a href="#相邻同级元素" class="headerlink" title="相邻同级元素"></a>相邻同级元素</h4><p>HTML</p>
+<pre>
+&lt;div class="div1"&gt;
+    &lt;div class="son1"&gt;son1 &lt;/div&gt;
+    &lt;div class="son2"&gt;son2 &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>CSS</p>
+<pre>
+.son1 , .son2{
+    width:100px;
+    height:100px;
+    border:1px solid #000;
+}
+.son1:hover + .son2{
+    background:#000;
+}
+</pre>
+
+<p>鼠标移入son1元素，son2元素背景色变黑</p>
+<h4 id="父级元素"><a href="#父级元素" class="headerlink" title="父级元素"></a>父级元素</h4><p>HTML</p>
+<pre>
+&lt;div class="div1"&gt;
+    &lt;div class="son"&gt;son1 &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>CSS</p>
+<pre>
+.div1{
+    width:200px;
+    height:200px;
+    border:1px solid #000;
+}
+.son{
+    margin:0 auto;
+    width:100px;
+    height:100px;
+    border:1px solid #000;
+}
+.div1:hover .son{
+    background:#000;
+}
+</pre>
+
+<p>鼠标移入父级.div1元素，子元素son背景变黑</p>
+
+      
     </div>
-</div> 
-    <script>
-    var jsInfo = {
-        root: '/'
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/21/利用hover控制其他元素样式/" data-id="cjl6lbthq000hw8mbd363led1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Web安全攻击方式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/18/Web安全攻击方式/" class="article-date">
+  <time datetime="2018-05-18T15:56:27.000Z" itemprop="datePublished">2018-05-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/18/Web安全攻击方式/">Web安全攻击方式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="xss"><a href="#xss" class="headerlink" title="xss"></a>xss</h3><p>xss是跨站脚本攻击，指攻击者在网页中嵌入客户端脚本，当用户浏览次页面时，脚本就会在用户浏览器上执行，从而达到攻击目的</p>
+<p>比如我们下载有这么一个代码</p>
+<blockquote>
+<p>&lt;input type=”text” name=”address” value=”valuefrom”&gt;</p>
+</blockquote>
+<p>valuefrom是来自用户的输入，如果用户不是输入valuefrom而是输入”/&gt;&lt;script&gt;alert(document.cookie)&gt;/script&gt;&lt;!-,即变成</p>
+<blockquote>
+<p>&lt;input type=”text” name=”address” value=””/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-“&gt;</p>
+</blockquote>
+<p>嵌入的javascript代码将会被执行</p>
+<p><strong>xss漏洞修复</strong><br>原则：不要相信用户输入的数据</p>
+<p>*注意：攻击代码不一定在&lt;script&gt;&lt;script&gt;标签里</p>
+<blockquote>
+<ul>
+<li>将重要的cookie标记为http only，这样js的document.cookie语句就无法获取cookie</li>
+<li>只允许用户输入我们规定的数据，比如年龄只允许输入数字</li>
+<li>对数据进行html Encode处理</li>
+<li>过滤或移除特殊的html标签，例如&lt;script&gt;,&lt;iframe&gt;</li>
+<li>过滤掉js事件的标签，比如onclick,onfocus</li>
+</ul>
+</blockquote>
+<h3 id="csrf"><a href="#csrf" class="headerlink" title="csrf"></a>csrf</h3><p>csrf是跨站请求伪造，指攻击者盗用了你的身份，以你的名义发送恶意请求，csrf能够以你名义发送邮件，发消息……会造成个人隐私泄露以及财产安全等问题</p>
+<p>要完成一次csrf攻击，受害者必须依次完成两个步骤：</p>
+<blockquote>
+<p>登录受信任网站A，并在本地生成cookie</p>
+<p>在不登出A的情况下，访问危险网站B</p>
+</blockquote>
+<p>看到这里，你也许会说：“如果我不满足以上两个条件中的一个，我就不会受到CSRF的攻击”。是的，确实如此，但你不能保证以下情况不会发生：</p>
+<blockquote>
+<p>1.你不能保证你登录了一个网站后，不再打开一个tab页面并访问另外的网站。</p>
+<p>2.你不能保证你关闭浏览器了后，你本地的Cookie立刻过期，你上次的会话已经结束。（事实上，关闭浏览器不能结束一个会话，但大多数人都会错误的认为关闭浏览器就等于退出登录/结束会话了……）</p>
+<p>3.所谓的攻击网站，可能是一个存在其他漏洞的可信任的经常被人访问的网站。</p>
+</blockquote>
+<p><strong>csrf防御</strong></p>
+<p>1.服务端进行csrf防御</p>
+<p>服务端的CSRF方式方法很多样，但总的思想都是一致的，就是在客户端页面增加伪随机数。</p>
+<p>(1).Cookie Hashing(所有表单都包含同一个伪随机值)</p>
+<p>(2).验证码</p>
+<p>(3).One-Time Tokens(不同的表单包含一个不同的伪随机值)</p>
+<p>目前防御 CSRF 攻击主要有三种策略：</p>
+<p>①验证 HTTP Referer 字段；</p>
+<p>②在请求地址中添加 token 并验证；</p>
+<p>③在 HTTP 头中自定义属性并验证。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/18/Web安全攻击方式/" data-id="cjl6lbthc0005w8mbiucuffun" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-安装mongodb遇到的坑" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/11/安装mongodb遇到的坑/" class="article-date">
+  <time datetime="2018-05-11T15:55:45.000Z" itemprop="datePublished">2018-05-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/11/安装mongodb遇到的坑/">安装mongodb遇到的坑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程"><a href="#mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程" class="headerlink" title="mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程"></a>mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程</h3><hr>
+<p>我在官网上下载最新3.6版本并在windows下安装会出现进度条长时间不动的情况，这是因为3.6版本在windows<br>下有不适配的问题，需要我们下载3.4版本安装</p>
+<p>（我的安装路径是C:\Program Files\MongoDB）</p>
+<p>下载安装完成之后，需要添加安装路径到path环境变量：C:\Program Files\MongoDB\Server\3.4\bin</p>
+<p>我们在D盘创建如下文件夹D:\mongodb\data  D:\mongodb\logs</p>
+<p>在命令提示符输入</p>
+<blockquote>
+<p>cd C:\Program Files\MongoDB\Server\3.4\bin</p>
+</blockquote>
+<p>再输入mongod.exe –dbpath=D:\mongodb\data –logpath=D:\mongodb\logs\mongodb.log –install</p>
+<p>输入net start mongodb启动服务</p>
+<p>最后在浏览器输入<a href="http://localhost:27017/在页面看到It" target="_blank" rel="external">http://localhost:27017/在页面看到It</a> looks like you are trying to access MongoDB over HTTP on the native driver port.表示成功</p>
+<p>在这里我说一下我安装的时候遇到的几个坑</p>
+<blockquote>
+<p>1.首先就是安装包问题，需要安装3.4版本的<br><br>2.在输入net start mongodb之后，提示我服务没有响应控制功能，之后我发现在配置path路径时把C:\windows\system32给删掉了，把这句加上就可以了<br><br>在D盘创建文件夹时，当时看别人的博客是把logs文件夹放到data文件夹里面，我这样操作之后启动服务是无法启动的，当我把logs文件夹和data文件夹并列之后，启动是可以的。</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/11/安装mongodb遇到的坑/" data-id="cjl6lbths000jw8mbbpqxa7dk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-使用express配置前端服务器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/05/使用express配置前端服务器/" class="article-date">
+  <time datetime="2018-05-05T13:39:41.000Z" itemprop="datePublished">2018-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/05/使用express配置前端服务器/">使用express配置前端服务器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用webpack打包vue项目之后会生成dist文件夹，dist文件夹下面有html文件和其他的css,js和img等文件，如果你要查看打包之后的文件怎么办，这时候我们可以将生成的dist文件部署到express服务器上运行。</p>
+<h3 id="首先我们需要安装express-generator生成器"><a href="#首先我们需要安装express-generator生成器" class="headerlink" title="首先我们需要安装express-generator生成器"></a>首先我们需要安装express-generator生成器</h3><blockquote>
+<p>npm install express-generator -g</p>
+</blockquote>
+<h3 id="创建express项目"><a href="#创建express项目" class="headerlink" title="创建express项目"></a>创建express项目</h3><blockquote>
+<p>express expressname(项目名称)</p>
+</blockquote>
+<h3 id="进入项目目录，安装相关项目依赖"><a href="#进入项目目录，安装相关项目依赖" class="headerlink" title="进入项目目录，安装相关项目依赖"></a>进入项目目录，安装相关项目依赖</h3><blockquote>
+<p>cd expressname<br>npm install</p>
+</blockquote>
+<h3 id="将dist文件夹下生成的文件复制到express项目下的piblic文件夹下，然后运行npm-start，启动express项目"><a href="#将dist文件夹下生成的文件复制到express项目下的piblic文件夹下，然后运行npm-start，启动express项目" class="headerlink" title="将dist文件夹下生成的文件复制到express项目下的piblic文件夹下，然后运行npm start，启动express项目"></a>将dist文件夹下生成的文件复制到express项目下的piblic文件夹下，然后运行npm start，启动express项目</h3><h3 id="打开浏览器，输入localhost-3000查看效果"><a href="#打开浏览器，输入localhost-3000查看效果" class="headerlink" title="打开浏览器，输入localhost:3000查看效果"></a>打开浏览器，输入localhost:3000查看效果</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/05/使用express配置前端服务器/" data-id="cjl6lbthp000gw8mbheoe2yyi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-自适应布局的几种方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/01/自适应布局的几种方法/" class="article-date">
+  <time datetime="2018-05-01T12:44:19.000Z" itemprop="datePublished">2018-05-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/01/自适应布局的几种方法/">自适应布局的几种方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>自适应布局的几种方法</p>
+<h3 id="百分比"><a href="#百分比" class="headerlink" title="百分比"></a>百分比</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width-device-width,initial-scale=1&quot;</div></pre></td></tr></table></figure>
+<p>viewport是网页默认的宽度和高度，width=device-width即网页宽度默认等于屏幕宽度，initial-scale=1即原始缩放比例为1.0，网页初始大小占屏幕面积的100%。</p>
+<p>由于网页会根据屏幕宽度调整布局，所以不能使用绝对宽度的布局，也不能使用绝对宽度的元素，如css不能指定像素宽度，只能指定百分比宽度，字体不能使用绝对大小px，而只能使用相对大小em。</p>
+<h3 id="media规则"><a href="#media规则" class="headerlink" title="@media规则"></a>@media规则</h3><p>css3的@media规则可以在不改变html内容情况下，根据终端媒体设备的不同选择不同的css样式</p>
+<p>具体写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media 设备类型 and (设备特性)&#123;</div><div class="line">	css样式代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>例如：</p>
+<pre>
+//浏览器窗口大于900px
+@media screen and(min-width:900px){
+    body{
+        font-size:25px;
     }
-</script>
-    <!-- 不蒜子  -->
-    
-    <!-- CNZZ统计  -->
-    
+}
+//浏览器窗口大于500px小于900px
+@media screen and(min-width:500px)and(max-width:900px){
+    body{
+        font-size:20px;
+    }
+}
+//浏览器窗口小于500px
+@media screen and(max-width:500px){
+    body{
+        font-size:15px;
+    }
+}
+</pre>
+
+<h3 id="rem自适应布局"><a href="#rem自适应布局" class="headerlink" title="rem自适应布局"></a>rem自适应布局</h3><p>首先我们需要知道rem是相对于根元素的字体大小的单位，它是一个相对单位，同理em是相对于父元素的字体大小的单位；rem的计算规则依赖根元素，我们只需要在根元素确定一个px字号，就可以计算出元素的宽高。</p>
+<h3 id="target-densitydpi属性"><a href="#target-densitydpi属性" class="headerlink" title="target-densitydpi属性"></a>target-densitydpi属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=640,target-densitydpi=device-dpi,user-scalable=no&quot;&gt;</div></pre></td></tr></table></figure>
+<p>通过读取device-width的值来自动计算出target-densitydpi去实现自适应网页，不过缺点是目前只在android支持，具有兼容性问题。</p>
+<p>target-densitydpi属性的取值范围：</p>
+<pre>
+device-dpi    --使用设备原本的dpi作为目标dpi，不会发生默认缩放。
+high-dpi    --使用hdpi作为目标dpi，中等像素密度和低像素密度设备相应缩小。
+medium-dpi    --使用mdpi作为目标dpi，高像素密度设备相应放大，低像素密度设备相应缩小，这是默认的target density
+low-dpi        --使用ldpi作为目标dpi，中等像素密度和高像素密度设备相应放大
+value        --指定一个具体的dpi，值作为target dpi，这个值得范围必须在70-400之间。
+</pre>
+      
     </div>
-    </body>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/01/自适应布局的几种方法/" data-id="cjl6lbthv000mw8mbykdbrjtc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-优雅降级与渐进增强" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/09/优雅降级与渐进增强/" class="article-date">
+  <time datetime="2018-02-09T14:25:17.000Z" itemprop="datePublished">2018-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/09/优雅降级与渐进增强/">优雅降级与渐进增强</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>优雅降级与渐进增强</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1839822-d10930c25da17cd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/650" alt=""></p>
+<p><strong>优雅降级(Graceful Degradation)</strong>：一开始就构建站点的完整功能，然后针对浏览器测试和修复。比如一开始使用CSS3的特性构建了一个应用，然后逐步针对各大浏览器进行测试使其可以再低版本浏览器上正常浏览。</p>
+<p><strong>渐进增强(Progressive Enhancement)</strong>：一开始就针对低版本浏览器进行构建页面，完成基本的功能，然后再针对高级浏览器进行效果、交互、追加功能达到更好的体验。</p>
+<p><em>渐进增强相当于向上兼容，而优雅降级相当于向下兼容，向下兼容指的是高版本支持低版本的或者说后期开发的版本支持和兼容早期开发的版本，向上兼容的很少，大多数软件都是向下兼容的</em></p>
+<p>区别</p>
+<p><strong>优雅降级</strong>认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段</p>
+<p><strong>渐进增强</strong>则认为应关注于内容本身，而对浏览器则是次要的，因为内容是建立网站的诱因，这使得渐进增强成一种更为合理的设计范例。</p>
+<p>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.transition&#123; /*渐进式写法*/</div><div class="line">    -webkit-transition:all .5s;</div><div class="line">    -moz-transition:all .5s;</div><div class="line">    -o-transition:all .5s;</div><div class="line">    transition:all .5s;</div><div class="line">&#125;</div><div class="line">.transition&#123; /*优雅降级写法*/</div><div class="line">    transition:all .5s;</div><div class="line">    -o-transition:all .5s;</div><div class="line">    -moz-transition:all .5s;</div><div class="line">    -webkit-transition:all .5s;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>前缀CSS3与正常CSS3在浏览器中的支持情况：</p>
+<ol>
+<li>很久以前：浏览器前缀CSS3和正常CSS3都不支持；</li>
+<li>不久之前：浏览器只支持前缀CSS3，不支持正常CSS3；</li>
+<li>现在：浏览器既支持前缀CSS3，又支持正常CSS3；</li>
+<li>未来：浏览器不支持前缀CSS3，仅支持正常CSS3。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/09/优雅降级与渐进增强/" data-id="cjl6lbtho000fw8mbggp1rlss" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-了解Vue-router" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/07/了解Vue-router/" class="article-date">
+  <time datetime="2018-02-06T17:30:11.000Z" itemprop="datePublished">2018-02-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/07/了解Vue-router/">了解Vue-router</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Vue-router"><a href="#Vue-router" class="headerlink" title="Vue-router"></a>Vue-router</h3><p>通过Vue我们可以实现组件化开发，而各组件之间如何跳转呢，在我们第一次项目用gulp构建工具开发时，页面跳转是通过a标签的href属性实现的，不过在Vue中，页面跳转是通过路由实现的，路由的配置就成了一个需要学习的问题</p>
+<hr>
+<h4 id="路由实现页面跳转"><a href="#路由实现页面跳转" class="headerlink" title="路由实现页面跳转"></a>路由实现页面跳转</h4><p>首先需要安装插件</p>
+<blockquote>
+<p>npm install vue-router –save</p>
+</blockquote>
+<p>之后在 <strong>main.js</strong> 里面写入</p>
+<blockquote>
+<p>import VueRouter from ‘vue-router’</p>
+<p>Vue.use(VueRouter)</p>
+</blockquote>
+<p>通过它来引入 <strong>vue-router</strong> ，之后进入 <strong>/router/index.js</strong> 文件，同样先引入</p>
+<blockquote>
+<p>import Router from ‘vue-router’</p>
+<p>Vue.use(Router)</p>
+</blockquote>
+<p>然后将你需要进行跳转的组件引入这个文件中，比如我现在要进行首页(<strong>index.vue</strong>)与商品列表(<strong>goodlist.vue</strong>)的跳转,首先我们需要将这两个页面引进来</p>
+<blockquote>
+<p>import index from ‘@/components/index.vue’</p>
+<p>import goodlist from ‘@/components/goodlist/goodlist.vue’</p>
+</blockquote>
+<p>然后进行页面的配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">export default new Router(&#123;</div><div class="line">    routers: [</div><div class="line">        &#123;</div><div class="line">            title: &apos;首页&apos;，</div><div class="line">            path: &apos;/&apos;,</div><div class="line">            name: &apos;index&apos;,</div><div class="line">            components: index</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            title: &apos;商品目录&apos;,</div><div class="line">            path: &apos;/goodlist&apos;,</div><div class="line">            name: &apos;goodlist&apos;,</div><div class="line">            components: goodlist</div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>然后在你的<strong>index.vue</strong>中商品元素的父元素中写入点击事件</p>
+<blockquote>
+<p>&lt;span @click=”goodlist()”&gt;商品目录&lt;/span&gt;</p>
+</blockquote>
+<p>然后在<strong>script</strong>中写入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">export default &#123;</div><div class="line">    methods: &#123;</div><div class="line">        goodlist: function () &#123;</div><div class="line">            this.$router.push(&#123;path: &apos;/goodlist&apos;&#125;)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>之后在页面点击首页的商品就可以跳转到商品列表页面</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/07/了解Vue-router/" data-id="cjl6lbthn000ew8mb83kfg62e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2月5日分享总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/06/2月5日分享总结/" class="article-date">
+  <time datetime="2018-02-05T17:07:11.000Z" itemprop="datePublished">2018-02-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/06/2月5日分享总结/">2月5日分享总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="分享总结"><a href="#分享总结" class="headerlink" title="分享总结"></a>分享总结</h3><p>今天晚上罗旋大佬给我们分享了关于web前沿方面的知识，对我的感觉是很精彩的，只比之前学姐的分享稍逊一筹，下面我来分享一下我的理解并在之后查阅的资料</p>
+<h4 id="Progressive-Web-App"><a href="#Progressive-Web-App" class="headerlink" title="Progressive Web App"></a>Progressive Web App</h4><p>这个词直译就是“进步的web app”，由于学长推荐的学习网页需要翻墙才能看，我在这里给大家推荐另一个网站 <strong><a href="https://lavas.baidu.com/mip/doc/README#%E5%8F%AF%E9%9D%A0" target="_blank" rel="external">什么是PWA</a></strong>,希望能有所帮助</p>
+<h5 id="什么是PWA？"><a href="#什么是PWA？" class="headerlink" title="什么是PWA？"></a>什么是PWA？</h5><p>PWA是一种提升Web App体验的方法，能带给用户原生应用般的体验，而PWA的主要特点主要包含以下几点：</p>
+<ul>
+<li>渐进式 - 适用于选用任何浏览器的所有用户，因为它是以渐进式增强作为核心宗旨来开发的</li>
+<li>自适应 - 适合任何机型：桌面设备、移动设备、平板电脑等</li>
+<li>连接无关性 - 能够借助服务工作线程在离线或低质量网络状况下工作</li>
+<li>类似应用 - 由于是在 <strong><a href="https://lavas.baidu.com/mip/guide/vue/doc/vue/advanced/define-app-shell" target="_blank" rel="external">App Shell模型</a></strong> 基础上开发，因此具有应用风格的交互和导航，给用户以应用般的熟悉感</li>
+<li>持续更新 - 在服务工作线程更新进程的作用下时刻保持最新状态</li>
+<li>安全 - 通过HTTPS提供，以防止窥探和确保内容不被篡改</li>
+<li>可发现 - W3C清单和服务工作流程注册作用域能够让搜索引擎找到它们，从而将其识别为“应用”</li>
+<li>可再互动 - 通过推送通知之类的功能简化了再互动</li>
+<li>可安装 - 用户可免去使用应用商店的麻烦，直接将对其最有用的应用“保留”在主屏幕上</li>
+<li>可链接 - 可通过网址轻松分享，无需复杂的安装</li>
+</ul>
+<p>比如有一个具体的例子，<strong><a href="https://weatherpwa.baidu.com/" target="_blank" rel="external">天气PWA</a></strong>，当我们平时遇到断网时刷新一下页面，电脑或手机会出现“未连接到互联网”之类的页面或错误提示，而PWA则会在断网刷新后依然出现页面内容，而且当我们对页面上一个内容很感兴趣时，我们可以直接将它放在主页面，不需要安装app,国内的 <strong><a href="https://m.douban.com/" target="_blank" rel="external">豆瓣网手机版</a></strong> 使用的也是PWA，对于如何使用，由于在chrome浏览器需要下载“Web Server for Chrome”扩展功能，我们可以查按照我推荐的那个网站来进行操作</p>
+<h5 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h5><p>前端工程师有很多性能优化手段，包括CDN、CSS Sprite、文件的合并压缩、异步加载、资源缓存等（<em>原谅我还不清楚具体的性能优化</em>），而Service Worker让缓存做到了优雅、极致，让Web App的缺点更加弱化。</p>
+<p>Service Worker特点：</p>
+<ul>
+<li>一个独立的worker线程，独立于当前网页进程，有自己独立的worker context</li>
+<li>一旦被install，就永远存在，除非被uninstall</li>
+<li>需要时可直接唤醒、不需要要=可以自动睡眠‘</li>
+<li>可编程拦截代理请求和返回，缓存文件，缓存的文件可以被网页进程渠取到（包括离线状态）</li>
+<li>离线内容开发者可控</li>
+<li>能向客户端推送消息</li>
+<li>不能直接操作DOM</li>
+<li>必须在HTTPS环境下工作</li>
+<li>异步实现，内部大都是通过Promise实现</li>
+</ul>
+<p>如何使用Service Worker请看网站资源，我试过，不用翻墙，可以成功检查到是否安装Seivice Worker</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/06/2月5日分享总结/" data-id="cjl6lbthw000nw8mbfdiq4j5v" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-vue中如何引入外链css和js" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/31/vue中如何引入外链css和js/" class="article-date">
+  <time datetime="2018-01-30T19:10:29.000Z" itemprop="datePublished">2018-01-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/31/vue中如何引入外链css和js/">Vue引入外链css和js</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>初次使用vue，在这里我把我了解到的vue如何引入css和js方法给大家分享一下</p>
+<ol>
+<li>引入外链css</li>
+</ol>
+<p>大家的文件夹格式基本都是<br><img src="http://ozxb0em6i.bkt.clouddn.com/cuijiahuan.png" alt=""></p>
+<p>这样的吧，在这里，我建议大家把css文件都放在<strong>static</strong>文件夹里面，可以直接放，也可以在里面新建文件夹放入，我也不知道为什么一定放在这里面，我放在比如<strong>assets</strong>里面死活就是不出来</p>
+<p>放好之后，下面就可以直接在<strong>&lt;style&gt;</strong>里面引入格式如下：</p>
+<blockquote>
+<p>@import ‘./static/common.css’</p>
+</blockquote>
+<p>这是引入css</p>
+<hr>
+<p>而对于js，我主要说一下如何引入jquery</p>
+<p>首先我们输入命令行</p>
+<blockquote>
+<p>npm install jquery –save</p>
+</blockquote>
+<p>安装好之后，我们在’<strong>build/webpack.base.conf</strong>文件中引入jquery</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">    ...</div><div class="line">    resolve: &#123;</div><div class="line">    extensions: [&apos;.js&apos;,&apos;.vue&apos;,&apos;.json&apos;],</div><div class="line">    alias: &#123;</div><div class="line">        &apos;vue$&apos;: &apos;vue/dist/vue.esm.js&apos;,</div><div class="line">        &apos;@&apos;: resolve(&apos;src&apos;),</div><div class="line">        &apos;jquery&apos;: path.resolve(__dirname, &apos;../node_modules/jquery/src/jquery&apos;)</div><div class="line">    &#125;</div><div class="line">    &#125;,</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后在你需要jquery的地方引入如下方法：</p>
+<blockquote>
+<p>import $ from ‘jquery’</p>
+</blockquote>
+<p>亲测是可以的</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/31/vue中如何引入外链css和js/" data-id="cjl6lbti2000ow8mbsmcu5lyg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/22/vue中遇到的一些问题总结/">vue中遇到的一些问题总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/21/利用hover控制其他元素样式/">利用hover控制其他元素样式</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/18/Web安全攻击方式/">Web安全攻击方式</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/11/安装mongodb遇到的坑/">安装mongodb遇到的坑</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/05/使用express配置前端服务器/">使用express配置前端服务器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
 </html>
-
-
