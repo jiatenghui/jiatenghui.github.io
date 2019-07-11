@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        思考跨域问题 · 绊AI的博客
+        vue问题总结【持续更新】 · 绊AI的博客
         
     </title>
     <link rel="icon" href= https://i.ibb.co/0cfSZWv/pic.png>
@@ -72,7 +72,7 @@
                 <a href="/" >绊AI的博客</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">思考跨域问题</a>
+                <a href="#" class="post-name">vue问题总结【持续更新】</a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            思考跨域问题
+            vue问题总结【持续更新】
             <!-- 404 -->
             
         </h1>
@@ -111,7 +111,7 @@
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/01/27</span>
+                <span class="post-intro-time">2018/08/22</span>
             </div>
         
     </div>
@@ -182,51 +182,24 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h4 id="什么是跨域问题？"><a href="#什么是跨域问题？" class="headerlink" title="什么是跨域问题？"></a>什么是跨域问题？</h4><p>跨域就是指浏览器不能执行其他网站的脚本，这是由浏览器的同源策略造成的，是javascript的安全限制</p>
-<p>一个域名地址是由：</p>
+        <p>1、今天在公司修改样式的时候发现引入Element-UI的tooltip组件之后，想对tootip的样式进行自定义修改，结果发现无论怎么设置选择器的优先级，都渲染不到页面上，后来经过一系列的尝试之后发现是由于给style设置scoped造成的，本身设置scoped是为了防止全局样式冲突，结果没想到会造成自定义的样式渲染不上，后来经过思考测试，其实是可以将组件内修改tooltp的样式放到全局css中，不过需要给对应的元素设置类型，比如tooltip可以通过<code>popper-class=”tooltip”</code>设置类名，然后给这个类名添加样式。</p>
+<p>2、在进行vue页面编写时经常会用到数据绑定，在渲染页面的时候其实会出现页面闪烁会看到变量的问题，比如通过<code>&lt;p&gt;&lt;p&gt;</code>进行数据绑定，页面刷新时可能会看到<code></code>，这对于用户体验来说是很差的，因此我们可以使用<strong>v-clock</strong>来解决这个问题，基本上我们只需要把它添加到el挂载的标签就可以，一般来说就是最外层的div，如<code>&lt;div class=”#app” v-clock&gt;</code></p>
 <blockquote>
-<p><a href="http://(请求头" target="_blank" rel="external">http://(请求头</a>)  www(子域名) . cuijahuan(主域名) : 8080(端口号) / script/jquery.js(请求资源地址) 组成的</p>
+<p>在某些情况下<code>v-clock</code>并不起作用</p>
+<p>①、挂载v-clock的元素的display属性被更高层级的覆盖掉了，如<code>!important</code>属性，这就需要我们提高层级</p>
+<p>②、当样式放到@import引入的css文件中时<code>v-clock</code>是不起作用的，可以用link引入样式或者写入内联样式。</p>
 </blockquote>
-<p>而同源，就是指域名，协议，端口均相同</p>
-<p>当协议、子域名、主域名、端口号中任意一个不相同时，都算作不同域</p>
-<p>而不同域之间的相互请求资源，就是跨域<br>比如<a href="http://cuijiahuan.xyz" target="_blank" rel="external">http://cuijiahuan.xyz</a> 请求 <a href="http://jiahuan.xyz" target="_blank" rel="external">http://jiahuan.xyz</a></p>
-<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>1、使用ajax的JSONP</p>
-<p><strong><em>首先要了解JSONP只支持GET请求，不支持POST请求</em></strong></p>
-<p>ajax请求受同源策略影响，不允许进行跨域请求，而script标签src属性可以访问跨域的js脚本，因此，服务器不再返回JSON格式的数据，而是返回一段调用某个函数的JS代码，在src中进行了调用，实现了跨域。</p>
-<pre><code>还没有看jsonp，目前我只知道要在ajax里面引入
-type:&quot;get&quot;, // 接收服务器数据的类型
-dataType:&quot;jsonp&quot;, // 用于服务器端的获取函数的参数
-jsonp:&quot;callback&quot;, // 函数名称
-</code></pre><p>2、使用jquery的jsonp插件</p>
-<p>首先我们要引入相关的js文件，相关下载可参考<a href="https://github.com/jaubourg/jquery-jsonp" target="_blank" rel="external">该地址</a></p>
-<p>在我们前端代码中需要在ajax里的url下加入</p>
-<pre><code>callbackParameter:&quot;callback&quot;
-callback:&quot;callback_success&quot;
-</code></pre><p>使用该方法不局限于get请求，还可以是post请求，但从服务器获取到的依然是jsonp格式</p>
-<p>第三种方法是使用cors方法，具体可以参考网上其他博客</p>
-<hr>
-<p>附：在项目中我解决跨域问题没有用到<strong>jsonp</strong>，是通过后台修改来实现的，在前端ajax里面需要加上一句语句</p>
-<blockquote>
-<p> xhrFields: {withCredentials: true}</p>
-</blockquote>
-<p>这句是提供了请求发送凭证的支持</p>
-
+<p>3、在搭建个人博客时我曾经换过页面标题旁边的图标，因此在利用vue编写个人项目时也考虑过这个问题，它的实现思路和博客其实差不多，只需要在最外层index.html的head标签里面加上<code>&lt;link rel=”shortcut icon” type=”image/x-icon” href=”static/favicon.ico”&gt;</code>，个人建议图标和logo之类的图片放在static文件夹中比较好。</p>
+<center>to be continue…</center>
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2018/01/30/setTimeout与闭包/" title= setTimeout与闭包 >
-                    <span>Next Post</span>
-                    <span>setTimeout与闭包</span>
-                </a>
-            </li>
-        
         
             <li class="previous">
-                <a href= "/2018/01/22/swiper初步应用/" title= swiper初步应用 >
+                <a href= "/2018/08/21/利用hover控制其他元素样式/" title= 利用hover控制其他元素样式 >
                     <span>Previous Post</span>
-                    <span>swiper初步应用</span>
+                    <span>利用hover控制其他元素样式</span>
                 </a>
             </li>
         
@@ -309,7 +282,7 @@ callback:&quot;callback_success&quot;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是跨域问题？"><span class="toc-number">1.</span> <span class="toc-text">什么是跨域问题？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解决方法"><span class="toc-number">2.</span> <span class="toc-text">解决方法</span></a></li></ol>
+        
     </div>
     
     <div class="back-top">&#xe639;</div>

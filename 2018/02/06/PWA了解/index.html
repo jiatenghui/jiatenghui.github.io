@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        思考跨域问题 · 绊AI的博客
+        PWA了解【不定时更新】 · 绊AI的博客
         
     </title>
     <link rel="icon" href= https://i.ibb.co/0cfSZWv/pic.png>
@@ -72,7 +72,7 @@
                 <a href="/" >绊AI的博客</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">思考跨域问题</a>
+                <a href="#" class="post-name">PWA了解【不定时更新】</a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            思考跨域问题
+            PWA了解【不定时更新】
             <!-- 404 -->
             
         </h1>
@@ -111,7 +111,7 @@
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/01/27</span>
+                <span class="post-intro-time">2018/02/06</span>
             </div>
         
     </div>
@@ -182,51 +182,52 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h4 id="什么是跨域问题？"><a href="#什么是跨域问题？" class="headerlink" title="什么是跨域问题？"></a>什么是跨域问题？</h4><p>跨域就是指浏览器不能执行其他网站的脚本，这是由浏览器的同源策略造成的，是javascript的安全限制</p>
-<p>一个域名地址是由：</p>
-<blockquote>
-<p><a href="http://(请求头" target="_blank" rel="external">http://(请求头</a>)  www(子域名) . cuijahuan(主域名) : 8080(端口号) / script/jquery.js(请求资源地址) 组成的</p>
-</blockquote>
-<p>而同源，就是指域名，协议，端口均相同</p>
-<p>当协议、子域名、主域名、端口号中任意一个不相同时，都算作不同域</p>
-<p>而不同域之间的相互请求资源，就是跨域<br>比如<a href="http://cuijiahuan.xyz" target="_blank" rel="external">http://cuijiahuan.xyz</a> 请求 <a href="http://jiahuan.xyz" target="_blank" rel="external">http://jiahuan.xyz</a></p>
-<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>1、使用ajax的JSONP</p>
-<p><strong><em>首先要了解JSONP只支持GET请求，不支持POST请求</em></strong></p>
-<p>ajax请求受同源策略影响，不允许进行跨域请求，而script标签src属性可以访问跨域的js脚本，因此，服务器不再返回JSON格式的数据，而是返回一段调用某个函数的JS代码，在src中进行了调用，实现了跨域。</p>
-<pre><code>还没有看jsonp，目前我只知道要在ajax里面引入
-type:&quot;get&quot;, // 接收服务器数据的类型
-dataType:&quot;jsonp&quot;, // 用于服务器端的获取函数的参数
-jsonp:&quot;callback&quot;, // 函数名称
-</code></pre><p>2、使用jquery的jsonp插件</p>
-<p>首先我们要引入相关的js文件，相关下载可参考<a href="https://github.com/jaubourg/jquery-jsonp" target="_blank" rel="external">该地址</a></p>
-<p>在我们前端代码中需要在ajax里的url下加入</p>
-<pre><code>callbackParameter:&quot;callback&quot;
-callback:&quot;callback_success&quot;
-</code></pre><p>使用该方法不局限于get请求，还可以是post请求，但从服务器获取到的依然是jsonp格式</p>
-<p>第三种方法是使用cors方法，具体可以参考网上其他博客</p>
-<hr>
-<p>附：在项目中我解决跨域问题没有用到<strong>jsonp</strong>，是通过后台修改来实现的，在前端ajax里面需要加上一句语句</p>
-<blockquote>
-<p> xhrFields: {withCredentials: true}</p>
-</blockquote>
-<p>这句是提供了请求发送凭证的支持</p>
+        <h3 id="分享总结"><a href="#分享总结" class="headerlink" title="分享总结"></a>分享总结</h3><h4 id="Progressive-Web-App"><a href="#Progressive-Web-App" class="headerlink" title="Progressive Web App"></a>Progressive Web App</h4><p>这个词直译就是“进步的web app”，由于学长推荐的学习网页需要翻墙才能看，我在这里给大家推荐另一个网站 <strong><a href="https://lavas.baidu.com/mip/doc/README#%E5%8F%AF%E9%9D%A0" target="_blank" rel="external">什么是PWA</a></strong>,希望能有所帮助</p>
+<h5 id="什么是PWA？"><a href="#什么是PWA？" class="headerlink" title="什么是PWA？"></a>什么是PWA？</h5><p>PWA是一种提升Web App体验的方法，能带给用户原生应用般的体验，而PWA的主要特点主要包含以下几点：</p>
+<ul>
+<li>渐进式 - 适用于选用任何浏览器的所有用户，因为它是以渐进式增强作为核心宗旨来开发的</li>
+<li>自适应 - 适合任何机型：桌面设备、移动设备、平板电脑等</li>
+<li>连接无关性 - 能够借助服务工作线程在离线或低质量网络状况下工作</li>
+<li>类似应用 - 由于是在 <strong><a href="https://lavas.baidu.com/mip/guide/vue/doc/vue/advanced/define-app-shell" target="_blank" rel="external">App Shell模型</a></strong> 基础上开发，因此具有应用风格的交互和导航，给用户以应用般的熟悉感</li>
+<li>持续更新 - 在服务工作线程更新进程的作用下时刻保持最新状态</li>
+<li>安全 - 通过HTTPS提供，以防止窥探和确保内容不被篡改</li>
+<li>可发现 - W3C清单和服务工作流程注册作用域能够让搜索引擎找到它们，从而将其识别为“应用”</li>
+<li>可再互动 - 通过推送通知之类的功能简化了再互动</li>
+<li>可安装 - 用户可免去使用应用商店的麻烦，直接将对其最有用的应用“保留”在主屏幕上</li>
+<li>可链接 - 可通过网址轻松分享，无需复杂的安装</li>
+</ul>
+<p>比如有一个具体的例子，<strong><a href="https://weatherpwa.baidu.com/" target="_blank" rel="external">天气PWA</a></strong>，当我们平时遇到断网时刷新一下页面，电脑或手机会出现“未连接到互联网”之类的页面或错误提示，而PWA则会在断网刷新后依然出现页面内容，而且当我们对页面上一个内容很感兴趣时，我们可以直接将它放在主页面，不需要安装app,国内的 <strong><a href="https://m.douban.com/" target="_blank" rel="external">豆瓣网手机版</a></strong> 使用的也是PWA，对于如何使用，由于在chrome浏览器需要下载“Web Server for Chrome”扩展功能，我们可以查按照我推荐的那个网站来进行操作</p>
+<h5 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h5><p>前端工程师有很多性能优化手段，包括CDN、CSS Sprite、文件的合并压缩、异步加载、资源缓存等（<em>原谅我还不清楚具体的性能优化</em>），而Service Worker让缓存做到了优雅、极致，让Web App的缺点更加弱化。</p>
+<p>Service Worker特点：</p>
+<ul>
+<li>一个独立的worker线程，独立于当前网页进程，有自己独立的worker context</li>
+<li>一旦被install，就永远存在，除非被uninstall</li>
+<li>需要时可直接唤醒、不需要要=可以自动睡眠‘</li>
+<li>可编程拦截代理请求和返回，缓存文件，缓存的文件可以被网页进程渠取到（包括离线状态）</li>
+<li>离线内容开发者可控</li>
+<li>能向客户端推送消息</li>
+<li>不能直接操作DOM</li>
+<li>必须在HTTPS环境下工作</li>
+<li>异步实现，内部大都是通过Promise实现</li>
+</ul>
+<p>如何使用Service Worker请看网站资源，我试过，不用翻墙，可以成功检查到是否安装Seivice Worker</p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
             <li class="next">
-                <a href= "/2018/01/30/setTimeout与闭包/" title= setTimeout与闭包 >
+                <a href= "/2018/02/07/了解Vue-router/" title= 了解Vue-router >
                     <span>Next Post</span>
-                    <span>setTimeout与闭包</span>
+                    <span>了解Vue-router</span>
                 </a>
             </li>
         
         
             <li class="previous">
-                <a href= "/2018/01/22/swiper初步应用/" title= swiper初步应用 >
+                <a href= "/2018/01/31/vue中如何引入外链css和js/" title= Vue中外链css和js[不推荐引入外链] >
                     <span>Previous Post</span>
-                    <span>swiper初步应用</span>
+                    <span>Vue中外链css和js[不推荐引入外链]</span>
                 </a>
             </li>
         
@@ -309,7 +310,7 @@ callback:&quot;callback_success&quot;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是跨域问题？"><span class="toc-number">1.</span> <span class="toc-text">什么是跨域问题？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解决方法"><span class="toc-number">2.</span> <span class="toc-text">解决方法</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#分享总结"><span class="toc-number">1.</span> <span class="toc-text">分享总结</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Progressive-Web-App"><span class="toc-number">1.1.</span> <span class="toc-text">Progressive Web App</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是PWA？"><span class="toc-number">1.1.1.</span> <span class="toc-text">什么是PWA？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Service-Worker"><span class="toc-number">1.1.2.</span> <span class="toc-text">Service Worker</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
