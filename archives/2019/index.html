@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        自适应布局的几种方法 · 绊AI的博客
+        绊AI的博客
         
     </title>
     <link rel="icon" href= https://i.ibb.co/0cfSZWv/pic.png>
@@ -58,8 +58,6 @@
 </head>
 
     
-        <body class="post-body">
-    
     
 <header class="header">
 
@@ -67,52 +65,27 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >绊AI的博客</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">自适应布局的几种方法</a>
-            </div>
-    </div>
-    
     <a class="home-link" href=/>绊AI的博客</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(https://i.ibb.co/tBkd547/bg2.png)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            自适应布局的几种方法
-            <!-- 404 -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <!-- 文章页标签  -->
-            
-            <div class="post-intro-meta">
-                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/05/01</span>
-            </div>
         
     </div>
 </div>
@@ -180,100 +153,42 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <p>自适应布局的几种方法</p>
-<h3 id="百分比"><a href="#百分比" class="headerlink" title="百分比"></a>百分比</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width-device-width,initial-scale=1&quot;</div></pre></td></tr></table></figure>
-<p>viewport是网页默认的宽度和高度，width=device-width即网页宽度默认等于屏幕宽度，initial-scale=1即原始缩放比例为1.0，网页初始大小占屏幕面积的100%。</p>
-<p>由于网页会根据屏幕宽度调整布局，所以不能使用绝对宽度的布局，也不能使用绝对宽度的元素，如css不能指定像素宽度，只能指定百分比宽度，字体不能使用绝对大小px，而只能使用相对大小em。</p>
-<h3 id="media规则"><a href="#media规则" class="headerlink" title="@media规则"></a>@media规则</h3><p>css3的@media规则可以在不改变html内容情况下，根据终端媒体设备的不同选择不同的css样式</p>
-<p>具体写法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media 设备类型 and (设备特性)&#123;</div><div class="line">	css样式代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>例如：</p>
-<pre>
-//浏览器窗口大于900px
-@media screen and(min-width:900px){
-    body{
-        font-size:25px;
-    }
-}
-//浏览器窗口大于500px小于900px
-@media screen and(min-width:500px)and(max-width:900px){
-    body{
-        font-size:20px;
-    }
-}
-//浏览器窗口小于500px
-@media screen and(max-width:500px){
-    body{
-        font-size:15px;
-    }
-}
-</pre>
-
-<h3 id="rem自适应布局"><a href="#rem自适应布局" class="headerlink" title="rem自适应布局"></a>rem自适应布局</h3><p>首先我们需要知道rem是相对于根元素的字体大小的单位，它是一个相对单位，同理em是相对于父元素的字体大小的单位；rem的计算规则依赖根元素，我们只需要在根元素确定一个px字号，就可以计算出元素的宽高。</p>
-<h3 id="target-densitydpi属性"><a href="#target-densitydpi属性" class="headerlink" title="target-densitydpi属性"></a>target-densitydpi属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=640,target-densitydpi=device-dpi,user-scalable=no&quot;&gt;</div></pre></td></tr></table></figure>
-<p>通过读取device-width的值来自动计算出target-densitydpi去实现自适应网页，不过缺点是目前只在android支持，具有兼容性问题。</p>
-<p>target-densitydpi属性的取值范围：</p>
-<pre>
-device-dpi    --使用设备原本的dpi作为目标dpi，不会发生默认缩放。
-high-dpi    --使用hdpi作为目标dpi，中等像素密度和低像素密度设备相应缩小。
-medium-dpi    --使用mdpi作为目标dpi，高像素密度设备相应放大，低像素密度设备相应缩小，这是默认的target density
-low-dpi        --使用ldpi作为目标dpi，中等像素密度和高像素密度设备相应放大
-value        --指定一个具体的dpi，值作为target dpi，这个值得范围必须在70-400之间。
-</pre>
-    </article>
-    <!-- 前后页  -->
-    <ul class="post-pager">
-        
-            <li class="next">
-                <a href= "/2018/05/05/使用express配置前端服务器/" title= 使用express配置前端服务器 >
-                    <span>Next Post</span>
-                    <span>使用express配置前端服务器</span>
-                </a>
-            </li>
-        
-        
-            <li class="previous">
-                <a href= "/2018/02/09/优雅降级与渐进增强/" title= 优雅降级与渐进增强 >
-                    <span>Previous Post</span>
-                    <span>优雅降级与渐进增强</span>
-                </a>
-            </li>
-        
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zODUxOS8xNTA0Nw==">
-<script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
-
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-</script>
-<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
-<!-- City版安装代码已完成 -->
-
+            <main class="main index-page">
     
     
-    <!--PC版-->
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2019/07/11/途家H5站点初步理解/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>H5项目理解【持续更新】</span>
+                    </h2>
+                <div class="abstract-content">
+                    
 
-    <!--PC版-->
+  
+  
+    Please enter the password to read the blog.
+    
+  
 
-    <!-- UY BEGIN -->
-    <div id="uyan_frame"></div>
-    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155431"></script>
-    <!-- UY END -->
+Incorrect Password!
+No content to display!
 
-
+U2FsdGVkX1806WskWCkYb7WHVEJL8ZklRj+1vXRTejGI8cZakbEE7ehOw5cu+8sRxH1K2rT4yvO7SBFoBU+qyQAKD5lqBmiBwIHqPGSxgUhkxerIVRMlUJ6uh8gyN+UjEn56YnneE+q9DYsyLLbIwzPsYR5soFw7rJqxLI1S64b8GzqhceqDdUDWZoxv...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/07/11</span>
+                </div>
+            </div>
+        </article>
+    
+    <!-- paginator  -->
     
 </main>
             <!-- profile -->
@@ -315,13 +230,6 @@ value        --指定一个具体的dpi，值作为target dpi，这个值得范�
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#百分比"><span class="toc-number">1.</span> <span class="toc-text">百分比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#media规则"><span class="toc-number">2.</span> <span class="toc-text">@media规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rem自适应布局"><span class="toc-number">3.</span> <span class="toc-text">rem自适应布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#target-densitydpi属性"><span class="toc-number">4.</span> <span class="toc-text">target-densitydpi属性</span></a></li></ol>
-    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">

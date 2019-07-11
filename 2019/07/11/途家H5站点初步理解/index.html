@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        自适应布局的几种方法 · 绊AI的博客
+        H5项目理解【持续更新】 · 绊AI的博客
         
     </title>
     <link rel="icon" href= https://i.ibb.co/0cfSZWv/pic.png>
@@ -72,7 +72,7 @@
                 <a href="/" >绊AI的博客</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">自适应布局的几种方法</a>
+                <a href="#" class="post-name">H5项目理解【持续更新】</a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            自适应布局的几种方法
+            H5项目理解【持续更新】
             <!-- 404 -->
             
         </h1>
@@ -111,7 +111,7 @@
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/05/01</span>
+                <span class="post-intro-time">2019/07/11</span>
             </div>
         
     </div>
@@ -182,62 +182,29 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>自适应布局的几种方法</p>
-<h3 id="百分比"><a href="#百分比" class="headerlink" title="百分比"></a>百分比</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width-device-width,initial-scale=1&quot;</div></pre></td></tr></table></figure>
-<p>viewport是网页默认的宽度和高度，width=device-width即网页宽度默认等于屏幕宽度，initial-scale=1即原始缩放比例为1.0，网页初始大小占屏幕面积的100%。</p>
-<p>由于网页会根据屏幕宽度调整布局，所以不能使用绝对宽度的布局，也不能使用绝对宽度的元素，如css不能指定像素宽度，只能指定百分比宽度，字体不能使用绝对大小px，而只能使用相对大小em。</p>
-<h3 id="media规则"><a href="#media规则" class="headerlink" title="@media规则"></a>@media规则</h3><p>css3的@media规则可以在不改变html内容情况下，根据终端媒体设备的不同选择不同的css样式</p>
-<p>具体写法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media 设备类型 and (设备特性)&#123;</div><div class="line">	css样式代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>例如：</p>
-<pre>
-//浏览器窗口大于900px
-@media screen and(min-width:900px){
-    body{
-        font-size:25px;
-    }
-}
-//浏览器窗口大于500px小于900px
-@media screen and(min-width:500px)and(max-width:900px){
-    body{
-        font-size:20px;
-    }
-}
-//浏览器窗口小于500px
-@media screen and(max-width:500px){
-    body{
-        font-size:15px;
-    }
-}
-</pre>
-
-<h3 id="rem自适应布局"><a href="#rem自适应布局" class="headerlink" title="rem自适应布局"></a>rem自适应布局</h3><p>首先我们需要知道rem是相对于根元素的字体大小的单位，它是一个相对单位，同理em是相对于父元素的字体大小的单位；rem的计算规则依赖根元素，我们只需要在根元素确定一个px字号，就可以计算出元素的宽高。</p>
-<h3 id="target-densitydpi属性"><a href="#target-densitydpi属性" class="headerlink" title="target-densitydpi属性"></a>target-densitydpi属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=640,target-densitydpi=device-dpi,user-scalable=no&quot;&gt;</div></pre></td></tr></table></figure>
-<p>通过读取device-width的值来自动计算出target-densitydpi去实现自适应网页，不过缺点是目前只在android支持，具有兼容性问题。</p>
-<p>target-densitydpi属性的取值范围：</p>
-<pre>
-device-dpi    --使用设备原本的dpi作为目标dpi，不会发生默认缩放。
-high-dpi    --使用hdpi作为目标dpi，中等像素密度和低像素密度设备相应缩小。
-medium-dpi    --使用mdpi作为目标dpi，高像素密度设备相应放大，低像素密度设备相应缩小，这是默认的target density
-low-dpi        --使用ldpi作为目标dpi，中等像素密度和高像素密度设备相应放大
-value        --指定一个具体的dpi，值作为target dpi，这个值得范围必须在70-400之间。
-</pre>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read the blog." />
+    <label for="pass">Please enter the password to read the blog.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2018/05/05/使用express配置前端服务器/" title= 使用express配置前端服务器 >
-                    <span>Next Post</span>
-                    <span>使用express配置前端服务器</span>
-                </a>
-            </li>
-        
         
             <li class="previous">
-                <a href= "/2018/02/09/优雅降级与渐进增强/" title= 优雅降级与渐进增强 >
+                <a href= "/2018/08/22/vue问题总结【持续更新】/" title= vue问题总结【持续更新】 >
                     <span>Previous Post</span>
-                    <span>优雅降级与渐进增强</span>
+                    <span>vue问题总结【持续更新】</span>
                 </a>
             </li>
         
@@ -320,7 +287,7 @@ value        --指定一个具体的dpi，值作为target dpi，这个值得范�
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#百分比"><span class="toc-number">1.</span> <span class="toc-text">百分比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#media规则"><span class="toc-number">2.</span> <span class="toc-text">@media规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rem自适应布局"><span class="toc-number">3.</span> <span class="toc-text">rem自适应布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#target-densitydpi属性"><span class="toc-number">4.</span> <span class="toc-text">target-densitydpi属性</span></a></li></ol>
+        
     </div>
     
     <div class="back-top">&#xe639;</div>
