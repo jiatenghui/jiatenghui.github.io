@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        绊AI的博客
+        tj前端项目部署流程 · 绊AI的博客
         
     </title>
     <link rel="icon" href= https://i.ibb.co/3sJmyLG/banAI.jpg>
@@ -58,6 +58,8 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
@@ -65,27 +67,58 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >绊AI的博客</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">tj前端项目部署流程</a>
+            </div>
+    </div>
+    
     <a class="home-link" href=/>绊AI的博客</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://i.ibb.co/tBkd547/bg2.png)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            tj前端项目部署流程
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = tj>tj</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2019/07/15</span>
+            </div>
         
     </div>
 </div>
@@ -153,147 +186,77 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/05/18/Web安全攻击方式/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Web安全攻击方式</span>
-                    </h2>
-                <div class="abstract-content">
-                    xssxss是跨站脚本攻击，指攻击者在网页中嵌入客户端脚本，当用户浏览次页面时，脚本就会在用户浏览器上执行，从而达到攻击目的
-比如我们下载有这么一个代码
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>++修改于2019.07.16 20:51:21++</p>
+<ol>
+<li>根据PMO确认排期和进入开发时间，进行开发（注意更改PMO状态）</li>
+<li><p>从<strong>master</strong>上新建开发分支，<a href="http://wiki.corp.tujia.com/confluence/pages/viewpage.action?pageId=20856279" target="_blank" rel="external">命名规则</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">示例：</div><div class="line">项目  feature-190716-PT-12151-telephone-jiahuanc</div><div class="line">bug   hotfix-190716-PT-12151-telephone-jiahuanc</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改代码，提交到开发分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">示例：</div><div class="line">git checkout master</div><div class="line">git pull</div><div class="line"></div><div class="line">git checkout workbranch</div><div class="line">git status</div><div class="line">git add .</div><div class="line">git commit -m &quot;xxxxx&quot;</div><div class="line">git push origin workbranch</div><div class="line">进入gitlab进行 merge request并检查是否有冲突（解决冲突）</div></pre></td></tr></table></figure>
+</li>
+<li><p>进行测试之前需要自己review检查，完成之后进行交叉review，先找同一项目同事进行交叉diff，邮件收到review done</p>
+</li>
+<li>之后需要在组内提diff，艾特技术负责人进行review，review done才可以上线；若review未通过，需要修改重新提diff（首次发群里，第二次只发技术负责人）</li>
+<li>上线需要在大群里申请上线【邮件收到两个review done才可以上线】</li>
+<li>上线完成之后需要进行回溯检查</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">示例：</div><div class="line">申请diff：途家品牌名称变更为途家民宿 mob</div><div class="line">pmo：http://pmo.tujia.com/browse/PT-15838</div><div class="line">diff：http://gitlab.corp.tujia.com/h5/fetujia_mob/merge_requests/194/diffs</div><div class="line"></div><div class="line">@技术负责人</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">示例：</div><div class="line">申请上线：途家品牌名称变更为途家民宿 mob</div><div class="line">pmo：http://pmo.tujia.com/browse/PT-15838</div><div class="line">diff：http://gitlab.corp.tujia.com/h5/fetujia_mob/merge_requests/194/diffs</div><div class="line">上线时间：填写日期 </div><div class="line">测试：测试人员</div></pre></td></tr></table></figure>
+<p>注：</p>
+<ul>
+<li>项目进行提测的时候需要及时更改PMO状态，及时和测试沟通解决出现的bug，尽量做到当天发现当天改，避免不必要的问题。</li>
+<li>选择部署的测试环境需要和测试同学沟通，确定测试分支。</li>
+<li>当天上线一定要当天在群里发上线通知，一旦上线代码不可修改，为了减少麻烦一定要细心修改提交。</li>
+</ul>
 
-&lt;input type=”text” name=”address” value=”valuefrom”&gt;
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="previous">
+                <a href= "/2019/07/11/Git学习【持续更新】/" title= Git学习【更新】 >
+                    <span>Previous Post</span>
+                    <span>Git学习【更新】</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zODUxOS8xNTA0Nw==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
-valuefrom是来自用户的输入，如果用户不是输入valuefrom而是输入”/&gt;&lt;script&gt;alert(document.cookie)&gt;/script&gt;&lt;!-,即变成
+       if (typeof LivereTower === 'function') { return; }
 
-&lt;input type=”text” name=”address” value=””/&gt;&...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = web安全>web安全</a>
-    
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/18</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/05/11/安装mongodb遇到的坑/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>安装mongodb遇到的坑</span>
-                    </h2>
-                <div class="abstract-content">
-                    mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程
-我在官网上下载最新3.6版本并在windows下安装会出现进度条长时间不动的情况，这是因为3.6版本在windows下有不适配的问题，需要我们下载3.4版本安装
-（我的安装路径是C:\Program Files\MongoDB）
-下载安装完成之后，需要添加安装路径到path环境变量：C:\Program Files\MongoDB\Server\3.4\bin
-我们在D盘创建如下文件夹D:\mongodb\data  D:\mongodb\logs
-在命...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = mongodb>mongodb</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/11</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/05/05/使用express配置前端服务器/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>使用express配置前端服务器</span>
-                    </h2>
-                <div class="abstract-content">
-                    使用webpack打包vue项目之后会生成dist文件夹，dist文件夹下面有html文件和其他的css,js和img等文件，如果你要查看打包之后的文件怎么办，这时候我们可以将生成的dist文件部署到express服务器上运行。
-首先我们需要安装express-generator生成器
-npm install express-generator -g
+<!-- City版安装代码已完成 -->
 
-创建express项目
-express expressname(项目名称)
+    
+    
+    <!--PC版-->
 
-进入项目目录，安装相关项目依赖
-cd expressnamenpm install
+    <!--PC版-->
 
-将dist文件夹下生成的文件复制到express项目下的piblic文件夹...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = node>node</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/05</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2018/05/01/自适应布局的几种方法/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>自适应布局的几种方法</span>
-                    </h2>
-                <div class="abstract-content">
-                    自适应布局的几种方法
-百分比1&lt;meta name=&quot;viewport&quot; content=&quot;width-device-width,initial-scale=1&quot;
-viewport是网页默认的宽度和高度，width=device-width即网页宽度默认等于屏幕宽度，initial-scale=1即原始缩放比例为1.0，网页初始大小占屏幕面积的100%。
-由于网页会根据屏幕宽度调整布局，所以不能使用绝对宽度的布局，也不能使用绝对宽度的元素，如css不能指定像素宽度，只能指定百分比宽度，字体不能使用绝对大小px，而只能使用相对大小em。
-@me...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 自适应布局>自适应布局</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/01</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155431"></script>
+    <!-- UY END -->
+
+
     
 </main>
             <!-- profile -->
@@ -339,6 +302,13 @@ viewport是网页默认的宽度和高度，width=device-width即网页宽度默
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
