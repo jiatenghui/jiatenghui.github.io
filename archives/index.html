@@ -1,934 +1,910 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
-<meta name="theme-color" content="#222"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
-
-<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    translation: {
-      copy_button: 'Kopieren',
-      copy_success: 'Kopiert',
-      copy_failure: 'Kopieren fehlgeschlagen'
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>
+        
+        绊AI的博客
+        
+    </title>
+    <link rel="icon" href= https://i.ibb.co/3sJmyLG/banAI.jpg>
+    <!-- TODO: 在font-face加载完毕后改变字体  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+    <!-- 提前加载place holder  -->
+    <style type="text/css">
+        @font-face {
+            font-family: 'Oswald-Regular';
+            src: url(/font/Oswald-Regular.ttf);
+        }
+    </style>
+    <style type="text/css">
+        .site-intro {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            box-shadow: -0.1rem 0 0.5rem 0 rgba(0, 0, 0, 0.8);
+        }
+        .site-intro-placeholder {
+            position: absolute;
+            z-index: -2;
+            top: 0;
+            left: 0px;
+            width: calc(100% + 300px);
+            height: 100%;
+            background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+            background-position: center center;
+            transform: translate3d(-226px, 0, 0);
+            animation: gradient-move 2.5s ease-out 0s 1;
+        }
+        @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
     }
-  };
-</script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="绊AI的博客">
-<meta property="og:url" content="cuijiahuan.github.io/archives/index.html">
-<meta property="og:site_name" content="绊AI的博客">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="绊AI的博客">
-
-
-
-
-
-  
-  
-  <link rel="canonical" href="cuijiahuan.github.io/archives/"/>
-
-
-
-<script id="page.configurations">
-  CONFIG.page = {
-    sidebar: "",
-  };
-</script>
-
-  
-  <title>Archiv | 绊AI的博客</title>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+</style>
+    <link rel="stylesheet" href = /css/style.css?v=20171218 />
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    
+    <script src="/scripts/main.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
-
-  
-  
     
-  
-
-  <div class="container sidebar-position-left page-archive">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
     
+<header class="header">
 
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">绊AI的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <a class="home-link" href=/>绊AI的博客</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro">
+    
+    <!-- 主页  -->
+            
+    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
     </div>
-    
-      
-        <p class="site-subtitle">绊AI的博客</p>
-      
-    
-    
-  </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
 </div>
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <script>
+            var browser = {
+                    versions: function () {
+                        var u = window.navigator.userAgent;
+                        return {
+                            userAgent: u,
+                            trident: u.indexOf('Trident') > -1, //IE内核
+                            presto: u.indexOf('Presto') > -1, //opera内核
+                            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                            iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+                            iPad: u.indexOf('iPad') > -1, //是否为iPad
+                            webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+                            weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+                            uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+                        };
+                    }()
+                }
 
-
-
-<nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-
+            function fontLoaded(){
+                console.log('font loaded');
+                if (document.getElementsByClassName('site-intro-meta')) {
+                    document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+                    document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+                    var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
+                        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
+                        if (postIntroTags) {
+                            postIntroTags.classList.add('post-fade-in');
+                        }
+                        if (postIntroMeat) {
+                            postIntroMeat.classList.add('post-fade-in');
+                        }
+                    }
+                }
+                
+            console.log("userAgent:" + browser.versions.userAgent);
+            // UC不支持跨域，所以直接显示
+            if (browser.versions.uc) {
+                console.log("UCBrowser");
+                fontLoaded();
+            } else {
+                WebFont.load({
+                    custom: {
+                        families: ['Oswald-Regular']
+                    },
+                    loading: function () {  //所有字体开始加载
+                        // console.log('loading');
+                    },
+                    active: function () {  //所有字体已渲染
+                        fontLoaded();
+                    },
+                    inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+                        console.log('inactive: timeout');
+                        fontLoaded();
+                    },
+                    timeout: 7000 // Set the timeout to two seconds
+                });
+            }
+        </script>
+        <div class="container container-unloaded">
+            <main class="main index-page">
     
     
-      
     
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>Startseite</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives menu-item-active">
-
-    
-    
-      
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>Archiv</a>
-
-  </li>
-
-      
-      
-    </ul>
-  
-
-  
-    
-
-    
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
-  
-
-  
-</nav>
-
-
-
-</div>
-    </header>
-
-    
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-          <div id="content" class="content">
-            
+        <article class="index-post">
+            <a class="content-show-full" href = "/2019/07/15/tj前端项目部署流程/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>tj前端项目部署流程</span>
+                    </h2>
+                <div class="abstract-content">
+                    
 
   
   
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Öhm..! Insgesamt 19 Artikel. Bleib dran.
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/tj前端项目部署流程/" itemprop="url">
-            
-              <span itemprop="name">tj前端项目部署流程</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-07-15T18:54:45+08:00"
-              content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/11/Git学习【持续更新】/" itemprop="url">
-            
-              <span itemprop="name">Git学习【更新】</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-07-11T17:48:24+08:00"
-              content="2019-07-11">
-          07-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/11/途家H5站点初步理解/" itemprop="url">
-            
-              <span itemprop="name">H5项目理解【持续更新】</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-07-11T16:26:23+08:00"
-              content="2019-07-11">
-          07-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2018/08/22/vue问题总结【持续更新】/" itemprop="url">
-            
-              <span itemprop="name">vue问题总结【更新】</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-22T21:06:55+08:00"
-              content="2018-08-22">
-          08-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2018/08/21/利用hover控制其他元素样式/" itemprop="url">
-            
-              <span itemprop="name">利用hover控制其他元素样式</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-21T21:05:29+08:00"
-              content="2018-08-21">
-          08-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2018/05/18/Web安全攻击方式/" itemprop="url">
-            
-              <span itemprop="name">Web安全攻击方式</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-18T23:56:27+08:00"
-              content="2018-05-18">
-          05-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2018/05/11/安装mongodb遇到的坑/" itemprop="url">
-            
-              <span itemprop="name">安装mongodb遇到的坑</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-11T23:55:45+08:00"
-              content="2018-05-11">
-          05-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2018/05/05/使用express配置前端服务器/" itemprop="url">
-            
-              <span itemprop="name">使用express配置前端服务器</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-05T21:39:41+08:00"
-              content="2018-05-05">
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2018/05/01/自适应布局的几种方法/" itemprop="url">
-            
-              <span itemprop="name">自适应布局的几种方法</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-01T20:44:19+08:00"
-              content="2018-05-01">
-          05-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2018/02/09/优雅降级与渐进增强/" itemprop="url">
-            
-              <span itemprop="name">优雅降级与渐进增强</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-09T22:25:17+08:00"
-              content="2018-02-09">
-          02-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-    </div>
-  </div>
-  
-  
+    Please enter the password to read the blog.
+    
   
 
+Incorrect Password!
+No content to display!
+
+U2FsdGVkX19vizj0mfIoeFnqzLm+fJD0Uc8pcLG/Tda3BYYgBcZvJUiBjjVZlXHdkZ/kvByKf9sCHLM+D/qJT9s9ku0mZMXGndi3oWNdG+LCBY0jMRUO8f7Rx4inCUVh+v3v+m7lr6jiNdgj7SGbDapxf8bQDCBxtUJS6Do1e9qB2NbHXt1y/VxStkoR...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/07/15</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2019/07/11/Git学习【持续更新】/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>Git学习【更新】</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+什么是Git？
+
+Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理，而对于大家熟知的Github来说，它是一个用Git做版本控制的项目托管平台如图：
+
+在这里我把我学习Git过程中的知识总结出来，供大家参考
+
+要想使用Git，首先我们需要来安装Git，这里我把链接放在这，有兴趣的兄dei可以来下载安装链接 密码：ue9y
+
+下载好之后，我们就开始正式了解Git
+
+因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程要使用Git，我们首先要告诉Git我们是谁一般填写的都是Github的用户名和注册邮箱
+1git con...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/07/11</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2019/07/11/途家H5站点初步理解/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>H5项目理解【持续更新】</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
-  </nav>
+  
+    Please enter the password to read the blog.
+    
+  
 
+Incorrect Password!
+No content to display!
 
+U2FsdGVkX19RZDk5OtN7IUj+UiHNnHYa3eazpZq+TjGWHT5lpIhrASUIvCsIRlbpWfs9RV+EEVpxXIK8dFkIMeActYae0zb/z3hI6hsSrRzRCRlg5+b/w3iC+VBUFqTv+oTYLd4lMNAcE+gU27PUAxCIOd5CDVF54NqM9AQOJwd9K8jBwoSq6qxYcNp8...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/07/11</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/08/22/vue问题总结【持续更新】/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>vue问题总结【更新】</span>
+                    </h2>
+                <div class="abstract-content">
+                    1、今天在公司修改样式的时候发现引入Element-UI的tooltip组件之后，想对tootip的样式进行自定义修改，结果发现无论怎么设置选择器的优先级，都渲染不到页面上，后来经过一系列的尝试之后发现是由于给style设置scoped造成的，本身设置scoped是为了防止全局样式冲突，结果没想到会造成自定义的样式渲染不上，后来经过思考测试，其实是可以将组件内修改tooltp的样式放到全局css中，不过需要给对应的元素设置类型，比如tooltip可以通过popper-class=”tooltip”设置类名，然后给这个类名添加样式。
+2、在进行vue页面编写时经常会用到数据绑定，在渲染页面...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/08/22</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/08/21/利用hover控制其他元素样式/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>利用hover控制其他元素样式</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+之前在项目中有一个需求是鼠标移入元素上时该元素改变样式的同时另外元素样式也要改变，刚开始想利用js来实现，不过有点麻烦，之后发现可以通过css直接来实现这个功能，本着人无我有，人有我优的原则，在这里记录一下具体过程。
 
+首先我经过尝试以及网上查找之后，发现利用hover来实现这个功能是有一定局限性的，如果你要改变其他元素的样式，那么它们必须是相邻同级元素或者是同一父元素的子元素，不然效果是出不来的（呜~）
+相邻同级元素HTML
 
-          </div>
-          
+&lt;div class="div1"&gt;
+    &lt;div class="son1"&gt;son1 &lt;/div&gt;
+    &lt;...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/08/21</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/05/18/Web安全攻击方式/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>Web安全攻击方式</span>
+                    </h2>
+                <div class="abstract-content">
+                    xssxss是跨站脚本攻击，指攻击者在网页中嵌入客户端脚本，当用户浏览次页面时，脚本就会在用户浏览器上执行，从而达到攻击目的
+比如我们下载有这么一个代码
 
+&lt;input type=”text” name=”address” value=”valuefrom”&gt;
+
+valuefrom是来自用户的输入，如果用户不是输入valuefrom而是输入”/&gt;&lt;script&gt;alert(document.cookie)&gt;/script&gt;&lt;!-,即变成
+
+&lt;input type=”text” name=”address” value=””/&gt;&...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/18</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/05/11/安装mongodb遇到的坑/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>安装mongodb遇到的坑</span>
+                    </h2>
+                <div class="abstract-content">
+                    mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程
+我在官网上下载最新3.6版本并在windows下安装会出现进度条长时间不动的情况，这是因为3.6版本在windows下有不适配的问题，需要我们下载3.4版本安装
+（我的安装路径是C:\Program Files\MongoDB）
+下载安装完成之后，需要添加安装路径到path环境变量：C:\Program Files\MongoDB\Server\3.4\bin
+我们在D盘创建如下文件夹D:\mongodb\data  D:\mongodb\logs
+在命...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/11</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/05/05/使用express配置前端服务器/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>使用express配置前端服务器</span>
+                    </h2>
+                <div class="abstract-content">
+                    使用webpack打包vue项目之后会生成dist文件夹，dist文件夹下面有html文件和其他的css,js和img等文件，如果你要查看打包之后的文件怎么办，这时候我们可以将生成的dist文件部署到express服务器上运行。
+首先我们需要安装express-generator生成器
+npm install express-generator -g
+
+创建express项目
+express expressname(项目名称)
+
+进入项目目录，安装相关项目依赖
+cd expressnamenpm install
+
+将dist文件夹下生成的文件复制到express项目下的piblic文件夹...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/05</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/05/01/自适应布局的几种方法/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>自适应布局的几种方法</span>
+                    </h2>
+                <div class="abstract-content">
+                    自适应布局的几种方法
+百分比1&lt;meta name=&quot;viewport&quot; content=&quot;width-device-width,initial-scale=1&quot;
+viewport是网页默认的宽度和高度，width=device-width即网页宽度默认等于屏幕宽度，initial-scale=1即原始缩放比例为1.0，网页初始大小占屏幕面积的100%。
+由于网页会根据屏幕宽度调整布局，所以不能使用绝对宽度的布局，也不能使用绝对宽度的元素，如css不能指定像素宽度，只能指定百分比宽度，字体不能使用绝对大小px，而只能使用相对大小em。
+@me...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/01</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/02/09/优雅降级与渐进增强/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>优雅降级与渐进增强</span>
+                    </h2>
+                <div class="abstract-content">
+                    优雅降级与渐进增强
+
+优雅降级(Graceful Degradation)：一开始就构建站点的完整功能，然后针对浏览器测试和修复。比如一开始使用CSS3的特性构建了一个应用，然后逐步针对各大浏览器进行测试使其可以再低版本浏览器上正常浏览。
+渐进增强(Progressive Enhancement)：一开始就针对低版本浏览器进行构建页面，完成基本的功能，然后再针对高级浏览器进行效果、交互、追加功能达到更好的体验。
+渐进增强相当于向上兼容，而优雅降级相当于向下兼容，向下兼容指的是高版本支持低版本的或者说后期开发的版本支持和兼容早期开发的版本，向上兼容的很少，大多数软件都是向下兼容的
+区别
+优...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/02/09</span>
+                </div>
+            </div>
+        </article>
+    
+    <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">#NEXT</a>
+    </nav>
+    
+</main>
+            <!-- profile -->
+            
         </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    
+        
+            
+                <a href="mailto:cuijiahuan97@foxmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/cuijiahuan" class="iconfont-archer github" target="_blank" title="github"></a>
+            
+        
+    
+        
+            
+                <a href="//www.zhihu.com/people/jia-huan-80-62/activities" class="iconfont-archer zhihu" target="_blank" title="zhihu"></a>
+            
+        
+    
+
     </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  
-  <p class="site-author-name" itemprop="name">绊AI</p>
-  <div class="site-description motion-element" itemprop="description"></div>
-</div>
-
-
-  <nav class="site-state motion-element">
     
-      <div class="site-state-item site-state-posts">
-        
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">19</span>
-          <span class="site-state-item-name">Artikel</span>
-        </a>
-      </div>
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
     
-
+</footer>
+    </div>
+    <!-- toc -->
     
-
-    
-  </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-          
+    <div class="back-top">&#xe639;</div>
+    <div class="sidebar">
+    <div class="sidebar-header sidebar-header-show-archive">
+        <div class="sidebar-category">
+            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
+            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
         </div>
-      </div>
-
-      
-
-      
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">绊AI</span>
-
-  
-
-  
-</div>
-
-
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.2.2</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-archive">
+    <!-- 在ejs中将archive按照时间排序 -->
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
-
     
-
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 19 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/15</span><a class="archive-post-title" href= "/2019/07/15/tj前端项目部署流程/" >tj前端项目部署流程</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/11</span><a class="archive-post-title" href= "/2019/07/11/Git学习【持续更新】/" >Git学习【更新】</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/11</span><a class="archive-post-title" href= "/2019/07/11/途家H5站点初步理解/" >H5项目理解【持续更新】</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2018/08/22/vue问题总结【持续更新】/" >vue问题总结【更新】</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/21</span><a class="archive-post-title" href= "/2018/08/21/利用hover控制其他元素样式/" >利用hover控制其他元素样式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/18</span><a class="archive-post-title" href= "/2018/05/18/Web安全攻击方式/" >Web安全攻击方式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2018/05/11/安装mongodb遇到的坑/" >安装mongodb遇到的坑</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/05</span><a class="archive-post-title" href= "/2018/05/05/使用express配置前端服务器/" >使用express配置前端服务器</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/01</span><a class="archive-post-title" href= "/2018/05/01/自适应布局的几种方法/" >自适应布局的几种方法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/09</span><a class="archive-post-title" href= "/2018/02/09/优雅降级与渐进增强/" >优雅降级与渐进增强</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/07</span><a class="archive-post-title" href= "/2018/02/07/了解Vue-router/" >了解Vue-router</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/06</span><a class="archive-post-title" href= "/2018/02/06/PWA了解/" >PWA了解【更新】</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/31</span><a class="archive-post-title" href= "/2018/01/31/vue中如何引入外链css和js/" >Vue中外链css和js【不推荐引】</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/30</span><a class="archive-post-title" href= "/2018/01/30/setTimeout与闭包/" >setTimeout与闭包</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/27</span><a class="archive-post-title" href= "/2018/01/27/思考跨域问题/" >思考跨域问题</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/22</span><a class="archive-post-title" href= "/2018/01/22/swiper初步应用/" >swiper初步应用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2018/01/08/webpack学习【持续更新】/" >webpack【更新】</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/18</span><a class="archive-post-title" href= "/2017/06/18/npm学习/" >npm学习</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/15</span><a class="archive-post-title" href= "/2017/06/15/gulp学习/" >gulp学习</a>
+        </li>
+    
+    </div>
   </div>
-
-  
-
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+        <div class="sidebar-tags">
+    <div class="sidebar-tags-name">
+    
+    </div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tag-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var jsInfo = {
+        root: '/'
+    }
 </script>
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-
-
-  <script src="/js/utils.js?v=7.2.0"></script>
-
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/schemes/muse.js?v=7.2.0"></script>
-
-
-
-  
-
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-</body>
+    <!-- 不蒜子  -->
+    
+    <!-- CNZZ统计  -->
+    
+    </div>
+    </body>
 </html>
+
+

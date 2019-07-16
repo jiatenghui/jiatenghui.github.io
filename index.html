@@ -1,2367 +1,975 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
-<meta name="theme-color" content="#222"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
-
-<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    translation: {
-      copy_button: 'Kopieren',
-      copy_success: 'Kopiert',
-      copy_failure: 'Kopieren fehlgeschlagen'
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>
+        
+        绊AI的博客
+        
+    </title>
+    <link rel="icon" href= https://i.ibb.co/3sJmyLG/banAI.jpg>
+    <!-- TODO: 在font-face加载完毕后改变字体  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+    <!-- 提前加载place holder  -->
+    <style type="text/css">
+        @font-face {
+            font-family: 'Oswald-Regular';
+            src: url(/font/Oswald-Regular.ttf);
+        }
+    </style>
+    <style type="text/css">
+        .site-intro {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            box-shadow: -0.1rem 0 0.5rem 0 rgba(0, 0, 0, 0.8);
+        }
+        .site-intro-placeholder {
+            position: absolute;
+            z-index: -2;
+            top: 0;
+            left: 0px;
+            width: calc(100% + 300px);
+            height: 100%;
+            background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+            background-position: center center;
+            transform: translate3d(-226px, 0, 0);
+            animation: gradient-move 2.5s ease-out 0s 1;
+        }
+        @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
     }
-  };
-</script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="绊AI的博客">
-<meta property="og:url" content="cuijiahuan.github.io/index.html">
-<meta property="og:site_name" content="绊AI的博客">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="绊AI的博客">
-
-
-
-
-
-  
-  
-  <link rel="canonical" href="cuijiahuan.github.io/"/>
-
-
-
-<script id="page.configurations">
-  CONFIG.page = {
-    sidebar: "",
-  };
-</script>
-
-  
-  <title>绊AI的博客</title>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+</style>
+    <link rel="stylesheet" href = /css/style.css?v=20171218 />
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    
+    <script src="/scripts/main.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
-
-  
-  
     
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
+        <body class="home-body">
     
+    
+<header class="header index-header">
 
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">绊AI的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <a class="home-link" href=/>绊AI的博客</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 文章页  -->
+            
+    <div class="site-intro-img" style="background-image: url(https://i.ibb.co/bz5hdGb/bg1.png)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            绊AI的博客
+            <!-- 文章页  -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+                false channel
+            
+            <!-- 文章页  -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
     </div>
-    
-      
-        <p class="site-subtitle">绊AI的博客</p>
-      
-    
-    
-  </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
 </div>
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <script>
+            var browser = {
+                    versions: function () {
+                        var u = window.navigator.userAgent;
+                        return {
+                            userAgent: u,
+                            trident: u.indexOf('Trident') > -1, //IE内核
+                            presto: u.indexOf('Presto') > -1, //opera内核
+                            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                            iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+                            iPad: u.indexOf('iPad') > -1, //是否为iPad
+                            webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+                            weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+                            uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+                        };
+                    }()
+                }
 
-
-
-<nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home menu-item-active">
-
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>Startseite</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
-      
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>Archiv</a>
-
-  </li>
-
-      
-      
-    </ul>
-  
-
-  
-    
-
-  
-
-  
-</nav>
-
-
-
-</div>
-    </header>
-
-    
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cuijiahuan.github.io/2019/07/15/tj前端项目部署流程/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="绊AI"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="绊AI的博客"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+            function fontLoaded(){
+                console.log('font loaded');
+                if (document.getElementsByClassName('site-intro-meta')) {
+                    document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+                    document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+                    var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
+                        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
+                        if (postIntroTags) {
+                            postIntroTags.classList.add('post-fade-in');
+                        }
+                        if (postIntroMeat) {
+                            postIntroMeat.classList.add('post-fade-in');
+                        }
+                    }
+                }
                 
-                
-                <a href="/2019/07/15/tj前端项目部署流程/" class="post-title-link" itemprop="url">tj前端项目部署流程</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2019-07-15 18:54:45" itemprop="dateCreated datePublished" datetime="2019-07-15T18:54:45+08:00">2019-07-15</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-07-16 11:38:21" itemprop="dateModified" datetime="2019-07-16T11:38:21+08:00">2019-07-16</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
+            console.log("userAgent:" + browser.versions.userAgent);
+            // UC不支持跨域，所以直接显示
+            if (browser.versions.uc) {
+                console.log("UCBrowser");
+                fontLoaded();
+            } else {
+                WebFont.load({
+                    custom: {
+                        families: ['Oswald-Regular']
+                    },
+                    loading: function () {  //所有字体开始加载
+                        // console.log('loading');
+                    },
+                    active: function () {  //所有字体已渲染
+                        fontLoaded();
+                    },
+                    inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+                        console.log('inactive: timeout');
+                        fontLoaded();
+                    },
+                    timeout: 7000 // Set the timeout to two seconds
+                });
+            }
+        </script>
+        <div class="container container-unloaded">
+            <main class="main index-page">
     
     
     
-    <div class="post-body" itemprop="articleBody">
+        <article class="index-post">
+            <a class="content-show-full" href = "/2019/07/15/tj前端项目部署流程/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>tj前端项目部署流程</span>
+                    </h2>
+                <div class="abstract-content">
+                    
 
-      
-      
+  
+  
+    Please enter the password to read the blog.
+    
+  
 
-      
-        
-          请输入密码进行查看
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/15/tj前端项目部署流程/#more" rel="contents">
-                Weiterlesen &raquo;
-              </a>
+Incorrect Password!
+No content to display!
+
+U2FsdGVkX19vizj0mfIoeFnqzLm+fJD0Uc8pcLG/Tda3BYYgBcZvJUiBjjVZlXHdkZ/kvByKf9sCHLM+D/qJT9s9ku0mZMXGndi3oWNdG+LCBY0jMRUO8f7Rx4inCUVh+v3v+m7lr6jiNdgj7SGbDapxf8bQDCBxtUJS6Do1e9qB2NbHXt1y/VxStkoR...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/07/15</span>
+                </div>
             </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-
+        </article>
     
     
     
+        <article class="index-post">
+            <a class="content-show-full" href = "/2019/07/11/Git学习【持续更新】/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>Git学习【更新】</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+什么是Git？
 
-    
+Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理，而对于大家熟知的Github来说，它是一个用Git做版本控制的项目托管平台如图：
 
-    
-      
-    
-    
+在这里我把我学习Git过程中的知识总结出来，供大家参考
 
-    
+要想使用Git，首先我们需要来安装Git，这里我把链接放在这，有兴趣的兄dei可以来下载安装链接 密码：ue9y
 
-    <footer class="post-footer">
-      
+下载好之后，我们就开始正式了解Git
 
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cuijiahuan.github.io/2019/07/11/Git学习【持续更新】/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="绊AI"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="绊AI的博客"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程要使用Git，我们首先要告诉Git我们是谁一般填写的都是Github的用户名和注册邮箱
+1git con...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
                 
-                
-                <a href="/2019/07/11/Git学习【持续更新】/" class="post-title-link" itemprop="url">Git学习【更新】</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2019-07-11 17:48:24" itemprop="dateCreated datePublished" datetime="2019-07-11T17:48:24+08:00">2019-07-11</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-07-12 11:18:57" itemprop="dateModified" datetime="2019-07-12T11:18:57+08:00">2019-07-12</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>什么是Git？</p>
-</blockquote>
-<p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理，而对于大家熟知的Github来说，它是一个用Git做版本控制的项目托管平台<br>如图：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/226662-6e184a8462131352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/583" alt=""></p>
-<p>在这里我把我学习Git过程中的知识总结出来，供大家参考</p>
-<blockquote>
-<p>要想使用Git，首先我们需要来安装Git，这里我把链接放在这，有兴趣的兄dei可以来下载安装<br><a href="https://pan.baidu.com/s/1c1J0Lbi" target="_blank" rel="external">链接</a> 密码：ue9y</p>
-</blockquote>
-<p>下载好之后，我们就开始正式了解Git</p>
-<hr>
-<h3 id="因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程"><a href="#因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程" class="headerlink" title="因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程"></a>因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程</h3><h4 id="要使用Git，我们首先要告诉Git我们是谁"><a href="#要使用Git，我们首先要告诉Git我们是谁" class="headerlink" title="要使用Git，我们首先要告诉Git我们是谁"></a>要使用Git，我们首先要告诉Git我们是谁</h4><p>一般填写的都是Github的用户名和注册邮箱</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &apos;你的名称&apos;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.email &apos;你的邮箱&apos;</div></pre></td></tr></table></figure>
-<h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><p>在任意一个地方新建一个文件，然后在文件中打开git，输入初始化命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure>
-<p>即初始化完成</p>
-<hr>
-<h4 id="提交过程"><a href="#提交过程" class="headerlink" title="提交过程"></a>提交过程</h4><p>首先我们需要先查看当前文件的状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
-<p>它会显示出当前我们所在的分支，比如“on branch master”表示我们现在处在master这个分支上，即主分支</p>
-<p>当我们在文件中新建文件之后，再次运行“git status”时，结果会以红色字体出现新建文件名，即git未跟踪文件，现在我们需要将未跟踪文件添加进来，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add .  #表示添加所有修改文件</div></pre></td></tr></table></figure>
-<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add 文件名  #表示添加某一文件</div></pre></td></tr></table></figure></p>
-<p>再次运行“git status”，会显示绿色字体，表示该文件将要被提交，这时需要确认提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m &apos;提交信息&apos;  #提交信息主要写你提交了什么文件</div></pre></td></tr></table></figure>
-<p>提交完成</p>
-<p>注：一旦修改了跟踪文件的内容，就要重新进行提交</p>
-<hr>
-<h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><p>先查看所有分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch</div></pre></td></tr></table></figure>
-<p>分支名称左边有“*”的默认为当前分支</p>
-<p>创建分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch 分支名</div></pre></td></tr></table></figure>
-<p>既然分支创建好了，如何切换分支呢？我们需要输入命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout 分支名</div></pre></td></tr></table></figure>
-<hr>
-<h4 id="下载版本库"><a href="#下载版本库" class="headerlink" title="下载版本库"></a>下载版本库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone 远程版本库地址  #默认名称为版本库名称，可以在后面加上自定义的名称</div></pre></td></tr></table></figure>
-<p>下载完成后，就可以在本地对版本库进行修改</p>
-<hr>
-<h4 id="提交版本库"><a href="#提交版本库" class="headerlink" title="提交版本库"></a>提交版本库</h4><p>当修改完成之后，在git里面输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin master</div></pre></td></tr></table></figure></p>
-<p>完成提交</p>
-<p>但是远程版本库并不知道你已经更新了状态，这个时候我们需要输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git fetch</div></pre></td></tr></table></figure>
-<p>提示已经提取到更新，然后查看状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
-<p>查看显示远程上已经有了更新，然后我们需要进行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge origin/master</div></pre></td></tr></table></figure>
-<p>这个时候当前分支就与“master”分支保持一致了</p>
-<pre><code>以上 2017-06-12
-</code></pre><hr>
-<center>分割线</center>
-
-<hr>
-<p>在主分支master上创建子分支（如t1和t2）时，需要注意，创建t1成功后，需要切换回master分支再创建t2分支，这样t1和t2才会是平级的分支。</p>
-<p>在工作中使用git进行代码管理时，需要注意公司采用图形化管理还是命令行管理，使用图形化管理时需要注意当前代码需改完成之后，需要进入gitlab下的项目中找到要提交的分支进行merge；命令行合并代码的时候，子分支进行到</p>
-<blockquote>
-<p>git commit -m “xxx”</p>
-</blockquote>
-<p>时就可以切换分支进行合并，然后在主分支进行远程提交即可。</p>
-<p>==另注：使用git一定要小心==</p>
-<pre><code>更新于 2019-07-11
-</code></pre>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cuijiahuan.github.io/2019/07/11/途家H5站点初步理解/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="绊AI"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="绊AI的博客"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/11/途家H5站点初步理解/" class="post-title-link" itemprop="url">H5项目理解【持续更新】</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2019-07-11 16:26:23" itemprop="dateCreated datePublished" datetime="2019-07-11T16:26:23+08:00">2019-07-11</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-07-15 11:33:34" itemprop="dateModified" datetime="2019-07-15T11:33:34+08:00">2019-07-15</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          请输入密码进行查看
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/11/途家H5站点初步理解/#more" rel="contents">
-                Weiterlesen &raquo;
-              </a>
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/07/11</span>
+                </div>
             </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-
+        </article>
     
     
     
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
+        <article class="index-post">
+            <a class="content-show-full" href = "/2019/07/11/途家H5站点初步理解/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>H5项目理解【持续更新】</span>
+                    </h2>
+                <div class="abstract-content">
+                    
 
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cuijiahuan.github.io/2018/08/22/vue问题总结【持续更新】/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="绊AI"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="绊AI的博客"/>
-    </span>
-
+    Please enter the password to read the blog.
     
-      <header class="post-header">
+  
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+Incorrect Password!
+No content to display!
+
+U2FsdGVkX19RZDk5OtN7IUj+UiHNnHYa3eazpZq+TjGWHT5lpIhrASUIvCsIRlbpWfs9RV+EEVpxXIK8dFkIMeActYae0zb/z3hI6hsSrRzRCRlg5+b/w3iC+VBUFqTv+oTYLd4lMNAcE+gU27PUAxCIOd5CDVF54NqM9AQOJwd9K8jBwoSq6qxYcNp8...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
                 
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/07/11</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/08/22/vue问题总结【持续更新】/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>vue问题总结【更新】</span>
+                    </h2>
+                <div class="abstract-content">
+                    1、今天在公司修改样式的时候发现引入Element-UI的tooltip组件之后，想对tootip的样式进行自定义修改，结果发现无论怎么设置选择器的优先级，都渲染不到页面上，后来经过一系列的尝试之后发现是由于给style设置scoped造成的，本身设置scoped是为了防止全局样式冲突，结果没想到会造成自定义的样式渲染不上，后来经过思考测试，其实是可以将组件内修改tooltp的样式放到全局css中，不过需要给对应的元素设置类型，比如tooltip可以通过popper-class=”tooltip”设置类名，然后给这个类名添加样式。
+2、在进行vue页面编写时经常会用到数据绑定，在渲染页面...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
                 
-                <a href="/2018/08/22/vue问题总结【持续更新】/" class="post-title-link" itemprop="url">vue问题总结【更新】</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2018-08-22 21:06:55" itemprop="dateCreated datePublished" datetime="2018-08-22T21:06:55+08:00">2018-08-22</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-07-12 11:19:15" itemprop="dateModified" datetime="2019-07-12T11:19:15+08:00">2019-07-12</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/08/22</span>
+                </div>
+            </div>
+        </article>
     
     
     
-    <div class="post-body" itemprop="articleBody">
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/08/21/利用hover控制其他元素样式/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>利用hover控制其他元素样式</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+之前在项目中有一个需求是鼠标移入元素上时该元素改变样式的同时另外元素样式也要改变，刚开始想利用js来实现，不过有点麻烦，之后发现可以通过css直接来实现这个功能，本着人无我有，人有我优的原则，在这里记录一下具体过程。
 
-      
-      
+首先我经过尝试以及网上查找之后，发现利用hover来实现这个功能是有一定局限性的，如果你要改变其他元素的样式，那么它们必须是相邻同级元素或者是同一父元素的子元素，不然效果是出不来的（呜~）
+相邻同级元素HTML
 
-      
-        
-          
-            <p>1、今天在公司修改样式的时候发现引入Element-UI的tooltip组件之后，想对tootip的样式进行自定义修改，结果发现无论怎么设置选择器的优先级，都渲染不到页面上，后来经过一系列的尝试之后发现是由于给style设置scoped造成的，本身设置scoped是为了防止全局样式冲突，结果没想到会造成自定义的样式渲染不上，后来经过思考测试，其实是可以将组件内修改tooltp的样式放到全局css中，不过需要给对应的元素设置类型，比如tooltip可以通过<code>popper-class=”tooltip”</code>设置类名，然后给这个类名添加样式。</p>
-<p>2、在进行vue页面编写时经常会用到数据绑定，在渲染页面的时候其实会出现页面闪烁会看到变量的问题，比如通过<code>&lt;p&gt;&lt;p&gt;</code>进行数据绑定，页面刷新时可能会看到<code></code>，这对于用户体验来说是很差的，因此我们可以使用<strong>v-clock</strong>来解决这个问题，基本上我们只需要把它添加到el挂载的标签就可以，一般来说就是最外层的div，如<code>&lt;div class=”#app” v-clock&gt;</code></p>
-<blockquote>
-<p>在某些情况下<code>v-clock</code>并不起作用</p>
-<p>①、挂载v-clock的元素的display属性被更高层级的覆盖掉了，如<code>!important</code>属性，这就需要我们提高层级</p>
-<p>②、当样式放到@import引入的css文件中时<code>v-clock</code>是不起作用的，可以用link引入样式或者写入内联样式。</p>
-</blockquote>
-<p>3、在搭建个人博客时我曾经换过页面标题旁边的图标，因此在利用vue编写个人项目时也考虑过这个问题，它的实现思路和博客其实差不多，只需要在最外层index.html的head标签里面加上<code>&lt;link rel=”shortcut icon” type=”image/x-icon” href=”static/favicon.ico”&gt;</code>，个人建议图标和logo之类的图片放在static文件夹中比较好。</p>
-<center>to be continue…</center>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cuijiahuan.github.io/2018/08/21/利用hover控制其他元素样式/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="绊AI"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="绊AI的博客"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/08/21/利用hover控制其他元素样式/" class="post-title-link" itemprop="url">利用hover控制其他元素样式</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2018-08-21 21:05:29" itemprop="dateCreated datePublished" datetime="2018-08-21T21:05:29+08:00">2018-08-21</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2018-08-22 08:53:25" itemprop="dateModified" datetime="2018-08-22T08:53:25+08:00">2018-08-22</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>之前在项目中有一个需求是鼠标移入元素上时该元素改变样式的同时另外元素样式也要改变，刚开始想利用js来实现，不过有点麻烦，之后发现可以通过css直接来实现这个功能，本着人无我有，人有我优的原则，在这里记录一下具体过程。</p>
-</blockquote>
-<p><strong>首先我经过尝试以及网上查找之后，发现利用hover来实现这个功能是有一定局限性的，如果你要改变其他元素的样式，那么它们必须是相邻同级元素或者是同一父元素的子元素，不然效果是出不来的（呜~）</strong></p>
-<h4 id="相邻同级元素"><a href="#相邻同级元素" class="headerlink" title="相邻同级元素"></a>相邻同级元素</h4><p>HTML</p>
-<pre>
 &lt;div class="div1"&gt;
     &lt;div class="son1"&gt;son1 &lt;/div&gt;
-    &lt;div class="son2"&gt;son2 &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    &lt;...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/08/21</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/05/18/Web安全攻击方式/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>Web安全攻击方式</span>
+                    </h2>
+                <div class="abstract-content">
+                    xssxss是跨站脚本攻击，指攻击者在网页中嵌入客户端脚本，当用户浏览次页面时，脚本就会在用户浏览器上执行，从而达到攻击目的
+比如我们下载有这么一个代码
 
-<p>CSS</p>
-<pre>
-.son1 , .son2{
-    width:100px;
-    height:100px;
-    border:1px solid #000;
-}
-.son1:hover + .son2{
-    background:#000;
-}
-</pre>
+&lt;input type=”text” name=”address” value=”valuefrom”&gt;
 
-<p>鼠标移入son1元素，son2元素背景色变黑</p>
-<h4 id="父级元素"><a href="#父级元素" class="headerlink" title="父级元素"></a>父级元素</h4><p>HTML</p>
-<pre>
-&lt;div class="div1"&gt;
-    &lt;div class="son"&gt;son1 &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+valuefrom是来自用户的输入，如果用户不是输入valuefrom而是输入”/&gt;&lt;script&gt;alert(document.cookie)&gt;/script&gt;&lt;!-,即变成
 
-<p>CSS</p>
-<pre>
-.div1{
-    width:200px;
-    height:200px;
-    border:1px solid #000;
-}
-.son{
-    margin:0 auto;
-    width:100px;
-    height:100px;
-    border:1px solid #000;
-}
-.div1:hover .son{
-    background:#000;
-}
-</pre>
+&lt;input type=”text” name=”address” value=””/&gt;&...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/18</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/05/11/安装mongodb遇到的坑/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>安装mongodb遇到的坑</span>
+                    </h2>
+                <div class="abstract-content">
+                    mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程
+我在官网上下载最新3.6版本并在windows下安装会出现进度条长时间不动的情况，这是因为3.6版本在windows下有不适配的问题，需要我们下载3.4版本安装
+（我的安装路径是C:\Program Files\MongoDB）
+下载安装完成之后，需要添加安装路径到path环境变量：C:\Program Files\MongoDB\Server\3.4\bin
+我们在D盘创建如下文件夹D:\mongodb\data  D:\mongodb\logs
+在命...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/11</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/05/05/使用express配置前端服务器/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>使用express配置前端服务器</span>
+                    </h2>
+                <div class="abstract-content">
+                    使用webpack打包vue项目之后会生成dist文件夹，dist文件夹下面有html文件和其他的css,js和img等文件，如果你要查看打包之后的文件怎么办，这时候我们可以将生成的dist文件部署到express服务器上运行。
+首先我们需要安装express-generator生成器
+npm install express-generator -g
 
-<p>鼠标移入父级.div1元素，子元素son背景变黑</p>
+创建express项目
+express expressname(项目名称)
 
-          
-        
-      
+进入项目目录，安装相关项目依赖
+cd expressnamenpm install
+
+将dist文件夹下生成的文件复制到express项目下的piblic文件夹...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/05</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/05/01/自适应布局的几种方法/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>自适应布局的几种方法</span>
+                    </h2>
+                <div class="abstract-content">
+                    自适应布局的几种方法
+百分比1&lt;meta name=&quot;viewport&quot; content=&quot;width-device-width,initial-scale=1&quot;
+viewport是网页默认的宽度和高度，width=device-width即网页宽度默认等于屏幕宽度，initial-scale=1即原始缩放比例为1.0，网页初始大小占屏幕面积的100%。
+由于网页会根据屏幕宽度调整布局，所以不能使用绝对宽度的布局，也不能使用绝对宽度的元素，如css不能指定像素宽度，只能指定百分比宽度，字体不能使用绝对大小px，而只能使用相对大小em。
+@me...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/05/01</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2018/02/09/优雅降级与渐进增强/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>优雅降级与渐进增强</span>
+                    </h2>
+                <div class="abstract-content">
+                    优雅降级与渐进增强
+
+优雅降级(Graceful Degradation)：一开始就构建站点的完整功能，然后针对浏览器测试和修复。比如一开始使用CSS3的特性构建了一个应用，然后逐步针对各大浏览器进行测试使其可以再低版本浏览器上正常浏览。
+渐进增强(Progressive Enhancement)：一开始就针对低版本浏览器进行构建页面，完成基本的功能，然后再针对高级浏览器进行效果、交互、追加功能达到更好的体验。
+渐进增强相当于向上兼容，而优雅降级相当于向下兼容，向下兼容指的是高版本支持低版本的或者说后期开发的版本支持和兼容早期开发的版本，向上兼容的很少，大多数软件都是向下兼容的
+区别
+优...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/02/09</span>
+                </div>
+            </div>
+        </article>
+    
+    <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">#NEXT</a>
+    </nav>
+    
+</main>
+            <!-- profile -->
+            
+            <div class="profile">
+    <img class="profile-avatar" src= https://i.ibb.co/hMqFRth/banAI.jpg >
+    <div class="profile-name">绊AI</div>
+    
+    <div class="profile-signature">
+        嗨多磨
     </div>
-
-    
-
-    
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cuijiahuan.github.io/2018/05/18/Web安全攻击方式/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="绊AI"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="绊AI的博客"/>
-    </span>
-
-    
-      <header class="post-header">
-
+    <div class="profile-social">
         
+    
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/05/18/Web安全攻击方式/" class="post-title-link" itemprop="url">Web安全攻击方式</a>
-              
             
-          </h1>
+                <a href="mailto:cuijiahuan97@foxmail.com" class="iconfont-archer email" title=email ></a>
+            
         
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2018-05-18 23:56:27" itemprop="dateCreated datePublished" datetime="2018-05-18T23:56:27+08:00">2018-05-18</time>
-            </span>
-          
-
-          
+    
+        
             
-
+                <a href="//github.com/cuijiahuan" class="iconfont-archer github" target="_blank" title="github"></a>
             
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+        
+    
+        
+            
+                <a href="//www.zhihu.com/people/jia-huan-80-62/activities" class="iconfont-archer zhihu" target="_blank" title="zhihu"></a>
+            
+        
+    
+
+    </div>
+    
+    
+        <div class="friends">
+            <div>FRIENDS</div>
+            
+                <span>
+                    <a href= //www.bilibili.com target="_black">bilibili</a>
                 </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2018-08-05 00:29:13" itemprop="dateModified" datetime="2018-08-05T00:29:13+08:00">2018-08-05</time>
-              </span>
             
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
     
     
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="xss"><a href="#xss" class="headerlink" title="xss"></a>xss</h3><p>xss是跨站脚本攻击，指攻击者在网页中嵌入客户端脚本，当用户浏览次页面时，脚本就会在用户浏览器上执行，从而达到攻击目的</p>
-<p>比如我们下载有这么一个代码</p>
-<blockquote>
-<p>&lt;input type=”text” name=”address” value=”valuefrom”&gt;</p>
-</blockquote>
-<p>valuefrom是来自用户的输入，如果用户不是输入valuefrom而是输入”/&gt;&lt;script&gt;alert(document.cookie)&gt;/script&gt;&lt;!-,即变成</p>
-<blockquote>
-<p>&lt;input type=”text” name=”address” value=””/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-“&gt;</p>
-</blockquote>
-<p>嵌入的javascript代码将会被执行</p>
-<p><strong>xss漏洞修复</strong><br>原则：不要相信用户输入的数据</p>
-<p>*注意：攻击代码不一定在&lt;script&gt;&lt;script&gt;标签里</p>
-<blockquote>
-<ul>
-<li>将重要的cookie标记为http only，这样js的document.cookie语句就无法获取cookie</li>
-<li>只允许用户输入我们规定的数据，比如年龄只允许输入数字</li>
-<li>对数据进行html Encode处理</li>
-<li>过滤或移除特殊的html标签，例如&lt;script&gt;,&lt;iframe&gt;</li>
-<li>过滤掉js事件的标签，比如onclick,onfocus</li>
-</ul>
-</blockquote>
-<h3 id="csrf"><a href="#csrf" class="headerlink" title="csrf"></a>csrf</h3><p>csrf是跨站请求伪造，指攻击者盗用了你的身份，以你的名义发送恶意请求，csrf能够以你名义发送邮件，发消息……会造成个人隐私泄露以及财产安全等问题</p>
-<p>要完成一次csrf攻击，受害者必须依次完成两个步骤：</p>
-<blockquote>
-<p>登录受信任网站A，并在本地生成cookie</p>
-<p>在不登出A的情况下，访问危险网站B</p>
-</blockquote>
-<p>看到这里，你也许会说：“如果我不满足以上两个条件中的一个，我就不会受到CSRF的攻击”。是的，确实如此，但你不能保证以下情况不会发生：</p>
-<blockquote>
-<p>1.你不能保证你登录了一个网站后，不再打开一个tab页面并访问另外的网站。</p>
-<p>2.你不能保证你关闭浏览器了后，你本地的Cookie立刻过期，你上次的会话已经结束。（事实上，关闭浏览器不能结束一个会话，但大多数人都会错误的认为关闭浏览器就等于退出登录/结束会话了……）</p>
-<p>3.所谓的攻击网站，可能是一个存在其他漏洞的可信任的经常被人访问的网站。</p>
-</blockquote>
-<p><strong>csrf防御</strong></p>
-<p>1.服务端进行csrf防御</p>
-<p>服务端的CSRF方式方法很多样，但总的思想都是一致的，就是在客户端页面增加伪随机数。</p>
-<p>(1).Cookie Hashing(所有表单都包含同一个伪随机值)</p>
-<p>(2).验证码</p>
-<p>(3).One-Time Tokens(不同的表单包含一个不同的伪随机值)</p>
-<p>目前防御 CSRF 攻击主要有三种策略：</p>
-<p>①验证 HTTP Referer 字段；</p>
-<p>②在请求地址中添加 token 并验证；</p>
-<p>③在 HTTP 头中自定义属性并验证。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cuijiahuan.github.io/2018/05/11/安装mongodb遇到的坑/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="绊AI"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="绊AI的博客"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/05/11/安装mongodb遇到的坑/" class="post-title-link" itemprop="url">安装mongodb遇到的坑</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2018-05-11 23:55:45" itemprop="dateCreated datePublished" datetime="2018-05-11T23:55:45+08:00">2018-05-11</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2018-08-03 00:04:52" itemprop="dateModified" datetime="2018-08-03T00:04:52+08:00">2018-08-03</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
+        <div class="about-me">
+            <div>
+                <a href = "/about" >ABOUT ME</a>
+            </div>
         </div>
-      </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程"><a href="#mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程" class="headerlink" title="mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程"></a>mongodb是一个基于分布式文件存储的开源数据库系统，它主要为WEB应用提供可扩展的高性能数据存储解决方案。下面我说说具体的安装过程</h3><hr>
-<p>我在官网上下载最新3.6版本并在windows下安装会出现进度条长时间不动的情况，这是因为3.6版本在windows<br>下有不适配的问题，需要我们下载3.4版本安装</p>
-<p>（我的安装路径是C:\Program Files\MongoDB）</p>
-<p>下载安装完成之后，需要添加安装路径到path环境变量：C:\Program Files\MongoDB\Server\3.4\bin</p>
-<p>我们在D盘创建如下文件夹D:\mongodb\data  D:\mongodb\logs</p>
-<p>在命令提示符输入</p>
-<blockquote>
-<p>cd C:\Program Files\MongoDB\Server\3.4\bin</p>
-</blockquote>
-<p>再输入mongod.exe –dbpath=D:\mongodb\data –logpath=D:\mongodb\logs\mongodb.log –install</p>
-<p>输入net start mongodb启动服务</p>
-<p>最后在浏览器输入<a href="http://localhost:27017/在页面看到It" target="_blank" rel="external">http://localhost:27017/在页面看到It</a> looks like you are trying to access MongoDB over HTTP on the native driver port.表示成功</p>
-<p>在这里我说一下我安装的时候遇到的几个坑</p>
-<blockquote>
-<p>1.首先就是安装包问题，需要安装3.4版本的<br><br>2.在输入net start mongodb之后，提示我服务没有响应控制功能，之后我发现在配置path路径时把C:\windows\system32给删掉了，把这句加上就可以了<br><br>在D盘创建文件夹时，当时看别人的博客是把logs文件夹放到data文件夹里面，我这样操作之后启动服务是无法启动的，当我把logs文件夹和data文件夹并列之后，启动是可以的。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cuijiahuan.github.io/2018/05/05/使用express配置前端服务器/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="绊AI"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="绊AI的博客"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/05/05/使用express配置前端服务器/" class="post-title-link" itemprop="url">使用express配置前端服务器</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2018-05-05 21:39:41" itemprop="dateCreated datePublished" datetime="2018-05-05T21:39:41+08:00">2018-05-05</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2018-08-01 21:48:58" itemprop="dateModified" datetime="2018-08-01T21:48:58+08:00">2018-08-01</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>使用webpack打包vue项目之后会生成dist文件夹，dist文件夹下面有html文件和其他的css,js和img等文件，如果你要查看打包之后的文件怎么办，这时候我们可以将生成的dist文件部署到express服务器上运行。</p>
-<h3 id="首先我们需要安装express-generator生成器"><a href="#首先我们需要安装express-generator生成器" class="headerlink" title="首先我们需要安装express-generator生成器"></a>首先我们需要安装express-generator生成器</h3><blockquote>
-<p>npm install express-generator -g</p>
-</blockquote>
-<h3 id="创建express项目"><a href="#创建express项目" class="headerlink" title="创建express项目"></a>创建express项目</h3><blockquote>
-<p>express expressname(项目名称)</p>
-</blockquote>
-<h3 id="进入项目目录，安装相关项目依赖"><a href="#进入项目目录，安装相关项目依赖" class="headerlink" title="进入项目目录，安装相关项目依赖"></a>进入项目目录，安装相关项目依赖</h3><blockquote>
-<p>cd expressname<br>npm install</p>
-</blockquote>
-<h3 id="将dist文件夹下生成的文件复制到express项目下的piblic文件夹下，然后运行npm-start，启动express项目"><a href="#将dist文件夹下生成的文件复制到express项目下的piblic文件夹下，然后运行npm-start，启动express项目" class="headerlink" title="将dist文件夹下生成的文件复制到express项目下的piblic文件夹下，然后运行npm start，启动express项目"></a>将dist文件夹下生成的文件复制到express项目下的piblic文件夹下，然后运行npm start，启动express项目</h3><h3 id="打开浏览器，输入localhost-3000查看效果"><a href="#打开浏览器，输入localhost-3000查看效果" class="headerlink" title="打开浏览器，输入localhost:3000查看效果"></a>打开浏览器，输入localhost:3000查看效果</h3>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cuijiahuan.github.io/2018/05/01/自适应布局的几种方法/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="绊AI"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="绊AI的博客"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/05/01/自适应布局的几种方法/" class="post-title-link" itemprop="url">自适应布局的几种方法</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2018-05-01 20:44:19" itemprop="dateCreated datePublished" datetime="2018-05-01T20:44:19+08:00">2018-05-01</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2018-07-31 20:45:53" itemprop="dateModified" datetime="2018-07-31T20:45:53+08:00">2018-07-31</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>自适应布局的几种方法</p>
-<h3 id="百分比"><a href="#百分比" class="headerlink" title="百分比"></a>百分比</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width-device-width,initial-scale=1&quot;</div></pre></td></tr></table></figure>
-<p>viewport是网页默认的宽度和高度，width=device-width即网页宽度默认等于屏幕宽度，initial-scale=1即原始缩放比例为1.0，网页初始大小占屏幕面积的100%。</p>
-<p>由于网页会根据屏幕宽度调整布局，所以不能使用绝对宽度的布局，也不能使用绝对宽度的元素，如css不能指定像素宽度，只能指定百分比宽度，字体不能使用绝对大小px，而只能使用相对大小em。</p>
-<h3 id="media规则"><a href="#media规则" class="headerlink" title="@media规则"></a>@media规则</h3><p>css3的@media规则可以在不改变html内容情况下，根据终端媒体设备的不同选择不同的css样式</p>
-<p>具体写法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media 设备类型 and (设备特性)&#123;</div><div class="line">	css样式代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>例如：</p>
-<pre>
-//浏览器窗口大于900px
-@media screen and(min-width:900px){
-    body{
-        font-size:25px;
-    }
-}
-//浏览器窗口大于500px小于900px
-@media screen and(min-width:500px)and(max-width:900px){
-    body{
-        font-size:20px;
-    }
-}
-//浏览器窗口小于500px
-@media screen and(max-width:500px){
-    body{
-        font-size:15px;
-    }
-}
-</pre>
-
-<h3 id="rem自适应布局"><a href="#rem自适应布局" class="headerlink" title="rem自适应布局"></a>rem自适应布局</h3><p>首先我们需要知道rem是相对于根元素的字体大小的单位，它是一个相对单位，同理em是相对于父元素的字体大小的单位；rem的计算规则依赖根元素，我们只需要在根元素确定一个px字号，就可以计算出元素的宽高。</p>
-<h3 id="target-densitydpi属性"><a href="#target-densitydpi属性" class="headerlink" title="target-densitydpi属性"></a>target-densitydpi属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=640,target-densitydpi=device-dpi,user-scalable=no&quot;&gt;</div></pre></td></tr></table></figure>
-<p>通过读取device-width的值来自动计算出target-densitydpi去实现自适应网页，不过缺点是目前只在android支持，具有兼容性问题。</p>
-<p>target-densitydpi属性的取值范围：</p>
-<pre>
-device-dpi    --使用设备原本的dpi作为目标dpi，不会发生默认缩放。
-high-dpi    --使用hdpi作为目标dpi，中等像素密度和低像素密度设备相应缩小。
-medium-dpi    --使用mdpi作为目标dpi，高像素密度设备相应放大，低像素密度设备相应缩小，这是默认的target density
-low-dpi        --使用ldpi作为目标dpi，中等像素密度和高像素密度设备相应放大
-value        --指定一个具体的dpi，值作为target dpi，这个值得范围必须在70-400之间。
-</pre>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="cuijiahuan.github.io/2018/02/09/优雅降级与渐进增强/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="绊AI"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.gif"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="绊AI的博客"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/02/09/优雅降级与渐进增强/" class="post-title-link" itemprop="url">优雅降级与渐进增强</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2018-02-09 22:25:17" itemprop="dateCreated datePublished" datetime="2018-02-09T22:25:17+08:00">2018-02-09</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2018-02-26 14:51:31" itemprop="dateModified" datetime="2018-02-26T14:51:31+08:00">2018-02-26</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br/>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>优雅降级与渐进增强</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/1839822-d10930c25da17cd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/650" alt=""></p>
-<p><strong>优雅降级(Graceful Degradation)</strong>：一开始就构建站点的完整功能，然后针对浏览器测试和修复。比如一开始使用CSS3的特性构建了一个应用，然后逐步针对各大浏览器进行测试使其可以再低版本浏览器上正常浏览。</p>
-<p><strong>渐进增强(Progressive Enhancement)</strong>：一开始就针对低版本浏览器进行构建页面，完成基本的功能，然后再针对高级浏览器进行效果、交互、追加功能达到更好的体验。</p>
-<p><em>渐进增强相当于向上兼容，而优雅降级相当于向下兼容，向下兼容指的是高版本支持低版本的或者说后期开发的版本支持和兼容早期开发的版本，向上兼容的很少，大多数软件都是向下兼容的</em></p>
-<p>区别</p>
-<p><strong>优雅降级</strong>认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段</p>
-<p><strong>渐进增强</strong>则认为应关注于内容本身，而对浏览器则是次要的，因为内容是建立网站的诱因，这使得渐进增强成一种更为合理的设计范例。</p>
-<p>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.transition&#123; /*渐进式写法*/</div><div class="line">    -webkit-transition:all .5s;</div><div class="line">    -moz-transition:all .5s;</div><div class="line">    -o-transition:all .5s;</div><div class="line">    transition:all .5s;</div><div class="line">&#125;</div><div class="line">.transition&#123; /*优雅降级写法*/</div><div class="line">    transition:all .5s;</div><div class="line">    -o-transition:all .5s;</div><div class="line">    -moz-transition:all .5s;</div><div class="line">    -webkit-transition:all .5s;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>前缀CSS3与正常CSS3在浏览器中的支持情况：</p>
-<ol>
-<li>很久以前：浏览器前缀CSS3和正常CSS3都不支持；</li>
-<li>不久之前：浏览器只支持前缀CSS3，不支持正常CSS3；</li>
-<li>现在：浏览器既支持前缀CSS3，又支持正常CSS3；</li>
-<li>未来：浏览器不支持前缀CSS3，仅支持正常CSS3。</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  
-  <p class="site-author-name" itemprop="name">绊AI</p>
-  <div class="site-description motion-element" itemprop="description"></div>
 </div>
-
-
-  <nav class="site-state motion-element">
-    
-      <div class="site-state-item site-state-posts">
-        
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">19</span>
-          <span class="site-state-item-name">Artikel</span>
-        </a>
-      </div>
-    
-
-    
-
-    
-  </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-          
+            
         </div>
-      </div>
-
-      
-
-      
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:cuijiahuan97@foxmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/cuijiahuan" class="iconfont-archer github" target="_blank" title="github"></a>
+            
+        
+    
+        
+            
+                <a href="//www.zhihu.com/people/jia-huan-80-62/activities" class="iconfont-archer zhihu" target="_blank" title="zhihu"></a>
+            
+        
+    
 
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">绊AI</span>
-
-  
-
-  
-</div>
-
-
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.2.2</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
     
-
+</footer>
+    </div>
+    <!-- toc -->
     
-
+    <div class="back-top">&#xe639;</div>
+    <div class="sidebar">
+    <div class="sidebar-header sidebar-header-show-archive">
+        <div class="sidebar-category">
+            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
+            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
+        </div>
+    </div>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-archive">
+    <!-- 在ejs中将archive按照时间排序 -->
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 19 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/15</span><a class="archive-post-title" href= "/2019/07/15/tj前端项目部署流程/" >tj前端项目部署流程</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/11</span><a class="archive-post-title" href= "/2019/07/11/Git学习【持续更新】/" >Git学习【更新】</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/11</span><a class="archive-post-title" href= "/2019/07/11/途家H5站点初步理解/" >H5项目理解【持续更新】</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2018/08/22/vue问题总结【持续更新】/" >vue问题总结【更新】</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/21</span><a class="archive-post-title" href= "/2018/08/21/利用hover控制其他元素样式/" >利用hover控制其他元素样式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/18</span><a class="archive-post-title" href= "/2018/05/18/Web安全攻击方式/" >Web安全攻击方式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2018/05/11/安装mongodb遇到的坑/" >安装mongodb遇到的坑</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/05</span><a class="archive-post-title" href= "/2018/05/05/使用express配置前端服务器/" >使用express配置前端服务器</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/01</span><a class="archive-post-title" href= "/2018/05/01/自适应布局的几种方法/" >自适应布局的几种方法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/09</span><a class="archive-post-title" href= "/2018/02/09/优雅降级与渐进增强/" >优雅降级与渐进增强</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/07</span><a class="archive-post-title" href= "/2018/02/07/了解Vue-router/" >了解Vue-router</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/06</span><a class="archive-post-title" href= "/2018/02/06/PWA了解/" >PWA了解【更新】</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/31</span><a class="archive-post-title" href= "/2018/01/31/vue中如何引入外链css和js/" >Vue中外链css和js【不推荐引】</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/30</span><a class="archive-post-title" href= "/2018/01/30/setTimeout与闭包/" >setTimeout与闭包</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/27</span><a class="archive-post-title" href= "/2018/01/27/思考跨域问题/" >思考跨域问题</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/22</span><a class="archive-post-title" href= "/2018/01/22/swiper初步应用/" >swiper初步应用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2018/01/08/webpack学习【持续更新】/" >webpack【更新】</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/18</span><a class="archive-post-title" href= "/2017/06/18/npm学习/" >npm学习</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/15</span><a class="archive-post-title" href= "/2017/06/15/gulp学习/" >gulp学习</a>
+        </li>
+    
+    </div>
   </div>
-
-  
-
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+        <div class="sidebar-tags">
+    <div class="sidebar-tags-name">
+    
+    </div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tag-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var jsInfo = {
+        root: '/'
+    }
 </script>
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-
-
-  <script src="/js/utils.js?v=7.2.0"></script>
-
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/schemes/muse.js?v=7.2.0"></script>
-
-
-
-  
-
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-</body>
+    <!-- 不蒜子  -->
+    
+    <!-- CNZZ统计  -->
+    
+    </div>
+    </body>
 </html>
+
+
