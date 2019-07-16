@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
+    }
+  };
+</script>
+
+  <meta name="description" content="什么是swiper？swiper是一种用于移动端页面的前端特效插件，它是一种纯javascript的框架，主要用来做轮播图之类页面，在使用之前首先我们需要下载swiper
+
+注：下载swiper-4.1.0.min.js和swiper-4.1.0.min.css即可
+
+swiper使用方法1.首先加载插件1234567891011&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swiper初步应用">
+<meta property="og:url" content="cuijiahuan.github.io/2018/01/22/swiper初步应用/index.html">
+<meta property="og:site_name" content="绊AI的博客">
+<meta property="og:description" content="什么是swiper？swiper是一种用于移动端页面的前端特效插件，它是一种纯javascript的框架，主要用来做轮播图之类页面，在使用之前首先我们需要下载swiper
+
+注：下载swiper-4.1.0.min.js和swiper-4.1.0.min.css即可
+
+swiper使用方法1.首先加载插件1234567891011&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;">
+<meta property="og:updated_time" content="2019-07-11T08:28:12.407Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="swiper初步应用">
+<meta name="twitter:description" content="什么是swiper？swiper是一种用于移动端页面的前端特效插件，它是一种纯javascript的框架，主要用来做轮播图之类页面，在使用之前首先我们需要下载swiper
+
+注：下载swiper-4.1.0.min.js和swiper-4.1.0.min.css即可
+
+swiper使用方法1.首先加载插件1234567891011&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="cuijiahuan.github.io/2018/01/22/swiper初步应用/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  
+  <title>swiper初步应用 | 绊AI的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">绊AI的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">绊AI的博客</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>Startseite</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>Archiv</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="cuijiahuan.github.io/2018/01/22/swiper初步应用/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="绊AI"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="绊AI的博客"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">swiper初步应用
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2018-01-22 00:57:30" itemprop="dateCreated datePublished" datetime="2018-01-22T00:57:30+08:00">2018-01-22</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-07-11 16:28:12" itemprop="dateModified" datetime="2019-07-11T16:28:12+08:00">2019-07-11</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="什么是swiper？"><a href="#什么是swiper？" class="headerlink" title="什么是swiper？"></a>什么是swiper？</h4><p>swiper是一种用于移动端页面的前端特效插件，它是一种纯javascript的框架，主要用来做轮播图之类页面，在使用之前首先我们需要<a href="http://www.swiper.com.cn/download/index.html" target="_blank" rel="external">下载swiper</a></p>
+<blockquote>
+<p><strong>注：</strong>下载swiper-4.1.0.min.js和swiper-4.1.0.min.css即可</p>
+</blockquote>
+<h4 id="swiper使用方法"><a href="#swiper使用方法" class="headerlink" title="swiper使用方法"></a>swiper使用方法</h4><h5 id="1-首先加载插件"><a href="#1-首先加载插件" class="headerlink" title="1.首先加载插件"></a>1.首先加载插件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    ...</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/swiper.min.css&quot;&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    ...</div><div class="line">    &lt;script src=&quot;path/to/swiper.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h5 id="2-HTML内容"><a href="#2-HTML内容" class="headerlink" title="2.HTML内容"></a>2.HTML内容</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;swiper-container&quot;&gt;</div><div class="line">    &lt;div class=&quot;swiper-wrapper&quot;&gt;</div><div class="line">        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 1&lt;/div&gt;</div><div class="line">        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 2&lt;/div&gt;</div><div class="line">        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 3&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;!-- 如果需要分页器 --&gt;</div><div class="line">    &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;</div><div class="line">    </div><div class="line">    &lt;!-- 如果需要导航按钮 --&gt;</div><div class="line">    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;</div><div class="line">    </div><div class="line">    &lt;!-- 如果需要滚动条 --&gt;</div><div class="line">    &lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">导航等组件可以放在container之外</div></pre></td></tr></table></figure>
+<p><strong><em>注：</em></strong>可以自行给swiper定义大小</p>
+<h5 id="3-初始化swiper"><a href="#3-初始化swiper" class="headerlink" title="3.初始化swiper"></a>3.初始化swiper</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;        </div><div class="line">  var mySwiper = new Swiper (&apos;.swiper-container&apos;, &#123;</div><div class="line">    direction: &apos;vertical&apos;,</div><div class="line">    loop: true,</div><div class="line">    </div><div class="line">    // 如果需要分页器</div><div class="line">    pagination: &#123;</div><div class="line">      el: &apos;.swiper-pagination&apos;,</div><div class="line">    &#125;,</div><div class="line">    </div><div class="line">    // 如果需要前进后退按钮</div><div class="line">    navigation: &#123;</div><div class="line">      nextEl: &apos;.swiper-button-next&apos;,</div><div class="line">      prevEl: &apos;.swiper-button-prev&apos;,</div><div class="line">    &#125;,</div><div class="line">    </div><div class="line">    // 如果需要滚动条</div><div class="line">    scrollbar: &#123;</div><div class="line">      el: &apos;.swiper-scrollbar&apos;,</div><div class="line">    &#125;,</div><div class="line">  &#125;)        </div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<h5 id="4-如何利用swiper实现一个简单的轮播图效果"><a href="#4-如何利用swiper实现一个简单的轮播图效果" class="headerlink" title="4.如何利用swiper实现一个简单的轮播图效果"></a>4.如何利用swiper实现一个简单的轮播图效果</h5><blockquote>
+<p>默认前三项都成功完成</p>
+</blockquote>
+<p>首先先上代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;swiper-4.1.0.min.css&quot;&gt;</div><div class="line">		&lt;title&gt;轮播图&lt;/title&gt;</div><div class="line">		&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">			.swiper-container &#123;</div><div class="line">    			width: 600px;</div><div class="line">    			height: 300px;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide&#123;</div><div class="line">				font-size: 50px;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide:nth-of-type(1)&#123;</div><div class="line">				background-color: cornflowerblue;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide:nth-of-type(2)&#123;</div><div class="line">				background-color: coral;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide:nth-of-type(3)&#123;</div><div class="line">				background-color: yellowgreen;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide:nth-of-type(4)&#123;</div><div class="line">				background-color: coral;</div><div class="line">			&#125;</div><div class="line">			.swiper-slide:nth-of-type(5)&#123;</div><div class="line">				background-color: cornflowerblue;</div><div class="line">			&#125;</div><div class="line">		&lt;/style&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;div class=&quot;swiper-container&quot;&gt;</div><div class="line">    		&lt;div class=&quot;swiper-wrapper&quot;&gt;</div><div class="line">        		&lt;div class=&quot;swiper-slide&quot;&gt;Slide 1&lt;/div&gt;</div><div class="line">        		&lt;div class=&quot;swiper-slide&quot;&gt;Slide 2&lt;/div&gt;</div><div class="line">        		&lt;div class=&quot;swiper-slide&quot;&gt;Slide 3&lt;/div&gt;</div><div class="line">        		&lt;div class=&quot;swiper-slide&quot;&gt;Slide 4&lt;/div&gt;</div><div class="line">        		&lt;div class=&quot;swiper-slide&quot;&gt;Slide 5&lt;/div&gt;</div><div class="line">    		&lt;/div&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">		&lt;script src=&quot;swiper-4.1.0.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">		&lt;script&gt;        </div><div class="line">  			var mySwiper = new Swiper (&apos;.swiper-container&apos;, &#123;</div><div class="line">//              horizontal 水平  </div><div class="line">//				vertical   垂直</div><div class="line">    			direction: &apos;horizontal&apos;,</div><div class="line">//				开始显示第几张</div><div class="line">    			initialSlide: 0,</div><div class="line">//				换页速度</div><div class="line">				speed: 1500,</div><div class="line">//				自动切换</div><div class="line">    			autoplay: &#123;</div><div class="line">    				delay: 2000,</div><div class="line">    			&#125;,</div><div class="line">  			&#125;)        </div><div class="line">  		&lt;/script&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>initialSlide参数：设定初始化时slide页面的索引，初始时为0，即默认为轮播图第一张图；如果设置为2时，swiper初始化时页面就是轮播图第三张图</p>
+<p>direction参数：设置轮播图的滑动方向，水平方向为（horizontal），垂直方向为（vertical），默认为水平方向</p>
+<p>speed参数：轮播图的切换速度</p>
+<p>autoplay参数：设置为true时自动切换图片，默认为false</p>
+<p>delay参数：自动切换的时间间隔，详情见上图代码</p>
+<p>关于swiper的用法和初始化组件还有许多，<a href="http://www.swiper.com.cn/api/index.html" target="_blank" rel="external">具体请查看swiperAPI文档</a></p>
+<hr>
+<p><em>分割线</em></p>
+<p>在vue中我们可以直接下载插件实现<strong>swiper</strong>的功能</p>
+<blockquote>
+<p>npm install vue-awesome-swiper</p>
+</blockquote>
+<p>然后在<strong>main.js</strong>中引入</p>
+<blockquote>
+<p>import VueAwesomeSwiper from ‘vue-awesome-swiper’<br>Vue.use(VueAwesomeSwiper)</p>
+</blockquote>
+<p>在对应的 <strong>.vue</strong> 比如(<strong>slide.vue</strong>)文件中，写入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">template&gt;</div><div class="line">  &lt;div id=&quot;slide&quot;&gt;</div><div class="line">    &lt;swiper :options=&quot;swiperOption&quot; ref=&quot;mySwiper&quot;&gt;</div><div class="line">      &lt;!-- 幻灯内容 --&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide1&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;1.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide2&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;2.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide3&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;3.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide4&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;4.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">      &lt;swiper-slide&gt;&lt;div class=&quot;fd_slide fd_slide5&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;5.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/swiper-slide&gt;</div><div class="line">    &lt;/swiper&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">import &#123; swiper, swiperSlide &#125; from &apos;vue-awesome-swiper&apos;</div><div class="line">import $ from &apos;jquery&apos;</div><div class="line">export default &#123;</div><div class="line">  components: &#123;</div><div class="line">    swiper,</div><div class="line">    swiperSlide</div><div class="line">  &#125;,</div><div class="line">  data () &#123;</div><div class="line">    return &#123;</div><div class="line">      swiperOption: &#123;</div><div class="line">        initialSlide: 0,</div><div class="line">        direction: &apos;horizontal&apos;,</div><div class="line">        loop: true,</div><div class="line">        loopAdditionalSlides: 2,</div><div class="line">        speed: 1000,</div><div class="line">        autoplay: &#123;</div><div class="line">          delay: 2000</div><div class="line">        &#125;,</div><div class="line">        autoplayDisableOnInteraction: false,</div><div class="line">        observer: true,</div><div class="line">        observeParents: true</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"> &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/08/webpack学习【持续更新】/" rel="next" title="webpack【更新】">
+                <i class="fa fa-chevron-left"></i> webpack【更新】
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/27/思考跨域问题/" rel="prev" title="思考跨域问题">
+                思考跨域问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+  <p class="site-author-name" itemprop="name">绊AI</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+
+
+  <nav class="site-state motion-element">
+    
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+    
+
+    
+
+    
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是swiper？"><span class="nav-number">1.</span> <span class="nav-text">什么是swiper？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#swiper使用方法"><span class="nav-number">2.</span> <span class="nav-text">swiper使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-首先加载插件"><span class="nav-number">2.1.</span> <span class="nav-text">1.首先加载插件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-HTML内容"><span class="nav-number">2.2.</span> <span class="nav-text">2.HTML内容</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-初始化swiper"><span class="nav-number">2.3.</span> <span class="nav-text">3.初始化swiper</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-如何利用swiper实现一个简单的轮播图效果"><span class="nav-number">2.4.</span> <span class="nav-text">4.如何利用swiper实现一个简单的轮播图效果</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">绊AI</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.2.2</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
