@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        webpack【更新】 · 绊AI的博客
+        tj首页到下单的流程和逻辑【持续更新】 · 绊AI的博客
         
     </title>
     <link rel="icon" href= https://i.ibb.co/3sJmyLG/banAI.jpg>
@@ -72,7 +72,7 @@
                 <a href="/" >绊AI的博客</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">webpack【更新】</a>
+                <a href="#" class="post-name">tj首页到下单的流程和逻辑【持续更新】</a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            webpack【更新】
+            tj首页到下单的流程和逻辑【持续更新】
             <!-- 404 -->
             
         </h1>
@@ -111,13 +111,13 @@
             
                 <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = webpack>webpack</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = tj>tj</a>
     
 </div>
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/01/08</span>
+                <span class="post-intro-time">2019/07/11</span>
             </div>
         
     </div>
@@ -188,72 +188,36 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h3 id="什么是Webpack"><a href="#什么是Webpack" class="headerlink" title="什么是Webpack?"></a>什么是Webpack?</h3><p>Webpack是一个前端资源加载/打包工具，它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源.</p>
-<p>通俗地讲，Webpack可以看作是模块打包机：它做的事情是，分析你的项目结构，找到Javascript模块以及其他的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。</p>
-<h3 id="Webpack与Gulp区别"><a href="#Webpack与Gulp区别" class="headerlink" title="Webpack与Gulp区别"></a>Webpack与Gulp区别</h3><p>Webpack与之前学习的gulp相比较而言，两者的流程不大相同，而且Wwbpack的处理速度更快更直接，能打包更多不同类型的文件。</p>
-<p>gulp是一种能够优化前端的开发流程的工具，它的工作方式是：在一个配置文件中，指明对某些文件进行类似编译，组合，压缩等任务的具体步骤，工具之后可以自动替你完成这些任务。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/1031000-d0693c06bb3a00e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
-<p>Webpack是一种模块化的解决方案，它的工作方式是：把你的项目当做一个整体，通过一个给定的主文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的Javascript文件。</p>
-<blockquote>
-<p>【注:loader用于对模块的源代码进行转换,比如Webpack只能处理js文件，因此对于css文件就需要安装对应loader模块：style-loader和css-loader等】</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/1031000-160bc667d3b6093a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
-<p>从图中可以看出，Webpack可以将多种静态资源js,css,less转换成一个静态文件。</p>
-<h3 id="使用Webpack"><a href="#使用Webpack" class="headerlink" title="使用Webpack"></a>使用Webpack</h3><h5 id="安装Webpack"><a href="#安装Webpack" class="headerlink" title="安装Webpack"></a>安装Webpack</h5><p>在安装之前，需要检查本地环境是否支持node.js</p>
-<p>使用npm安装Webpack</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack -g</div></pre></td></tr></table></figure>
-<h5 id="创建一个文件夹"><a href="#创建一个文件夹" class="headerlink" title="创建一个文件夹"></a>创建一个文件夹</h5><p>在你的电脑随便一个盘里创建一个新的文件夹或者使用命令创建:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir webpack-test</div></pre></td></tr></table></figure>
-<p>在文件夹中新建一个<strong>run1.js</strong>文件，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.write(&quot;Hello World&quot;);</div></pre></td></tr></table></figure>
-<p>再添加<strong>index.html</strong>文件，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;script type=&quot;text/javascript&quot; src=&quot;bundle.js&quot;&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>接下来使用Webpack命令进行打包：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack run1.js bundle.js</div></pre></td></tr></table></figure>
-<p>执行以上命令会编译run1.js文件并生成bundle.js文件</p>
-<p>在浏览器中打开<strong>index.html</strong>文件，会看到页面上有“Hello World”。</p>
-<h5 id="Loader"><a href="#Loader" class="headerlink" title="Loader"></a>Loader</h5><p>就像之前说的，如果想要处理除js之外的其他文件，对于css文件，首先需要执行命令来安装css-loader和style-loader</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install css-loader style-loader</div></pre></td></tr></table></figure>
-<p>接下来创建一个style.css文件，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">    background:red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>修改run1.js文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">require(&quot;!style-loader!css-loader!./style.css&quot;);</div><div class="line">document.write(&quot;Hello World&quot;);</div></pre></td></tr></table></figure>
-<p>继续使用Webpack命令打包：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack run1.js bundle.js</div></pre></td></tr></table></figure>
-<p>在浏览器访问index.html会发现背景变成红色。</p>
-<h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><p>可以将一些编译选项放在配置文件中，以便于统一管理。</p>
-<p>创建webpack.config.js文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">    entry: &quot;./run1.js&quot;,</div><div class="line">    output: &#123;</div><div class="line">        path: __dirname,</div><div class="line">        filename: &quot;bundle.js&quot;</div><div class="line">    &#125;,</div><div class="line">    module: &#123;</div><div class="line">        loaders: [</div><div class="line">            &#123;test: /\.css$/,loader: &quot;style.loader!css-loader&quot;&#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>接下来只需要执行<strong>webpack</strong>命令即可生成<strong>bundle.js</strong>文件</p>
-<p>Webpack命令执行后，会默认载入当前目录的<strong>webpack.config.js</strong>文件。</p>
-<p><strong>当你想要查看你添加的loaders模块时。可以在安装webpack之后再生成一个package.json文件,它里面会显示你当前所有的依赖模块</strong>，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
-<p><em>默认一直点回车就行</em></p>
-<h5 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h5><p>如果不想每次修改模块之后还要重新编译，那么可以启用监听模式；开启之后，就不需要每次都重新编译，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack --watch</div></pre></td></tr></table></figure>
-<p>当然还有一种方法是启用一个本地服务器，来实现热加载，可以使用webpack-dev-server服务，当然首先需要安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack-dev-server -g</div></pre></td></tr></table></figure>
-<p>运行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack-dev-server</div></pre></td></tr></table></figure>
-<p>运行之后一般会通过localhost:8080启用一个express静态资源web服务器，并且会以监听模式自动运行webpack；如果该端口被占用，可以通过“ -port 端口号 ” 来改变服务器端口。</p>
-<p>当然webpack还有其他功能。</p>
-
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read the blog." />
+    <label for="pass">Please enter the password to read the blog.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
             <li class="next">
-                <a href= "/2018/01/22/swiper初步应用/" title= swiper初步应用 >
+                <a href= "/2019/07/11/Git学习【持续更新】/" title= Git学习【更新】 >
                     <span>Next Post</span>
-                    <span>swiper初步应用</span>
+                    <span>Git学习【更新】</span>
                 </a>
             </li>
         
         
             <li class="previous">
-                <a href= "/2017/06/18/npm学习/" title= npm学习 >
+                <a href= "/2018/08/22/vue问题总结【持续更新】/" title= vue问题总结【更新】 >
                     <span>Previous Post</span>
-                    <span>npm学习</span>
+                    <span>vue问题总结【更新】</span>
                 </a>
             </li>
         
@@ -340,7 +304,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是Webpack"><span class="toc-number">1.</span> <span class="toc-text">什么是Webpack?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webpack与Gulp区别"><span class="toc-number">2.</span> <span class="toc-text">Webpack与Gulp区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用Webpack"><span class="toc-number">3.</span> <span class="toc-text">使用Webpack</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#安装Webpack"><span class="toc-number">3.0.1.</span> <span class="toc-text">安装Webpack</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#创建一个文件夹"><span class="toc-number">3.0.2.</span> <span class="toc-text">创建一个文件夹</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Loader"><span class="toc-number">3.0.3.</span> <span class="toc-text">Loader</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置文件"><span class="toc-number">3.0.4.</span> <span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#开发环境"><span class="toc-number">3.0.5.</span> <span class="toc-text">开发环境</span></a></li></ol></li></ol></li></ol>
+        
     </div>
     
     <div class="back-top">&#xe639;</div>
