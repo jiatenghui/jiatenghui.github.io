@@ -188,31 +188,20 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>内部镜像是利用npm命令空间管理来实现内部包和外部包的分开管理，内部包托管在tj内部服务器，采用@tj的命名空间。</p>
-<h4 id="添加公司npm镜像"><a href="#添加公司npm镜像" class="headerlink" title="添加公司npm镜像"></a>添加公司npm镜像</h4><ol>
-<li><p>在CMD中输入 <span style="color:red">npm config list</span>来找到“.npmrc”文件路径，之后将默认npm镜像地址和tj空间下的仓库地址写入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">registry=https://registry.npm.taobao.org/</div><div class="line">@tj:registry=https://registry-npm.tj.com</div></pre></td></tr></table></figure>
-</li>
-<li><p>下载tj的npm包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install @tj/url_utils</div></pre></td></tr></table></figure>
-</li>
-<li><p>进行相关项目启动时，需要先确保本身有连接到公司内部的npm镜像，没有连接的可以使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i --registry=https://registry-npm.tj.com</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><span style="color:red">注：</span>这里需要注意确定好自己电脑的node版本，不适配的话安装过程会报错。</p>
-<blockquote>
-<p>安装完成之后，启动项目时，查看“package.json”中相关运行命令，确定启动的环境。</p>
-</blockquote>
-<hr>
-<h4 id="h5公共库"><a href="#h5公共库" class="headerlink" title="h5公共库"></a>h5公共库</h4><p><a href="http://fedoc.corp.tujia.com/fe_vue_ui_doc/#/zh-CN/intro" target="_blank" rel="external">fe_vue_ui h5组件库</a>根据有赞的<a href="https://youzan.github.io/vant-weapp/#/intro" target="_blank" rel="external">vant</a>框架改造而成，主要增加了tj业务组件，以及调整了基于tj色值组件库UI样式。</p>
-<ul>
-<li>使用</li>
-</ul>
-<p>将NPM镜像配置完成进行“npm install”下载时，会自动将h5公共库下载下来，只需要在开发页面引入组件代码</p>
-<table><br>    <tr align="center"><br>        <td colspan="2">示例</td><br>    </tr><br>    <tr><br>        <td>按钮</td><br>        <td><tj-button type="primary">默认大小</tj-button></td><br>    </tr><br>        <tr><br>        <td>弹出层</td><br>        <td><tj-popup v-model="show">内容</tj-popup></td><br>    </tr><br></table>
-
-
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read the blog." />
+    <label for="pass">Please enter the password to read the blog.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
@@ -308,7 +297,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#添加公司npm镜像"><span class="toc-number">1.</span> <span class="toc-text">添加公司npm镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#h5公共库"><span class="toc-number">2.</span> <span class="toc-text">h5公共库</span></a></li></ol>
+        
     </div>
     
     <div class="back-top">&#xe639;</div>
@@ -322,6 +311,30 @@
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-archive">
     <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -693,33 +706,33 @@
     
         <span class="sidebar-tag-name"><a href= "#">git</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">npm</a></span>
-    
-        <span class="sidebar-tag-name"><a href= "#">gulp</a></span>
+        <span class="sidebar-tag-name"><a href= "#">web安全</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">pwa</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">tj</a></span>
+        <span class="sidebar-tag-name"><a href= "#">gulp</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">异步</a></span>
-    
-        <span class="sidebar-tag-name"><a href= "#">web安全</a></span>
-    
-        <span class="sidebar-tag-name"><a href= "#">vue</a></span>
+        <span class="sidebar-tag-name"><a href= "#">npm</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">swiper框架</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">node</a></span>
+        <span class="sidebar-tag-name"><a href= "#">异步</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">tj</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">vue</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">vue-router</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">css</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">跨域</a></span>
-    
         <span class="sidebar-tag-name"><a href= "#">webpack</a></span>
     
+        <span class="sidebar-tag-name"><a href= "#">node</a></span>
+    
         <span class="sidebar-tag-name"><a href= "#">mongodb</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">跨域</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">自适应布局</a></span>
     
