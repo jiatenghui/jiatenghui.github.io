@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        绊AI的博客
+        tjNPM内部镜像和h5公共库 · 绊AI的博客
         
     </title>
     <link rel="icon" href= https://i.ibb.co/3sJmyLG/banAI.jpg>
@@ -58,6 +58,8 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
@@ -65,27 +67,58 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >绊AI的博客</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">tjNPM内部镜像和h5公共库</a>
+            </div>
+    </div>
+    
     <a class="home-link" href=/>绊AI的博客</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://i.ibb.co/tBkd547/bg2.png)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            tjNPM内部镜像和h5公共库
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = tj>tj</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2019/07/18</span>
+            </div>
         
     </div>
 </div>
@@ -153,163 +186,78 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2019/07/18/tjNPM私有镜像和h5公共库/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>tjNPM内部镜像和h5公共库</span>
-                    </h2>
-                <div class="abstract-content">
-                    内部镜像是利用npm命令空间管理来实现内部包和外部包的分开管理，内部包托管在tj内部服务器，采用@tj的命名空间。
-添加公司npm镜像
-在CMD中输入 npm config list来找到“.npmrc”文件路径，之后将默认npm镜像地址和tj空间下的仓库地址写入
-12registry=https://registry.npm.taobao.org/@tj:registry=https://registry-npm.tj.com
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>内部镜像是利用npm命令空间管理来实现内部包和外部包的分开管理，内部包托管在tj内部服务器，采用@tj的命名空间。</p>
+<h4 id="添加公司npm镜像"><a href="#添加公司npm镜像" class="headerlink" title="添加公司npm镜像"></a>添加公司npm镜像</h4><ol>
+<li><p>在CMD中输入 <span style="color:red">npm config list</span>来找到“.npmrc”文件路径，之后将默认npm镜像地址和tj空间下的仓库地址写入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">registry=https://registry.npm.taobao.org/</div><div class="line">@tj:registry=https://registry-npm.tj.com</div></pre></td></tr></table></figure>
+</li>
+<li><p>下载tj的npm包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install @tj/url_utils</div></pre></td></tr></table></figure>
+</li>
+<li><p>进行相关项目启动时，需要先确保本身有连接到公司内部的npm镜像，没有连接的可以使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i --registry=https://registry-npm.tj.com</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><span style="color:red">注：</span>这里需要注意确定好自己电脑的node版本，不适配的话安装过程会报错。</p>
+<blockquote>
+<p>安装完成之后，启动项目时，查看“package.json”中相关运行命令，确定启动的环境。</p>
+</blockquote>
+<hr>
+<h4 id="h5公共库"><a href="#h5公共库" class="headerlink" title="h5公共库"></a>h5公共库</h4><p><a href="http://fedoc.corp.tujia.com/fe_vue_ui_doc/#/zh-CN/intro" target="_blank" rel="external">fe_vue_ui h5组件库</a>根据有赞的<a href="https://youzan.github.io/vant-weapp/#/intro" target="_blank" rel="external">vant</a>框架改造而成，主要增加了tj业务组件，以及调整了基于tj色值组件库UI样式。</p>
+<ul>
+<li>使用</li>
+</ul>
+<p>将NPM镜像配置完成进行“npm install”下载时，会自动将h5公共库下载下来，只需要在开发页面引入组件代码</p>
+<table><br>    <tr align="center"><br>        <td colspan="2">示例</td><br>    </tr><br>    <tr><br>        <td>按钮</td><br>        <td><tj-button type="primary">默认大小</tj-button></td><br>    </tr><br>        <tr><br>        <td>弹出层</td><br>        <td><tj-popup v-model="show">内容</tj-popup></td><br>    </tr><br></table>
 
-下载tj的npm包
-1npm install @tj/url_utils
 
-进行相关项目启动时，需要先确保本身有连接到公司内部的npm镜像，没有连接的可以使用...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = tj>tj</a>
-    
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="previous">
+                <a href= "/2019/07/15/tj前端项目开发部署流程/" title= tj前端项目部署流程 >
+                    <span>Previous Post</span>
+                    <span>tj前端项目部署流程</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zODUxOS8xNTA0Nw==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/07/18</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2019/07/15/tj前端项目开发部署流程/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>tj前端项目部署流程</span>
-                    </h2>
-                <div class="abstract-content">
-                    
+<!-- City版安装代码已完成 -->
 
-  
-  
-    Please enter the password to read the blog.
     
-  
+    
+    <!--PC版-->
 
-Incorrect Password!
-No content to display!
+    <!--PC版-->
 
-U2FsdGVkX183uB6YWBJcs3lIehFIQMLPvz0PH37hvnKdCbKXIiSxSxEJUiG8MWqBUWSqUWK/NvsRSoF+DZ9AHdZsz5KkbcT8/MWIgpYc9rQ6GgphNWXBfwGctOSGMgg8/AM1P9CJYWN0jRmtmRShRZQ9kZ7DGhWhFWcbk55MCXPUgZsfCSbOl7rhReQ8...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = tj>tj</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/07/15</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2019/07/11/Git学习【持续更新】/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Git学习</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-什么是Git？
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155431"></script>
+    <!-- UY END -->
 
-Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理，而对于大家熟知的Github来说，它是一个用Git做版本控制的项目托管平台如图：
 
-在这里我把我学习Git过程中的知识总结出来，供大家参考
-
-要想使用Git，首先我们需要来安装Git，这里我把链接放在这，有兴趣的兄dei可以来下载安装链接 密码：ue9y
-
-下载好之后，我们就开始正式了解Git
-
-因为在建博客时也用到了Git，因此我主要说明一下Git如何进行远程连接和下载提交工程要使用Git，我们首先要告诉Git我们是谁一般填写的都是Github的用户名和注册邮箱
-1git con...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = git>git</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/07/11</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2019/07/11/tj首页到下单的流程和逻辑/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>tj首页到下单的流程和逻辑【持续更新】</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-
-  
-  
-    Please enter the password to read the blog.
-    
-  
-
-Incorrect Password!
-No content to display!
-
-U2FsdGVkX1++dVi7YQ1B+cNdUtTWiCmahASkOdX2dDfnxsnV5SRYEaGVyeAo/k2766vgYj+aEnHy/aNID0zOxUzWLn5ftuW8iFPzHMlZ5NypQ9K2s6Z+LtHM6cCZLu57/i+xd3gCwRgQf4uxtO2hp4J4s9gtg5nY0CsNZdHnDpmYUkEG0LU/MMUH1mqj...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = tj>tj</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/07/11</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
     
 </main>
             <!-- profile -->
@@ -355,6 +303,13 @@ U2FsdGVkX1++dVi7YQ1B+cNdUtTWiCmahASkOdX2dDfnxsnV5SRYEaGVyeAo/k2766vgYj+aEnHy/aNI
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#添加公司npm镜像"><span class="toc-number">1.</span> <span class="toc-text">添加公司npm镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#h5公共库"><span class="toc-number">2.</span> <span class="toc-text">h5公共库</span></a></li></ol>
+    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
